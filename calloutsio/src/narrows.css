@@ -1,0 +1,415 @@
+.narrowsFullGrid{
+  display:grid;
+  justify-content: center;
+  grid-template-columns: 500px 750px 300px;
+  grid-template-rows: 80px 625px;
+  color:white; 
+}
+.mapTitleNarrows{
+  grid-column: 1/span 3;
+  grid-row: 1/span 1;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#narrowsMap{
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+  display:grid;
+  background-image: url('./components/Halo3/BlueprintPics/Narrows.png');
+  background-repeat:no-repeat;
+  grid-template-columns: repeat(50,2%);
+  grid-template-rows: repeat(50,2%);
+  border:1px solid white;
+  background-color: black;
+}
+#narrowsScreenShot{
+  width: 250px;
+  height:250px;
+  border:1px solid white;
+}
+#narrowsCallouts p{
+  font-size: 1.7rem;
+}
+#fiftyMauler{
+	grid-column:25/span 2;
+	grid-row:12/span 4;
+}
+#afro{
+	grid-column:14/span 2;
+	grid-row:12/span 3;
+}
+#afroLeft{
+	grid-column:36/span 2;
+	grid-row:12/span 3;
+}
+#backCannon{
+	grid-column:47/span 3;
+	grid-row:18/span 3;
+}
+#backCannonLeft{
+	grid-column:2/span 3;
+	grid-row:18/span 3;
+}
+#backFlag{
+	grid-column:46/span 1;
+	grid-row:5/span 4;
+}
+#backFlagLeft{
+	grid-column:5/span 1;
+	grid-row:5/span 4;
+}
+#cannonLeft{
+	grid-column:7/span 4;
+	grid-row:19/span 5;
+}
+#cannon{
+	grid-column:41/span 4;
+	grid-row:19/span 5;
+}
+#cannonLobbyLeft{
+	grid-column:6/span 2;
+	grid-row:17/span 1;
+}
+#cannonLobby{
+	grid-column:44/span 2;
+	grid-row:17/span 1;
+}
+#cannonPowerUpLeft1{
+	grid-column:14/span 1;
+	grid-row:22/span 2;
+}
+#cannonPowerUpLeft2{
+	grid-column:15/span 2;
+	grid-row:20/span 4;
+}
+#cannonPowerUpLeft3{
+	grid-column:17/span 2;
+	grid-row:18/span 6;
+}
+#cannonPowerUp1{
+	grid-column:33/span 2;
+	grid-row:18/span 6;
+}
+#cannonPowerUp2{
+	grid-column:35/span 2;
+	grid-row:20/span 4;
+}
+#cannonPowerUp3{
+	grid-column:37/span 1;
+	grid-row:22/span 2;
+}
+#cannonShockwave{
+	grid-column:33/span 1;
+	grid-row:17/span 1;
+}
+#cannonShockwaveLeft{
+	grid-column:18/span 1;
+	grid-row:17/span 1;
+}
+#cannonSneaky{
+	grid-column:37/ span 3;
+	grid-row:18/span 1;
+}
+#cannonSneakyLeft{
+	grid-column:12/span 3;
+	grid-row:18/span 1;
+}
+#cannonDoor{
+	grid-column:37/span 2;
+	grid-row:39/span 3;
+}
+#cannonDoorLeft{
+	grid-column:13/span 2;
+	grid-row:39/span 3;
+}
+#cannonSpawn{
+	grid-column:45/span 2;
+	grid-row:18/span 3;
+}
+#cannonSpawnLeft{
+	grid-column:5/span 2;
+	grid-row:18/span 3;
+}
+#flagDoor{
+	grid-column:13/span 2;
+	grid-row:32/span 3;
+}
+#flagDoorLeft{
+	grid-column:13/span 2;
+	grid-row:32/span 3;
+}
+#flagBox1{
+	grid-column:37/span 3;
+	grid-row:5/span 3;
+}
+#flagBox2{
+	grid-column:39/span 2;
+	grid-row:28/span 3;
+}
+#flagBoxLeft1{
+	grid-column:12/span 3;
+	grid-row:5/span 3;
+}
+#flagBoxLeft2{
+	grid-column:11/span 2;
+	grid-row:28/span 3;
+}
+#flagLobby{
+	grid-column:6/span 2;
+	grid-row:9/span 2;
+}
+#flagLobbyLeft{
+	grid-column:6/span 2;
+	grid-row:9/span 2;
+}
+#flagPowerUp1{
+	grid-column:33/span 2;
+	grid-row:5/span 5;
+}
+#flagPowerUp2{
+	grid-column:35/span 1;
+	grid-row:5/span 3;
+}
+#flagPowerUp3{
+	grid-column:36/span 1;
+	grid-row:5/span 2;
+}
+#flagPowerUpLeft1{
+	grid-column:15/span 1;
+	grid-row:5/span 2;
+}
+#flagPowerUpLeft2{
+	grid-column:16/span 1;
+	grid-row:5/span 3;
+}
+#flagPowerUpLeft3{
+	grid-column:17/span 2;
+	grid-row:5/span 5;
+}
+#flagShockwave{
+	grid-column:33/span 1;
+	grid-row:10/span 1;
+}
+#flagShockwaveLeft{
+	grid-column:18/span 1;
+	grid-row:10/span 1;
+}
+#flagSneaky{
+	grid-column:37/span 3;
+	grid-row:9/span 3;
+}
+#flagSneakyLeft{
+	grid-column:12/span 3;
+	grid-row:9/span 3;
+}
+#flagLobby{
+	grid-column:44/span 2;
+	grid-row:9/span 2;
+}
+#flagLobbyLeft{
+	grid-column:6/span 2;
+	grid-row:9/span 2;
+}
+#l01{
+	grid-column:34/span 1;
+	grid-row:16/span 2;
+}
+#l02{
+	grid-column:35/span 1;
+	grid-row:16/span 1;
+}
+#l1{
+	grid-column:27/span 6;
+	grid-row:16/span 2;
+}
+#l21{
+	grid-column:19/span 6;
+	grid-row:16/span 2;
+}
+#l22{
+	grid-column:18/span 6;
+	grid-row:40/span 1;
+}
+#l3{
+	grid-column:15/span 3;
+	grid-row:16/span 2;
+}
+#l4{
+	grid-column:9/span 3;
+	grid-row:16/span 1;
+}
+#leftAttic{
+	grid-column:39/span 3;
+	grid-row:10/span 1;
+}
+#leftBox{
+	grid-column:38/span 2;
+	grid-row:16/span 1;
+}
+#leftShoulder{
+	grid-column:32/span 1;
+	grid-row:38/span 2;
+}
+#lobby{
+	grid-column:44/span 3;
+	grid-row:11/span 6;
+}
+#mainCannon{
+	grid-column:37/span 3;
+	grid-row:20/span 2;
+}
+#mainCannon2{
+	grid-column:38/span 3;
+	grid-row:43/span 2;
+}
+#mainCannonLeft1{
+	grid-column:12/span 3;
+	grid-row:20/span 2;
+}
+#mainCannonLeft2{
+	grid-column:11/span 3;
+	grid-row:43/span 2;
+}
+#miniMohawk{
+	grid-column:39/span 3;
+	grid-row:13/span 2;
+}
+#miniMohawkLeft{
+	grid-column:10/span 3;
+	grid-row:13/span 2;
+}
+#mohawk{
+	grid-column:29/span 3;
+	grid-row:13/span 2;
+}
+#mohawkLeft{
+	grid-column:20/span 3;
+	grid-row:13/span 2;
+}
+#powerUp1{
+	grid-column:34/span 3;
+	grid-row:33/span 3;
+}
+#powerUp2{
+	grid-column:34/span 3;
+	grid-row:40/span 3;
+}
+#powerUpLeft1{
+	grid-column:15/span 3;
+	grid-row:33/span 3;
+}
+#powerUpLeft2{
+	grid-column:15/span 3;
+	grid-row:40/span 3;
+}
+#r0{
+	grid-column:34/span 2;
+	grid-row:10/span 2;
+}
+#r1{
+	grid-column:27/span 6;
+	grid-row:10/span 2;
+}
+#r21{
+	grid-column:19/span 6;
+	grid-row:10/span 2;
+}
+#r22{
+	grid-column:18/span 6;
+	grid-row:33/span 1;
+}
+#r3{
+	grid-column:15/span 3;
+	grid-row:10/span 2;
+}
+#r4{
+	grid-column:9/span 3;
+	grid-row:10/span 3;
+}
+#rightAttic{
+	grid-column:40/span 3;
+	grid-row:10/span 1;
+}
+#rightBox{
+	grid-column:38/span 2;
+	grid-row:10/span 2;
+}
+#rightBoxLeft{
+	grid-column:12/span 2;
+	grid-row:10/span 2;
+}
+#rightShoulder{
+	grid-column:32/span 1;
+	grid-row:34/span 2;
+}
+#rightShoulderLeft{
+	grid-column:19/span 1;
+	grid-row:34/span 2;
+}
+#rockets{
+	grid-column:23/span 6;
+	grid-row:36/span 2;
+}
+#snipe{
+	grid-column:34/span 3;
+	grid-row:34/span 6;
+}
+#snipe2{
+	grid-column:35/span 2;
+	grid-row:35/span 4;
+}
+#snipeLeft{
+	grid-column:15/span 3;
+	grid-row:34/span 6;
+}
+#snipeLeft2{
+	grid-column:13/span 2;
+	grid-row:35/span 4;
+}
+#topLeft{
+	grid-column:25/span 2;
+	grid-row:16/span 3;
+}
+#topRight{
+	grid-column:25/span 2;
+	grid-row:9/span 3;
+}
+@media only screen and (max-width: 1259px) {
+  .narrowsFullGrid{
+    grid-template-columns:750px;
+}
+  #narrowsMap{
+    grid-column: 1/span 1;
+    display:block;
+    background-image: url('./components/Halo3/BlueprintPics/narrowsBPs/NarrowsWithCalloutsList.png');
+  }
+}
+@media only screen and (min-width: 1260px) and (max-width: 1450px) {
+  .narrowsFullGrid{
+    grid-template-columns:200px 750px 150px;
+  }
+  #narrowsCallouts p{
+    font-size: 1rem;
+  }
+  #narrowsScreenShot{
+    width: 100px;
+    height:100px;
+    border:1px solid white;
+  }
+  #narrowsMap{
+    background-image: url('./components/Halo3/BlueprintPics/narrowsBPs/Narrows.png');
+  }
+}
+@media only screen and (min-width:1451px) and (max-width: 1650px) {
+  .narrowsFullGrid{
+    grid-template-columns:350px 750px 300px;
+  }
+  #narrowsCallouts p{
+    font-size: 1.3rem;
+  }
+  #narrowsMap{
+    background-image: url('./components/Halo3/BlueprintPics/narrowsBPs/Narrows.png');
+  }
+}

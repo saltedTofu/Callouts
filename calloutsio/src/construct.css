@@ -1,0 +1,332 @@
+.constructFullGrid{
+	display:grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 400px 750px 300px;
+    grid-template-rows: 80px 725px;
+    color:white;
+}
+.mapTitleConstruct{
+	grid-column: 1/span 3;
+	grid-row: 1/span 1;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+  }
+#constructMap{
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+    border:1px solid white;
+    display:grid;
+    background-image: url('./components/Halo3/BlueprintPics/Construct.png');
+    background-repeat:no-repeat;
+    grid-template-columns: repeat(50,2%);
+    grid-template-rows: repeat(50,2%);
+	background-color: black;
+}
+#constructCallouts p{
+	font-size:1.8rem;
+}
+#constructScreenShot{
+	width: 250px;
+    height:250px;
+	border:1px solid white;
+}
+@media only screen and (max-width: 1259px) {
+	.constructFullGrid{
+		grid-template-columns:750px;
+	}
+	#constructMap{
+		grid-column: 1/span 1;
+	}
+}
+@media only screen and (min-width: 1260px) and (max-width: 1450px) {
+    .constructFullGrid{
+      grid-template-columns:200px 750px 150px;
+    }
+    #constructCallouts p{
+      font-size: 1.1rem;
+    }
+    #constructScreenShot{
+      width: 100px;
+      height:100px;
+      border:1px solid white;
+    }
+}
+@media only screen and (min-width:1451px) and (max-width: 1650px) {
+	.constructFullGrid{
+	  grid-template-columns:300px 750px 300px;
+	}
+	#constructCallouts p{
+		font-size:1.6rem;
+	}
+}
+#backGoldRamp{
+	grid-column:22/span 8;
+	grid-row:35/span 2;
+}
+#bottomGoldo{
+	grid-column:41/span 5;
+	grid-row:30/span 4;
+}
+#c1One{
+	grid-column:44/span 3;
+	grid-row:23/span 1;
+}
+#c1Two{
+    grid-column:46/span 1;
+    grid-row: 22/span 1;
+}
+#c2{
+	grid-column:28/span 2;
+	grid-row:22/span 5;
+}
+#c3One{
+	grid-column:12/span 4;
+	grid-row:20/span 2;
+}
+#c3Two{
+	grid-column:12/span 2;
+	grid-row:22/span 1;
+}
+#c3Three{
+	grid-column:14/span 3;
+	grid-row:22/span 4;
+}
+#closedBarrelsOne{
+	grid-column:45/span 4;
+	grid-row:19 /span 2;
+}
+#closedBarrelsTwo{
+	grid-column:45/span 3;
+	grid-row:21/span 1;
+}
+#closedBarrelsThree{
+	grid-column:48/span 2;
+	grid-row:21/span 4;
+}
+#closedBR{
+	grid-column:26/span 3;
+	grid-row:18/span 1;
+}
+#closedBubble{
+	grid-column:10/span 2;
+	grid-row:27/span 1;
+}
+#closedSkinny{
+	grid-column:47/span 3;
+	grid-row:28/span 4;
+}
+#closedStreet{
+	grid-column:13/span 4;
+	grid-row:26/span 8;
+}
+#closedSwordLeg{
+	grid-column:26/span 1;
+	grid-row:19/span 3;
+}
+#donut{
+	grid-column:24/span 3;
+	grid-row:26/span 2;
+}
+#laserOne{
+	grid-column:17/span 2;
+	grid-row:23/span 6;
+}
+#laserTwo{
+	grid-column:35/span 2;
+	grid-row:23/span 6;
+}
+#lobby{
+	grid-column:7/span 5;
+	grid-row:19/span 3;
+}
+#mainRampOne{
+	grid-column:42/span 3;
+	grid-row:18/span 5;
+}
+#mainRampTwo{
+	grid-column:25/span 1;
+	grid-row:18/span 5;
+}
+#midGold{
+	grid-column:22/span 10;
+	grid-row:32/span 2;
+}
+#midGoldRamp{
+	grid-column:32/span 2;
+	grid-row:27/span 7;
+}
+#o1One{
+	grid-column:39/span 2;
+	grid-row:22/span 2;
+}
+#o1Two{
+	grid-column:41/span 2;
+	grid-row:23/span 1;
+}
+#o2{
+	grid-column:21/span 2;
+	grid-row:22/span 5;
+}
+#o3One{
+	grid-column:3/span 4;
+	grid-row:20/span 2;
+}
+#o3Two{
+	grid-column:5/span 2;
+	grid-row:22/span 1;
+}
+#o3Three{
+	grid-column:2/span 3;
+	grid-row:22/span 4;
+}
+#openBarrelOne{
+	grid-column:39/span 3;
+	grid-row:19/span 2;
+}
+#openBarrelTwo{
+	grid-column:38/span 1;
+	grid-row:20/span 2;
+}
+#openBarrelThree{
+	grid-column:39/span 1;
+	grid-row:21/span 1;
+}
+#openBarrelFour{
+	grid-column:37/span 2;
+	grid-row:22/span 3;
+}
+#openBR{
+	grid-column:22/span 3;
+	grid-row:18/span 1;
+}
+#openBubble{
+	grid-column:7/span 2;
+	grid-row:27/span 1;
+}
+#openRampOne{
+	grid-column:2/span 1;
+	grid-row:29/span 3;
+}
+#openRampTwo{
+	grid-column:3/span 1;
+	grid-row:29/span 1;
+}
+#openRampThree{
+	grid-column:3/span 2;
+	grid-row:30/span 3;
+}
+#openRampFour{
+	grid-column:3/span 3;
+	grid-row:33/span 1;
+}
+#openRampFive{
+	grid-column:18/span 1;
+	grid-row:30/span 2;
+}
+#openRampSix{
+	grid-column:19/span 1;
+	grid-row:30/span 4;
+}
+#openRampSeven{
+	grid-column:20/span 1;
+	grid-row:31/span 4;
+}
+#openRampEight{
+	grid-column:21/span 1;
+	grid-row:33/span 3;
+}
+#openSkinny{
+	grid-column:37/span 3;
+	grid-row:28/span 4;
+}
+#openStreetOne{
+	grid-column:2/span 3;
+	grid-row:26/span 3;
+}
+#openStreetTwo{
+	grid-column:4/span 1;
+	grid-row:29/span 1;
+}
+#openStreetThree{
+	grid-column:5/span 1;
+	grid-row:28/span 5;
+}
+#openStreetFour{
+	grid-column:6/span 1;
+	grid-row:30/span 4;
+}
+#openSwordLeg{
+	grid-column:24/span 1;
+	grid-row:19/span 3;
+}
+#r1One{
+	grid-column:7/span 1;
+	grid-row:24/span 3;
+}
+#r1Two{
+	grid-column:8/span 1;
+	grid-row:22/span 5;
+}
+#r1Three{
+	grid-column:10/span 1;
+	grid-row:22/span 5;
+}
+#r1Four{
+	grid-column:11/span 1;
+	grid-row:25/span 2;
+}
+#r2{
+	grid-column:9/span 1;
+	grid-row:22/span 6;
+}
+#riverOne{
+	grid-column:19/span 3;
+	grid-row:18/span 2;
+}
+#riverTwo{
+	grid-column:18/span 3;
+	grid-row:20/span 1;
+}
+#riverThree{
+	grid-column:18/span 2;
+	grid-row:21/span 2;
+}
+#riverFour{
+	grid-column:38/span 1;
+	grid-row:17/span 3;
+}
+#riverFive{
+	grid-column:35/span 1;
+	grid-row:21/span 2;
+}
+#riverSix{
+	grid-column:36/span 1;
+	grid-row:19/span 4;
+}
+#riverSeven{
+	grid-column:37/span 1;
+	grid-row:17/span 5;
+}
+#snipe{
+	grid-column:23/span 5;
+	grid-row:12/span 6;
+}
+#sword{
+	grid-column:8/span 3;
+	grid-row:6/span 12;
+}
+#topGoldo{
+	grid-column:5/span 10;
+	grid-row:34/span 4;
+}
+#underGlassOne{
+	grid-column:8/span 1;
+	grid-row:18/span 1;
+}
+#underGlassTwo{
+	grid-column:10/span 1;
+	grid-row:18/span 1;
+}
