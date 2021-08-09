@@ -100,6 +100,30 @@
 	grid-column:37/span 1;
 	grid-row:22/span 2;
 }
+#cannonPowerUpLeft1Bottom{
+	grid-column:13/span 1;
+	grid-row:45/span 2;
+}
+#cannonPowerUpLeft2Bottom{
+	grid-column:14/span 2;
+	grid-row:43/span 4;
+}
+#cannonPowerUpLeft3Bottom{
+	grid-column:16/span 2;
+	grid-row:41/span 6;
+}
+#cannonPowerUp1Bottom{
+	grid-column:34/span 2;
+	grid-row:41/span 6;
+}
+#cannonPowerUp2Bottom{
+	grid-column:36/span 2;
+	grid-row:43/span 4;
+}
+#cannonPowerUp3Bottom{
+	grid-column:38/span 1;
+	grid-row:45/span 2;
+}
 #cannonShockwave{
 	grid-column:33/span 1;
 	grid-row:17/span 1;
@@ -132,8 +156,16 @@
 	grid-column:5/span 2;
 	grid-row:18/span 3;
 }
+#flag{
+	grid-column:40/span 6;
+	grid-row: 5/span 4;
+}
+#flagLeft{
+	grid-column:6/span 6;
+	grid-row:5/span 4;
+}
 #flagDoor{
-	grid-column:13/span 2;
+	grid-column:37/span 2;
 	grid-row:32/span 3;
 }
 #flagDoorLeft{
@@ -188,6 +220,22 @@
 	grid-column:17/span 2;
 	grid-row:5/span 5;
 }
+#flagPowerUp1Bottom{
+	grid-column:34/span 3;
+	grid-row:28/span 5;
+}
+#flagPowerUp2Bottom{
+	grid-column:37/span 1;
+	grid-row:28/span 2;
+}
+#flagPowerUpLeft1Bottom{
+	grid-column:28/span 2;
+	grid-row:14/span 1;
+}
+#flagPowerUpLeft2Bottom{
+	grid-column:15/span 3;
+	grid-row:28/span 5;
+}
 #flagShockwave{
 	grid-column:33/span 1;
 	grid-row:10/span 1;
@@ -224,13 +272,17 @@
 	grid-column:27/span 6;
 	grid-row:16/span 2;
 }
-#l21{
+#l1Bottom{
+	grid-column:28/span 6;
+	grid-row:40/span 2;
+}
+#l2{
 	grid-column:19/span 6;
 	grid-row:16/span 2;
 }
-#l22{
+#l2Bottom{
 	grid-column:18/span 6;
-	grid-row:40/span 1;
+	grid-row:40/span 2;
 }
 #l3{
 	grid-column:15/span 3;
@@ -241,19 +293,31 @@
 	grid-row:16/span 1;
 }
 #leftAttic{
-	grid-column:39/span 3;
-	grid-row:10/span 1;
+	grid-column:40/span 3;
+	grid-row:16/span 1;
 }
 #leftBox{
 	grid-column:38/span 2;
+	grid-row:16/span 1;
+}
+#leftBoxLeft{
+	grid-column: 12/span 2;
 	grid-row:16/span 1;
 }
 #leftShoulder{
 	grid-column:32/span 1;
 	grid-row:38/span 2;
 }
+#leftShoulderLeft{
+	grid-column:19/span 1;
+	grid-row:38/span 2;
+}
 #lobby{
 	grid-column:44/span 3;
+	grid-row:11/span 6;
+}
+#lobbyLeft{
+	grid-column:5/span 3;
 	grid-row:11/span 6;
 }
 #mainCannon{
@@ -290,19 +354,19 @@
 }
 #powerUp1{
 	grid-column:34/span 3;
-	grid-row:33/span 3;
+	grid-row:33/span 1;
 }
 #powerUp2{
 	grid-column:34/span 3;
-	grid-row:40/span 3;
+	grid-row:40/span 1;
 }
 #powerUpLeft1{
 	grid-column:15/span 3;
-	grid-row:33/span 3;
+	grid-row:33/span 1;
 }
 #powerUpLeft2{
 	grid-column:15/span 3;
-	grid-row:40/span 3;
+	grid-row:40/span 1;
 }
 #r0{
 	grid-column:34/span 2;
@@ -311,6 +375,10 @@
 #r1{
 	grid-column:27/span 6;
 	grid-row:10/span 2;
+}
+#r1Bottom{
+	grid-column:28/span 6;
+	grid-row:33/span 1;
 }
 #r21{
 	grid-column:19/span 6;
@@ -367,6 +435,14 @@
 #snipeLeft2{
 	grid-column:13/span 2;
 	grid-row:35/span 4;
+}
+#stageLeft{
+	grid-column: 2/span 2;
+	grid-row: 11/span 5;
+}
+#stage{
+	grid-column: 48/span 2;
+	grid-row:11/span 5;
 }
 #topLeft{
 	grid-column:25/span 2;

@@ -346,12 +346,12 @@ class Narrows extends React.Component{
     showlobby = () => {
         this.loadAll();
         document.getElementById('narrowsMap').style.backgroundImage=`url(${lobby})`;
-        document.getElementById('lobbyText').style.color='green';
+        document.getElementById('lobbyTextNarrows').style.color='green';
         document.getElementById('narrowsInGamePicText').style.color="white";
         document.getElementById('narrowsInGamePicText').innerHTML="penis2";
     }
     unshowlobby = () => {
-        document.getElementById('lobbyText').style.color='white';
+        document.getElementById('lobbyTextNarrows').style.color='white';
     }
     showmainCannon = () => {
         this.loadAll();
@@ -416,22 +416,22 @@ class Narrows extends React.Component{
     showr1 = () => {
         this.loadAll();
         document.getElementById('narrowsMap').style.backgroundImage=`url(${r1})`;
-        document.getElementById('r1Text').style.color='green';
+        document.getElementById('r1TextNarrows').style.color='green';
         document.getElementById('narrowsInGamePicText').style.color="white";
         document.getElementById('narrowsInGamePicText').innerHTML="penis2";
     }
     unshowr1 = () => {
-        document.getElementById('r1Text').style.color='white';
+        document.getElementById('r1TextNarrows').style.color='white';
     }
     showr2 = () => {
         this.loadAll();
         document.getElementById('narrowsMap').style.backgroundImage=`url(${r2})`;
-        document.getElementById('r2Text').style.color='green';
+        document.getElementById('r2TextNarrows').style.color='green';
         document.getElementById('narrowsInGamePicText').style.color="white";
         document.getElementById('narrowsInGamePicText').innerHTML="penis2";
     }
     unshowr2 = () => {
-        document.getElementById('r2Text').style.color='white';
+        document.getElementById('r2TextNarrows').style.color='white';
     }
     showr3 = () => {
         this.loadAll();
@@ -496,12 +496,12 @@ class Narrows extends React.Component{
     showsnipe = () => {
         this.loadAll();
         document.getElementById('narrowsMap').style.backgroundImage=`url(${snipe})`;
-        document.getElementById('snipeText').style.color='green';
+        document.getElementById('snipeTextNarrows').style.color='green';
         document.getElementById('narrowsInGamePicText').style.color="white";
         document.getElementById('narrowsInGamePicText').innerHTML="penis2";
     }
     unshowsnipe = () => {
-        document.getElementById('snipeText').style.color='white';
+        document.getElementById('snipeTextNarrows').style.color='white';
     }
     showstage = () => {
         this.loadAll();
@@ -566,22 +566,22 @@ class Narrows extends React.Component{
                     <p id="leftAtticText" onMouseOver={this.showleftAttic} onMouseOut={() => {this.resetBackground(); this.unshowleftAttic()}}>Left Attic</p>
                     <p id="leftBoxText" onMouseOver={this.showleftBox} onMouseOut={() => {this.resetBackground(); this.unshowleftBox()}}>Left Box</p>
                     <p id="leftShoulderText" onMouseOver={this.showleftShoulder} onMouseOut={() => {this.resetBackground(); this.unshowleftShoulder()}}>Left Shoulder</p>
-                    <p id="lobbyText" onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>Lobby</p>
+                    <p id="lobbyTextNarrows" onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>Lobby</p>
                     <p id="mainCannonText" onMouseOver={this.showmainCannon} onMouseOut={() => {this.resetBackground(); this.unshowmainCannon()}}>Main Cannon</p>
                     <p id="fiftyMaulerText" onMouseOver={this.showfiftyMauler} onMouseOut={() => {this.resetBackground(); this.unshowfiftyMauler()}}>Mauler/50</p>
                     <p id="miniMohawkText" onMouseOver={this.showminiMohawk} onMouseOut={() => {this.resetBackground(); this.unshowminiMohawk()}}>Mini Mohawk</p>
                     <p id="mohawkText" onMouseOver={this.showmohawk} onMouseOut={() => {this.resetBackground(); this.unshowmohawk()}}>Mohawk</p>
                     <p id="powerUpText" onMouseOver={this.showpowerUp} onMouseOut={() => {this.resetBackground(); this.unshowpowerUp()}}>Power Up</p>
                     <p id="r0Text" onMouseOver={this.showr0} onMouseOut={() => {this.resetBackground(); this.unshowr0()}}>R0</p>
-                    <p id="r1Text" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>R1</p>
-                    <p id="r2Text" onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>R2</p>
+                    <p id="r1TextNarrows" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>R1</p>
+                    <p id="r2TextNarrows" onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>R2</p>
                     <p id="r3Text" onMouseOver={this.showr3} onMouseOut={() => {this.resetBackground(); this.unshowr3()}}>R3</p>
                     <p id="r4Text" onMouseOver={this.showr4} onMouseOut={() => {this.resetBackground(); this.unshowr4()}}>R4</p>
                     <p id="rightAtticText" onMouseOver={this.showrightAttic} onMouseOut={() => {this.resetBackground(); this.unshowrightAttic()}}>Right Attic</p>
                     <p id="rightBoxText" onMouseOver={this.showrightBox} onMouseOut={() => {this.resetBackground(); this.unshowrightBox()}}>Right Box</p>
                     <p id="rightShoulderText" onMouseOver={this.showrightShoulder} onMouseOut={() => {this.resetBackground(); this.unshowrightShoulder()}}>Right Shoulder</p>
                     <p id="rocketsText" onMouseOver={this.showrockets} onMouseOut={() => {this.resetBackground(); this.unshowrockets()}}>Rockets</p>
-                    <p id="snipeText" onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>Snipe</p>
+                    <p id="snipeTextNarrows" onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>Snipe</p>
                     <p id="stageText" onMouseOver={this.showstage} onMouseOut={() => {this.resetBackground(); this.unshowstage()}}>Stage</p>
                     <p id="topLeftText" onMouseOver={this.showtopLeft} onMouseOut={() => {this.resetBackground(); this.unshowtopLeft()}}>Top Left</p>
                     <p id="topRightText" onMouseOver={this.showtopRight} onMouseOut={() => {this.resetBackground(); this.unshowtopRight()}}>Top Right</p>
@@ -638,6 +638,24 @@ class Narrows extends React.Component{
                     <div id='cannonPowerUp3' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
                         <img src={cannonPowerUp} className='preloadImage'></img>
                     </div>
+                    <div id='cannonPowerUpLeft1Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
+                        <img src={cannonPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='cannonPowerUpLeft2Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
+                        <img src={cannonPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='cannonPowerUpLeft3Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
+                        <img src={cannonPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='cannonPowerUp1Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
+                        <img src={cannonPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='cannonPowerUp2Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
+                        <img src={cannonPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='cannonPowerUp3Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
+                        <img src={cannonPowerUp} className='preloadImage'></img>
+                    </div>
                     <div id='cannonShockwave' onMouseOver={this.showcannonShockwave} onMouseOut={() => {this.resetBackground(); this.unshowcannonShockwave()}}>
                         <img src={cannonShockwave} className='preloadImage'></img>
                     </div>
@@ -661,6 +679,12 @@ class Narrows extends React.Component{
                     </div>
                     <div id='cannonSpawnLeft' onMouseOver={this.showcannonSpawn} onMouseOut={() => {this.resetBackground(); this.unshowcannonSpawn()}}>
                         <img src={cannonSpawn} className='preloadImage'></img>
+                    </div>
+                    <div id='flag' onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>
+                        <img src={flag} className='preloadImage'></img>
+                    </div>
+                    <div id='flagLeft' onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>
+                        <img src={flag} className='preloadImage'></img>
                     </div>
                     <div id='flagDoor' onMouseOver={this.showflagDoor} onMouseOut={() => {this.resetBackground(); this.unshowflagDoor()}}>
                         <img src={flagDoor} className='preloadImage'></img>
@@ -707,6 +731,18 @@ class Narrows extends React.Component{
                     <div id='flagPowerUpLeft3' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
                         <img src={flagPowerUp} className='preloadImage'></img>
                     </div>
+                    <div id='flagPowerUp1Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
+                        <img src={flagPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='flagPowerUp2Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
+                        <img src={flagPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='flagPowerUpLeft1Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
+                        <img src={flagPowerUp} className='preloadImage'></img>
+                    </div>
+                    <div id='flagPowerUpLeft2Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
+                        <img src={flagPowerUp} className='preloadImage'></img>
+                    </div>
                     <div id='flagShockwave' onMouseOver={this.showflagShockwave} onMouseOut={() => {this.resetBackground(); this.unshowflagShockwave()}}>
                         <img src={flagShockwave} className='preloadImage'></img>
                     </div>
@@ -725,19 +761,22 @@ class Narrows extends React.Component{
                     <div id='flagLobbyLeft' onMouseOver={this.showflagLobby} onMouseOut={() => {this.resetBackground(); this.unshowflagLobby()}}>
                         <img src={flagLobby} className='preloadImage'></img>
                     </div>
-                    <div id='l01' onMouseOver={this.showl01} onMouseOut={() => {this.resetBackground(); this.unshowl0()}}>
+                    <div id='l01' onMouseOver={this.showl0} onMouseOut={() => {this.resetBackground(); this.unshowl0()}}>
                         <img src={l0} className='preloadImage'></img>
                     </div>
-                    <div id='l02' onMouseOver={this.showl02} onMouseOut={() => {this.resetBackground(); this.unshowl0()}}>
+                    <div id='l02' onMouseOver={this.showl0} onMouseOut={() => {this.resetBackground(); this.unshowl0()}}>
                         <img src={l0} className='preloadImage'></img>
                     </div>
                     <div id='l1' onMouseOver={this.showl1} onMouseOut={() => {this.resetBackground(); this.unshowl1()}}>
                         <img src={l1} className='preloadImage'></img>
                     </div>
-                    <div id='l21' onMouseOver={this.showl21} onMouseOut={() => {this.resetBackground(); this.unshowl2()}}>
+                    <div id='l1Bottom' onMouseOver={this.showl1} onMouseOut={() => {this.resetBackground(); this.unshowl1()}}>
+                        <img src={l1} className='preloadImage'></img>
+                    </div>
+                    <div id='l2' onMouseOver={this.showl2} onMouseOut={() => {this.resetBackground(); this.unshowl2()}}>
                         <img src={l2} className='preloadImage'></img>
                     </div>
-                    <div id='l22' onMouseOver={this.showl22} onMouseOut={() => {this.resetBackground(); this.unshowl2()}}>
+                    <div id='l2Bottom' onMouseOver={this.showl2} onMouseOut={() => {this.resetBackground(); this.unshowl2()}}>
                         <img src={l2} className='preloadImage'></img>
                     </div>
                     <div id='l3' onMouseOver={this.showl3} onMouseOut={() => {this.resetBackground(); this.unshowl3()}}>
@@ -752,10 +791,19 @@ class Narrows extends React.Component{
                     <div id='leftBox' onMouseOver={this.showleftBox} onMouseOut={() => {this.resetBackground(); this.unshowleftBox()}}>
                         <img src={leftBox} className='preloadImage'></img>
                     </div>
+                    <div id='leftBoxLeft' onMouseOver={this.showleftBox} onMouseOut={() => {this.resetBackground(); this.unshowleftBox()}}>
+                        <img src={leftBox} className='preloadImage'></img>
+                    </div>
                     <div id='leftShoulder' onMouseOver={this.showleftShoulder} onMouseOut={() => {this.resetBackground(); this.unshowleftShoulder()}}>
                         <img src={leftShoulder} className='preloadImage'></img>
                     </div>
+                    <div id='leftShoulderLeft' onMouseOver={this.showleftShoulder} onMouseOut={() => {this.resetBackground(); this.unshowleftShoulder()}}>
+                        <img src={leftShoulder} className='preloadImage'></img>
+                    </div>
                     <div id='lobby' onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>
+                        <img src={lobby} className='preloadImage'></img>
+                    </div>
+                    <div id='lobbyLeft' onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>
                         <img src={lobby} className='preloadImage'></img>
                     </div>
                     <div id='mainCannon' onMouseOver={this.showmainCannon} onMouseOut={() => {this.resetBackground(); this.unshowmainCannon()}}>
@@ -800,6 +848,9 @@ class Narrows extends React.Component{
                     <div id='r1' onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>
                         <img src={r1} className='preloadImage'></img>
                     </div>
+                    <div id='r1Bottom' onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>
+                        <img src={r1} className='preloadImage'></img>
+                    </div>
                     <div id='r21' onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>
                         <img src={r2} className='preloadImage'></img>
                     </div>
@@ -841,6 +892,12 @@ class Narrows extends React.Component{
                     </div>
                     <div id='snipeLeft2' onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>
                         <img src={snipe} className='preloadImage'></img>
+                    </div>
+                    <div id='stage' onMouseOver={this.showstage} onMouseOut={() => {this.resetBackground(); this.unshowstage()}}>
+                        <img src={stage} className='preloadImage'></img>
+                    </div>
+                    <div id='stageLeft' onMouseOver={this.showstage} onMouseOut={() => {this.resetBackground(); this.unshowstage()}}>
+                        <img src={stage} className='preloadImage'></img>
                     </div>
                     <div id='topLeft' onMouseOver={this.showtopLeft} onMouseOut={() => {this.resetBackground(); this.unshowtopLeft()}}>
                         <img src={topLeft} className='preloadImage'></img>
