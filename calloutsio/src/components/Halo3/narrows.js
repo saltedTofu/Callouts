@@ -47,865 +47,192 @@ import topLeft from './BlueprintPics/narrowsBPs/topLeft.png'
 import topRight from './BlueprintPics/narrowsBPs/topRight.png'
 
 class Narrows extends React.Component{
-    loadAll = () => {
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${afro})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${backCannon})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${backFlag})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannon})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonDoor})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonLobby})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonPowerUp})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonShockwave})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonSneaky})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonSpawn})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flag})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagBox})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagDoor})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagLobby})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagPowerUp})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagShockwave})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagSneaky})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l0})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l1})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l2})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l3})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l4})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${leftAttic})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${leftBox})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${leftShoulder})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${lobby})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${mainCannon})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${fiftyMauler})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${miniMohawk})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${mohawk})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${powerUp})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r0})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r1})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r2})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r3})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r4})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rightAttic})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rightBox})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rightShoulder})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rockets})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${snipe})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${stage})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${topLeft})`;
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${topRight})`;
+    turnGreen(div){
+        div.style.fill="rgba(0, 255, 0, 0.5)";
     }
-    showafro = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${afro})`;
-        document.getElementById('afroText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
+    returnColor(div){
+        div.style.fill="rgba(0, 0, 0, 0)";
     }
-    unshowafro = () => {
-        document.getElementById('afroText').style.color='white';
+    textGreen(textP){
+        textP.style.color="rgba(0, 255, 0, 1)"
     }
-    showbackCannon = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${backCannon})`;
-        document.getElementById('backCannonText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowbackCannon = () => {
-        document.getElementById('backCannonText').style.color='white';
-    }
-    showbackFlag = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${backFlag})`;
-        document.getElementById('backFlagText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowbackFlag = () => {
-        document.getElementById('backFlagText').style.color='white';
-    }
-    showcannon = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannon})`;
-        document.getElementById('cannonText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowcannon = () => {
-        document.getElementById('cannonText').style.color='white';
-    }
-    showcannonDoor = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonDoor})`;
-        document.getElementById('cannonDoorText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowcannonDoor = () => {
-        document.getElementById('cannonDoorText').style.color='white';
-    }
-    showcannonLobby = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonLobby})`;
-        document.getElementById('cannonLobbyText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowcannonLobby = () => {
-        document.getElementById('cannonLobbyText').style.color='white';
-    }
-    showcannonPowerUp = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonPowerUp})`;
-        document.getElementById('cannonPowerUpText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowcannonPowerUp = () => {
-        document.getElementById('cannonPowerUpText').style.color='white';
-    }
-    showcannonShockwave = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonShockwave})`;
-        document.getElementById('cannonShockwaveText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowcannonShockwave = () => {
-        document.getElementById('cannonShockwaveText').style.color='white';
-    }
-    showcannonSneaky = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonSneaky})`;
-        document.getElementById('cannonSneakyText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowcannonSneaky = () => {
-        document.getElementById('cannonSneakyText').style.color='white';
-    }
-    showcannonSpawn = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${cannonSpawn})`;
-        document.getElementById('cannonSpawnText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowcannonSpawn = () => {
-        document.getElementById('cannonSpawnText').style.color='white';
-    }
-    showflag = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flag})`;
-        document.getElementById('flagText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowflag = () => {
-        document.getElementById('flagText').style.color='white';
-    }
-    showflagBox = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagBox})`;
-        document.getElementById('flagBoxText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowflagBox = () => {
-        document.getElementById('flagBoxText').style.color='white';
-    }
-    showflagDoor = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagDoor})`;
-        document.getElementById('flagDoorText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowflagDoor = () => {
-        document.getElementById('flagDoorText').style.color='white';
-    }
-    showflagLobby = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagLobby})`;
-        document.getElementById('flagLobbyText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowflagLobby = () => {
-        document.getElementById('flagLobbyText').style.color='white';
-    }
-    showflagPowerUp = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagPowerUp})`;
-        document.getElementById('flagPowerUpText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowflagPowerUp = () => {
-        document.getElementById('flagPowerUpText').style.color='white';
-    }
-    showflagShockwave = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagShockwave})`;
-        document.getElementById('flagShockwaveText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowflagShockwave = () => {
-        document.getElementById('flagShockwaveText').style.color='white';
-    }
-    showflagSneaky = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${flagSneaky})`;
-        document.getElementById('flagSneakyText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowflagSneaky = () => {
-        document.getElementById('flagSneakyText').style.color='white';
-    }
-    showl0 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l0})`;
-        document.getElementById('l0Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowl0 = () => {
-        document.getElementById('l0Text').style.color='white';
-    }
-    showl1 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l1})`;
-        document.getElementById('l1Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowl1 = () => {
-        document.getElementById('l1Text').style.color='white';
-    }
-    showl2 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l2})`;
-        document.getElementById('l2Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowl2 = () => {
-        document.getElementById('l2Text').style.color='white';
-    }
-    showl3 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l3})`;
-        document.getElementById('l3Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowl3 = () => {
-        document.getElementById('l3Text').style.color='white';
-    }
-    showl4 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${l4})`;
-        document.getElementById('l4Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowl4 = () => {
-        document.getElementById('l4Text').style.color='white';
-    }
-    showleftAttic = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${leftAttic})`;
-        document.getElementById('leftAtticText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowleftAttic = () => {
-        document.getElementById('leftAtticText').style.color='white';
-    }
-    showleftBox = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${leftBox})`;
-        document.getElementById('leftBoxText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowleftBox = () => {
-        document.getElementById('leftBoxText').style.color='white';
-    }
-    showleftShoulder = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${leftShoulder})`;
-        document.getElementById('leftShoulderText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowleftShoulder = () => {
-        document.getElementById('leftShoulderText').style.color='white';
-    }
-    showlobby = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${lobby})`;
-        document.getElementById('lobbyTextNarrows').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowlobby = () => {
-        document.getElementById('lobbyTextNarrows').style.color='white';
-    }
-    showmainCannon = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${mainCannon})`;
-        document.getElementById('mainCannonText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowmainCannon = () => {
-        document.getElementById('mainCannonText').style.color='white';
-    }
-    showfiftyMauler = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${fiftyMauler})`;
-        document.getElementById('fiftyMaulerText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowfiftyMauler = () => {
-        document.getElementById('fiftyMaulerText').style.color='white';
-    }
-    showminiMohawk = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${miniMohawk})`;
-        document.getElementById('miniMohawkText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowminiMohawk = () => {
-        document.getElementById('miniMohawkText').style.color='white';
-    }
-    showmohawk = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${mohawk})`;
-        document.getElementById('mohawkText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowmohawk = () => {
-        document.getElementById('mohawkText').style.color='white';
-    }
-    showpowerUp = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${powerUp})`;
-        document.getElementById('powerUpText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowpowerUp = () => {
-        document.getElementById('powerUpText').style.color='white';
-    }
-    showr0 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r0})`;
-        document.getElementById('r0Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowr0 = () => {
-        document.getElementById('r0Text').style.color='white';
-    }
-    showr1 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r1})`;
-        document.getElementById('r1TextNarrows').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowr1 = () => {
-        document.getElementById('r1TextNarrows').style.color='white';
-    }
-    showr2 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r2})`;
-        document.getElementById('r2TextNarrows').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowr2 = () => {
-        document.getElementById('r2TextNarrows').style.color='white';
-    }
-    showr3 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r3})`;
-        document.getElementById('r3Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowr3 = () => {
-        document.getElementById('r3Text').style.color='white';
-    }
-    showr4 = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${r4})`;
-        document.getElementById('r4Text').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowr4 = () => {
-        document.getElementById('r4Text').style.color='white';
-    }
-    showrightAttic = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rightAttic})`;
-        document.getElementById('rightAtticText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowrightAttic = () => {
-        document.getElementById('rightAtticText').style.color='white';
-    }
-    showrightBox = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rightBox})`;
-        document.getElementById('rightBoxText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowrightBox = () => {
-        document.getElementById('rightBoxText').style.color='white';
-    }
-    showrightShoulder = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rightShoulder})`;
-        document.getElementById('rightShoulderText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowrightShoulder = () => {
-        document.getElementById('rightShoulderText').style.color='white';
-    }
-    showrockets = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${rockets})`;
-        document.getElementById('rocketsText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowrockets = () => {
-        document.getElementById('rocketsText').style.color='white';
-    }
-    showsnipe = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${snipe})`;
-        document.getElementById('snipeTextNarrows').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowsnipe = () => {
-        document.getElementById('snipeTextNarrows').style.color='white';
-    }
-    showstage = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${stage})`;
-        document.getElementById('stageText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowstage = () => {
-        document.getElementById('stageText').style.color='white';
-    }
-    showtopLeft = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${topLeft})`;
-        document.getElementById('topLeftText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowtopLeft = () => {
-        document.getElementById('topLeftText').style.color='white';
-    }
-    showtopRight = () => {
-        this.loadAll();
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${topRight})`;
-        document.getElementById('topRightText').style.color='green';
-        document.getElementById('narrowsInGamePicText').style.color="white";
-        document.getElementById('narrowsInGamePicText').innerHTML="penis2";
-    }
-    unshowtopRight = () => {
-        document.getElementById('topRightText').style.color='white';
-    }
-    resetBackground = () =>{
-        document.getElementById('narrowsMap').style.backgroundImage=`url(${narrowsBlueprint})`;
+    returnTextColor(textP){
+        textP.style.color="white";
     }
     render(){
         return(
             <div className="narrowsFullGrid">
                 <h1 className="mapTitleNarrows">Narrows</h1>
-                <div className="calloutsList" id="narrowsCallouts">
-                    <p id="afroText" onMouseOver={this.showafro} onMouseOut={() => {this.resetBackground(); this.unshowafro()}}>Afro</p>
-                    <p id="backCannonText" onMouseOver={this.showbackCannon} onMouseOut={() => {this.resetBackground(); this.unshowbackCannon()}}>Back Cannon</p>
-                    <p id="backFlagText" onMouseOver={this.showbackFlag} onMouseOut={() => {this.resetBackground(); this.unshowbackFlag()}}>Back Flag</p>
-                    <p id="cannonText" onMouseOver={this.showcannon} onMouseOut={() => {this.resetBackground(); this.unshowcannon()}}>Cannon</p>
-                    <p id="cannonDoorText" onMouseOver={this.showcannonDoor} onMouseOut={() => {this.resetBackground(); this.unshowcannonDoor()}}>Cannon Door</p>
-                    <p id="cannonLobbyText" onMouseOver={this.showcannonLobby} onMouseOut={() => {this.resetBackground(); this.unshowcannonLobby()}}>Cannon Lobby</p>
-                    <p id="cannonPowerUpText" onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>Cannon Power Up</p>
-                    <p id="cannonShockwaveText" onMouseOver={this.showcannonShockwave} onMouseOut={() => {this.resetBackground(); this.unshowcannonShockwave()}}>Cannon Shockwave</p>
-                    <p id="cannonSneakyText" onMouseOver={this.showcannonSneaky} onMouseOut={() => {this.resetBackground(); this.unshowcannonSneaky()}}>Cannon Sneaky</p>
-                    <p id="cannonSpawnText" onMouseOver={this.showcannonSpawn} onMouseOut={() => {this.resetBackground(); this.unshowcannonSpawn()}}>Cannon Spawn</p>
-                    <p id="flagText" onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>Flag</p>
-                    <p id="flagBoxText" onMouseOver={this.showflagBox} onMouseOut={() => {this.resetBackground(); this.unshowflagBox()}}>Flag Box</p>
-                    <p id="flagDoorText" onMouseOver={this.showflagDoor} onMouseOut={() => {this.resetBackground(); this.unshowflagDoor()}}>Flag Door</p>
-                    <p id="flagLobbyText" onMouseOver={this.showflagLobby} onMouseOut={() => {this.resetBackground(); this.unshowflagLobby()}}>Flag Lobby</p>
-                    <p id="flagPowerUpText" onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>Flag Power Up</p>
-                    <p id="flagShockwaveText" onMouseOver={this.showflagShockwave} onMouseOut={() => {this.resetBackground(); this.unshowflagShockwave()}}>Flag Shockwave</p>
-                    <p id="flagSneakyText" onMouseOver={this.showflagSneaky} onMouseOut={() => {this.resetBackground(); this.unshowflagSneaky()}}>Flag Sneaky</p>
-                    <p id="l0Text" onMouseOver={this.showl0} onMouseOut={() => {this.resetBackground(); this.unshowl0()}}>L0</p>
-                    <p id="l1Text" onMouseOver={this.showl1} onMouseOut={() => {this.resetBackground(); this.unshowl1()}}>L1</p>
-                    <p id="l2Text" onMouseOver={this.showl2} onMouseOut={() => {this.resetBackground(); this.unshowl2()}}>L2</p>
-                    <p id="l3Text" onMouseOver={this.showl3} onMouseOut={() => {this.resetBackground(); this.unshowl3()}}>L3</p>
-                    <p id="l4Text" onMouseOver={this.showl4} onMouseOut={() => {this.resetBackground(); this.unshowl4()}}>L4</p>
-                    <p id="leftAtticText" onMouseOver={this.showleftAttic} onMouseOut={() => {this.resetBackground(); this.unshowleftAttic()}}>Left Attic</p>
-                    <p id="leftBoxText" onMouseOver={this.showleftBox} onMouseOut={() => {this.resetBackground(); this.unshowleftBox()}}>Left Box</p>
-                    <p id="leftShoulderText" onMouseOver={this.showleftShoulder} onMouseOut={() => {this.resetBackground(); this.unshowleftShoulder()}}>Left Shoulder</p>
-                    <p id="lobbyTextNarrows" onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>Lobby</p>
-                    <p id="mainCannonText" onMouseOver={this.showmainCannon} onMouseOut={() => {this.resetBackground(); this.unshowmainCannon()}}>Main Cannon</p>
-                    <p id="fiftyMaulerText" onMouseOver={this.showfiftyMauler} onMouseOut={() => {this.resetBackground(); this.unshowfiftyMauler()}}>Mauler/50</p>
-                    <p id="miniMohawkText" onMouseOver={this.showminiMohawk} onMouseOut={() => {this.resetBackground(); this.unshowminiMohawk()}}>Mini Mohawk</p>
-                    <p id="mohawkText" onMouseOver={this.showmohawk} onMouseOut={() => {this.resetBackground(); this.unshowmohawk()}}>Mohawk</p>
-                    <p id="powerUpText" onMouseOver={this.showpowerUp} onMouseOut={() => {this.resetBackground(); this.unshowpowerUp()}}>Power Up</p>
-                    <p id="r0Text" onMouseOver={this.showr0} onMouseOut={() => {this.resetBackground(); this.unshowr0()}}>R0</p>
-                    <p id="r1TextNarrows" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>R1</p>
-                    <p id="r2TextNarrows" onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>R2</p>
-                    <p id="r3Text" onMouseOver={this.showr3} onMouseOut={() => {this.resetBackground(); this.unshowr3()}}>R3</p>
-                    <p id="r4Text" onMouseOver={this.showr4} onMouseOut={() => {this.resetBackground(); this.unshowr4()}}>R4</p>
-                    <p id="rightAtticText" onMouseOver={this.showrightAttic} onMouseOut={() => {this.resetBackground(); this.unshowrightAttic()}}>Right Attic</p>
-                    <p id="rightBoxText" onMouseOver={this.showrightBox} onMouseOut={() => {this.resetBackground(); this.unshowrightBox()}}>Right Box</p>
-                    <p id="rightShoulderText" onMouseOver={this.showrightShoulder} onMouseOut={() => {this.resetBackground(); this.unshowrightShoulder()}}>Right Shoulder</p>
-                    <p id="rocketsText" onMouseOver={this.showrockets} onMouseOut={() => {this.resetBackground(); this.unshowrockets()}}>Rockets</p>
-                    <p id="snipeTextNarrows" onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>Snipe</p>
-                    <p id="stageText" onMouseOver={this.showstage} onMouseOut={() => {this.resetBackground(); this.unshowstage()}}>Stage</p>
-                    <p id="topLeftText" onMouseOver={this.showtopLeft} onMouseOut={() => {this.resetBackground(); this.unshowtopLeft()}}>Top Left</p>
-                    <p id="topRightText" onMouseOver={this.showtopRight} onMouseOut={() => {this.resetBackground(); this.unshowtopRight()}}>Top Right</p>
+                <div className="calloutsList" id="narrowsCallouts">   
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('afroNarrows')); this.textGreen(document.getElementById('afroNarrowsText')); this.turnGreen(document.getElementById('afroNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('afroNarrows')); this.returnTextColor(document.getElementById('afroNarrowsText')); this.returnColor(document.getElementById('afroNarrows2'))}} id="afroNarrowsText">Afro</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('backCannonNarrows')); this.textGreen(document.getElementById('backCannonNarrowsText')); this.turnGreen(document.getElementById('backCannonNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backCannonNarrows')); this.returnTextColor(document.getElementById('backCannonNarrowsText')); this.returnColor(document.getElementById('backCannonNarrows2'))}} id="backCannonNarrowsText">Back Cannon</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('backFlagNarrows')); this.textGreen(document.getElementById('backFlagNarrowsText')); this.turnGreen(document.getElementById('backFlagNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backFlagNarrows')); this.returnTextColor(document.getElementById('backFlagNarrowsText')); this.returnColor(document.getElementById('backFlagNarrows2'))}} id="backFlagNarrowsText">Back Flag</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cannonNarrows')); this.textGreen(document.getElementById('cannonNarrowsText')); this.turnGreen(document.getElementById('cannonNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonNarrows')); this.returnTextColor(document.getElementById('cannonNarrowsText')); this.returnColor(document.getElementById('cannonNarrows2'))}} id="cannonNarrowsText">Cannon</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cannonDoorNarrows')); this.textGreen(document.getElementById('cannonDoorNarrowsText')); this.turnGreen(document.getElementById('cannonDoorNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonDoorNarrows')); this.returnTextColor(document.getElementById('cannonDoorNarrowsText')); this.returnColor(document.getElementById('cannonDoorNarrows2'))}} id="cannonDoorNarrowsText">Cannon Door</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cannonLobbyNarrows')); this.textGreen(document.getElementById('cannonLobbyNarrowsText')); this.turnGreen(document.getElementById('cannonLobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonLobbyNarrows')); this.returnTextColor(document.getElementById('cannonLobbyNarrowsText')); this.returnColor(document.getElementById('cannonLobbyNarrows2'))}} id="cannonLobbyNarrowsText">Cannon Lobby</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cannonPowerUpNarrows')); this.textGreen(document.getElementById('cannonPowerUpNarrowsText')); this.turnGreen(document.getElementById('cannonPowerUpNarrows2')); this.turnGreen(document.getElementById('cannonPowerUpNarrows3')); this.turnGreen(document.getElementById('cannonPowerUpNarrows4'));}} onMouseOut={() => {this.returnColor(document.getElementById('cannonPowerUpNarrows')); this.returnTextColor(document.getElementById('cannonPowerUpNarrowsText')); this.returnColor(document.getElementById('cannonPowerUpNarrows2')); this.returnColor(document.getElementById('cannonPowerUpNarrows3')); this.returnColor(document.getElementById('cannonPowerUpNarrows4'))}} id="cannonPowerUpNarrowsText">Cannon Power Up</p>
+                    
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cannonShockwaveNarrows')); this.textGreen(document.getElementById('cannonShockwaveNarrowsText')); this.turnGreen(document.getElementById('cannonShockwaveNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonShockwaveNarrows')); this.returnTextColor(document.getElementById('cannonShockwaveNarrowsText')); this.returnColor(document.getElementById('cannonShockwaveNarrows2'))}} id="cannonShockwaveNarrowsText">Cannon Shockwave</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cannonSneakyNarrows')); this.textGreen(document.getElementById('cannonSneakyNarrowsText')); this.turnGreen(document.getElementById('cannonSneakyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonSneakyNarrows')); this.returnTextColor(document.getElementById('cannonSneakyNarrowsText')); this.returnColor(document.getElementById('cannonSneakyNarrows2'))}} id="cannonSneakyNarrowsText">Cannon Sneaky</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cannonSpawnNarrows')); this.textGreen(document.getElementById('cannonSpawnNarrowsText')); this.turnGreen(document.getElementById('cannonSpawnNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonSpawnNarrows')); this.returnTextColor(document.getElementById('cannonSpawnNarrowsText')); this.returnColor(document.getElementById('cannonSpawnNarrows2'))}} id="cannonSpawnNarrowsText">Cannon Spawn</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagNarrows')); this.textGreen(document.getElementById('flagNarrowsText')); this.turnGreen(document.getElementById('flagNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagNarrows')); this.returnTextColor(document.getElementById('flagNarrowsText')); this.returnColor(document.getElementById('flagNarrows2'))}} id="flagNarrowsText">Flag</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagBoxNarrows')); this.textGreen(document.getElementById('flagBoxNarrowsText')); this.turnGreen(document.getElementById('flagBoxNarrows2')); this.turnGreen(document.getElementById('flagBoxNarrows3')); this.turnGreen(document.getElementById('flagBoxNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagBoxNarrows')); this.returnTextColor(document.getElementById('flagBoxNarrowsText')); this.returnColor(document.getElementById('flagBoxNarrows2')); this.returnColor(document.getElementById('flagBoxNarrows3')); this.returnColor(document.getElementById('flagBoxNarrows4'))}} id="flagBoxNarrowsText">Flag Box</p>
+                    
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagDoorNarrows')); this.textGreen(document.getElementById('flagDoorNarrowsText')); this.turnGreen(document.getElementById('flagDoorNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagDoorNarrows')); this.returnTextColor(document.getElementById('flagDoorNarrowsText')); this.returnColor(document.getElementById('flagDoorNarrows2'))}} id="flagDoorNarrowsText">flagDoorNarrows</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagLobbyNarrows')); this.textGreen(document.getElementById('flagLobbyNarrowsText')); this.turnGreen(document.getElementById('flagLobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagLobbyNarrows')); this.returnTextColor(document.getElementById('flagLobbyNarrowsText')); this.returnColor(document.getElementById('flagLobbyNarrows2'))}} id="flagLobbyNarrowsText">flagLobbyNarrows</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagPowerUpNarrows')); this.textGreen(document.getElementById('flagPowerUpNarrowsText')); this.turnGreen(document.getElementById('flagPowerUpNarrows2')); this.turnGreen(document.getElementById('flagPowerUpNarrows3')); this.turnGreen(document.getElementById('flagPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPowerUpNarrows')); this.returnTextColor(document.getElementById('flagPowerUpNarrowsText')); this.returnColor(document.getElementById('flagPowerUpNarrows2')); this.returnColor(document.getElementById('flagPowerUpNarrows3')); this.returnColor(document.getElementById('flagPowerUpNarrows4'))}} id="flagPowerUpNarrowsText">Flag Power Up</p>
+                    
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagShockwaveNarrows')); this.textGreen(document.getElementById('flagShockwaveNarrowsText')); this.turnGreen(document.getElementById('flagShockwaveNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagShockwaveNarrows')); this.returnTextColor(document.getElementById('flagShockwaveNarrowsText')); this.returnColor(document.getElementById('flagShockwaveNarrows2'))}} id="flagShockwaveNarrowsText">Flag Shockwave</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagSneakyNarrows')); this.textGreen(document.getElementById('flagSneakyNarrowsText')); this.turnGreen(document.getElementById('flagSneakyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagSneakyNarrows')); this.returnTextColor(document.getElementById('flagSneakyNarrowsText')); this.returnColor(document.getElementById('flagSneakyNarrows2'))}} id="flagSneakyNarrowsText">Flag Sneaky</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('l0Narrows')); this.textGreen(document.getElementById('l0NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('l0Narrows')); this.returnTextColor(document.getElementById('l0NarrowsText'))}} id="l0NarrowsText">l0Narrows</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('l1Narrows')); this.textGreen(document.getElementById('l1NarrowsText')); this.turnGreen(document.getElementById('l1Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('l1Narrows')); this.returnTextColor(document.getElementById('l1NarrowsText')); this.returnColor(document.getElementById('l1Narrows2'))}} id="l1NarrowsText">L1</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('l2Narrows')); this.textGreen(document.getElementById('l2NarrowsText')); this.turnGreen(document.getElementById('l2Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('l2Narrows')); this.returnTextColor(document.getElementById('l2NarrowsText')); this.returnColor(document.getElementById('l2Narrows2'))}} id="l2NarrowsText">L2</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('l3Narrows')); this.textGreen(document.getElementById('l3NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('l3Narrows')); this.returnTextColor(document.getElementById('l3NarrowsText'))}} id="l3NarrowsText">L3</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('l4Narrows')); this.textGreen(document.getElementById('l4NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('l4Narrows')); this.returnTextColor(document.getElementById('l4NarrowsText'))}} id="l4NarrowsText">L4</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('leftAtticNarrows')); this.textGreen(document.getElementById('leftAtticNarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftAtticNarrows')); this.returnTextColor(document.getElementById('leftAtticNarrowsText'))}} id="leftAtticNarrowsText">Left Attic</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('leftBoxNarrows')); this.textGreen(document.getElementById('leftBoxNarrowsText')); this.turnGreen(document.getElementById('leftBoxNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftBoxNarrows')); this.returnTextColor(document.getElementById('leftBoxNarrowsText')); this.returnColor(document.getElementById('leftBoxNarrows2'))}} id="leftBoxNarrowsText">Left Box</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('leftShoulderNarrows')); this.textGreen(document.getElementById('leftShoulderNarrowsText')); this.turnGreen(document.getElementById('leftShoulderNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftShoulderNarrows')); this.returnTextColor(document.getElementById('leftShoulderNarrowsText')); this.returnColor(document.getElementById('leftShoulderNarrows2'))}} id="leftShoulderNarrowsText">Left Shoulder</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('lobbyNarrows')); this.textGreen(document.getElementById('lobbyNarrowsText')); this.turnGreen(document.getElementById('lobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('lobbyNarrows')); this.returnTextColor(document.getElementById('lobbyNarrowsText')); this.returnColor(document.getElementById('lobbyNarrows2'))}} id="lobbyNarrowsText">Lobby</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('mainCannonNarrows')); this.textGreen(document.getElementById('mainCannonNarrowsText')); this.turnGreen(document.getElementById('mainCannonNarrows2')); this.turnGreen(document.getElementById('mainCannonNarrows3')); this.turnGreen(document.getElementById('mainCannonNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainCannonNarrows')); this.returnTextColor(document.getElementById('mainCannonNarrowsText')); this.returnColor(document.getElementById('mainCannonNarrows2')); this.returnColor(document.getElementById('mainCannonNarrows3')); this.returnColor(document.getElementById('mainCannonNarrows4'))}} id="mainCannonNarrowsText">Main Cannon</p>
+                    
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('mauler50Narrows')); this.textGreen(document.getElementById('mauler50NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('mauler50Narrows')); this.returnTextColor(document.getElementById('mauler50NarrowsText'))}} id="mauler50NarrowsText">Mauler/50</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('miniMohawkNarrows')); this.textGreen(document.getElementById('miniMohawkNarrowsText')); this.turnGreen(document.getElementById('miniMohawkNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('miniMohawkNarrows')); this.returnTextColor(document.getElementById('miniMohawkNarrowsText')); this.returnColor(document.getElementById('miniMohawkNarrows2'))}} id="miniMohawkNarrowsText">Mini Mohawk</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('mohawkNarrows')); this.textGreen(document.getElementById('mohawkNarrowsText')); this.turnGreen(document.getElementById('mohawkNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('mohawkNarrows')); this.returnTextColor(document.getElementById('mohawkNarrowsText')); this.returnColor(document.getElementById('mohawkNarrows2'))}} id="mohawkNarrowsText">Mohawk</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('powerUpNarrows')); this.textGreen(document.getElementById('powerUpNarrowsText')); this.turnGreen(document.getElementById('powerUpNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('powerUpNarrows')); this.returnTextColor(document.getElementById('powerUpNarrowsText')); this.returnColor(document.getElementById('powerUpNarrows2'))}} id="powerUpNarrowsText">Power Up</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('r0Narrows')); this.textGreen(document.getElementById('r0NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r0Narrows')); this.returnTextColor(document.getElementById('r0NarrowsText'))}} id="r0NarrowsText">R0</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('r1Narrows')); this.textGreen(document.getElementById('r1NarrowsText')); this.turnGreen(document.getElementById('r1Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r1Narrows')); this.returnTextColor(document.getElementById('r1NarrowsText')); this.returnColor(document.getElementById('r1Narrows2'))}} id="r1NarrowsText">R1</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('r2Narrows')); this.textGreen(document.getElementById('r2NarrowsText')); this.turnGreen(document.getElementById('r2Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r2Narrows')); this.returnTextColor(document.getElementById('r2NarrowsText')); this.returnColor(document.getElementById('r2Narrows2'))}} id="r2NarrowsText">R2</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('r3Narrows')); this.textGreen(document.getElementById('r3NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r3Narrows')); this.returnTextColor(document.getElementById('r3NarrowsText'))}} id="r3NarrowsText">R3</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('r4Narrows')); this.textGreen(document.getElementById('r4NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r4Narrows')); this.returnTextColor(document.getElementById('r4NarrowsText'))}} id="r4NarrowsText">R4</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('rightAtticNarrows')); this.textGreen(document.getElementById('rightAtticNarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightAtticNarrows')); this.returnTextColor(document.getElementById('rightAtticNarrowsText'))}} id="rightAtticNarrowsText">Right Attic</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('rightBoxNarrows')); this.textGreen(document.getElementById('rightBoxNarrowsText')); this.turnGreen(document.getElementById('rightBoxNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightBoxNarrows')); this.returnTextColor(document.getElementById('rightBoxNarrowsText')); this.returnColor(document.getElementById('rightBoxNarrows2'))}} id="rightBoxNarrowsText">Right Box</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('rightShoulderNarrows')); this.textGreen(document.getElementById('rightShoulderNarrowsText')); this.turnGreen(document.getElementById('rightShoulderNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightShoulderNarrows')); this.returnTextColor(document.getElementById('rightShoulderNarrowsText')); this.returnColor(document.getElementById('rightShoulderNarrows2'))}} id="rightShoulderNarrowsText">Right Shoulder</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('rocketsNarrows')); this.textGreen(document.getElementById('rocketsNarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('rocketsNarrows')); this.returnTextColor(document.getElementById('rocketsNarrowsText'))}} id="rocketsNarrowsText">Rockets</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('stageNarrows')); this.textGreen(document.getElementById('stageNarrowsText')); this.turnGreen(document.getElementById('stageNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('stageNarrows')); this.returnTextColor(document.getElementById('stageNarrowsText')); this.returnColor(document.getElementById('stageNarrows2'))}} id="stageNarrowsText">Stage</p>
                 </div>
-                <div id="narrowsMap">
-                    <div id='fiftyMauler' onMouseOver={this.showfiftyMauler} onMouseOut={() => {this.resetBackground(); this.unshowfiftyMauler()}}>
-                        <img src={fiftyMauler} className='preloadImage'></img>
-                    </div>
-                    <div id='afro' onMouseOver={this.showafro} onMouseOut={() => {this.resetBackground(); this.unshowafro()}}>
-                        <img src={afro} className='preloadImage'></img>
-                    </div>
-                    <div id='afroLeft' onMouseOver={this.showafro} onMouseOut={() => {this.resetBackground(); this.unshowafro()}}>
-                        <img src={afro} className='preloadImage'></img>
-                    </div>
-                    <div id='backCannon' onMouseOver={this.showbackCannon} onMouseOut={() => {this.resetBackground(); this.unshowbackCannon()}}>
-                        <img src={backCannon} className='preloadImage'></img>
-                    </div>
-                    <div id='backCannonLeft' onMouseOver={this.showbackCannon} onMouseOut={() => {this.resetBackground(); this.unshowbackCannon()}}>
-                        <img src={backCannon} className='preloadImage'></img>
-                    </div>
-                    <div id='backFlag' onMouseOver={this.showbackFlag} onMouseOut={() => {this.resetBackground(); this.unshowbackFlag()}}>
-                        <img src={backFlag} className='preloadImage'></img>
-                    </div>
-                    <div id='backFlagLeft' onMouseOver={this.showbackFlag} onMouseOut={() => {this.resetBackground(); this.unshowbackFlag()}}>
-                        <img src={backFlag} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonLeft' onMouseOver={this.showcannon} onMouseOut={() => {this.resetBackground(); this.unshowcannon()}}>
-                        <img src={cannon} className='preloadImage'></img>
-                    </div>
-                    <div id='cannon' onMouseOver={this.showcannon} onMouseOut={() => {this.resetBackground(); this.unshowcannon()}}>
-                        <img src={cannon} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonLobbyLeft' onMouseOver={this.showcannonLobby} onMouseOut={() => {this.resetBackground(); this.unshowcannonLobby()}}>
-                        <img src={cannonLobby} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonLobby' onMouseOver={this.showcannonLobby} onMouseOut={() => {this.resetBackground(); this.unshowcannonLobby()}}>
-                        <img src={cannonLobby} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUpLeft1' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUpLeft2' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUpLeft3' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUp1' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUp2' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUp3' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUpLeft1Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUpLeft2Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUpLeft3Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUp1Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUp2Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonPowerUp3Bottom' onMouseOver={this.showcannonPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowcannonPowerUp()}}>
-                        <img src={cannonPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonShockwave' onMouseOver={this.showcannonShockwave} onMouseOut={() => {this.resetBackground(); this.unshowcannonShockwave()}}>
-                        <img src={cannonShockwave} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonShockwaveLeft' onMouseOver={this.showcannonShockwave} onMouseOut={() => {this.resetBackground(); this.unshowcannonShockwave()}}>
-                        <img src={cannonShockwave} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonSneaky' onMouseOver={this.showcannonSneaky} onMouseOut={() => {this.resetBackground(); this.unshowcannonSneaky()}}>
-                        <img src={cannonSneaky} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonSneakyLeft' onMouseOver={this.showcannonSneaky} onMouseOut={() => {this.resetBackground(); this.unshowcannonSneaky()}}>
-                        <img src={cannonSneaky} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonDoor' onMouseOver={this.showcannonDoor} onMouseOut={() => {this.resetBackground(); this.unshowcannonDoor()}}>
-                        <img src={cannonDoor} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonDoorLeft' onMouseOver={this.showcannonDoor} onMouseOut={() => {this.resetBackground(); this.unshowcannonDoor()}}>
-                        <img src={cannonDoor} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonSpawn' onMouseOver={this.showcannonSpawn} onMouseOut={() => {this.resetBackground(); this.unshowcannonSpawn()}}>
-                        <img src={cannonSpawn} className='preloadImage'></img>
-                    </div>
-                    <div id='cannonSpawnLeft' onMouseOver={this.showcannonSpawn} onMouseOut={() => {this.resetBackground(); this.unshowcannonSpawn()}}>
-                        <img src={cannonSpawn} className='preloadImage'></img>
-                    </div>
-                    <div id='flag' onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>
-                        <img src={flag} className='preloadImage'></img>
-                    </div>
-                    <div id='flagLeft' onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>
-                        <img src={flag} className='preloadImage'></img>
-                    </div>
-                    <div id='flagDoor' onMouseOver={this.showflagDoor} onMouseOut={() => {this.resetBackground(); this.unshowflagDoor()}}>
-                        <img src={flagDoor} className='preloadImage'></img>
-                    </div>
-                    <div id='flagDoorLeft' onMouseOver={this.showflagDoor} onMouseOut={() => {this.resetBackground(); this.unshowflagDoor()}}>
-                        <img src={flagDoor} className='preloadImage'></img>
-                    </div>
-                    <div id='flagBox1' onMouseOver={this.showflagBox} onMouseOut={() => {this.resetBackground(); this.unshowflagBox()}}>
-                        <img src={flagBox} className='preloadImage'></img>
-                    </div>
-                    <div id='flagBox2' onMouseOver={this.showflagBox} onMouseOut={() => {this.resetBackground(); this.unshowflagBox()}}>
-                        <img src={flagBox} className='preloadImage'></img>
-                    </div>
-                    <div id='flagBoxLeft1' onMouseOver={this.showflagBox} onMouseOut={() => {this.resetBackground(); this.unshowflagBox()}}>
-                        <img src={flagBox} className='preloadImage'></img>
-                    </div>
-                    <div id='flagBoxLeft2' onMouseOver={this.showflagBox} onMouseOut={() => {this.resetBackground(); this.unshowflagBox()}}>
-                        <img src={flagBox} className='preloadImage'></img>
-                    </div>
-                    <div id='flagLobby' onMouseOver={this.showflagLobby} onMouseOut={() => {this.resetBackground(); this.unshowflagLobby()}}>
-                        <img src={flagLobby} className='preloadImage'></img>
-                    </div>
-                    <div id='flagLobbyLeft' onMouseOver={this.showflagLobby} onMouseOut={() => {this.resetBackground(); this.unshowflagLobby()}}>
-                        <img src={flagLobby} className='preloadImage'></img>
-                    </div>
-                    <div id='flagLobbyLeft2' onMouseOver={this.showflagLobby} onMouseOut={() => {this.resetBackground(); this.unshowflagLobby()}}>
-                        <img src={flagLobby} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUp1' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUp2' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUp3' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUpLeft1' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUpLeft2' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUpLeft3' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUp1Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUp2Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUpLeft1Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagPowerUpLeft2Bottom' onMouseOver={this.showflagPowerUp} onMouseOut={() => {this.resetBackground(); this.unshowflagPowerUp()}}>
-                        <img src={flagPowerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='flagShockwave' onMouseOver={this.showflagShockwave} onMouseOut={() => {this.resetBackground(); this.unshowflagShockwave()}}>
-                        <img src={flagShockwave} className='preloadImage'></img>
-                    </div>
-                    <div id='flagShockwaveLeft' onMouseOver={this.showflagShockwave} onMouseOut={() => {this.resetBackground(); this.unshowflagShockwave()}}>
-                        <img src={flagShockwave} className='preloadImage'></img>
-                    </div>
-                    <div id='flagSneaky' onMouseOver={this.showflagSneaky} onMouseOut={() => {this.resetBackground(); this.unshowflagSneaky()}}>
-                        <img src={flagSneaky} className='preloadImage'></img>
-                    </div>
-                    <div id='flagSneakyLeft' onMouseOver={this.showflagSneaky} onMouseOut={() => {this.resetBackground(); this.unshowflagSneaky()}}>
-                        <img src={flagSneaky} className='preloadImage'></img>
-                    </div>
-                    <div id='flagLobby' onMouseOver={this.showflagLobby} onMouseOut={() => {this.resetBackground(); this.unshowflagLobby()}}>
-                        <img src={flagLobby} className='preloadImage'></img>
-                    </div>
-                    <div id='flagLobbyLeft' onMouseOver={this.showflagLobby} onMouseOut={() => {this.resetBackground(); this.unshowflagLobby()}}>
-                        <img src={flagLobby} className='preloadImage'></img>
-                    </div>
-                    <div id='l01' onMouseOver={this.showl0} onMouseOut={() => {this.resetBackground(); this.unshowl0()}}>
-                        <img src={l0} className='preloadImage'></img>
-                    </div>
-                    <div id='l02' onMouseOver={this.showl0} onMouseOut={() => {this.resetBackground(); this.unshowl0()}}>
-                        <img src={l0} className='preloadImage'></img>
-                    </div>
-                    <div id='l1' onMouseOver={this.showl1} onMouseOut={() => {this.resetBackground(); this.unshowl1()}}>
-                        <img src={l1} className='preloadImage'></img>
-                    </div>
-                    <div id='l1Bottom' onMouseOver={this.showl1} onMouseOut={() => {this.resetBackground(); this.unshowl1()}}>
-                        <img src={l1} className='preloadImage'></img>
-                    </div>
-                    <div id='l2' onMouseOver={this.showl2} onMouseOut={() => {this.resetBackground(); this.unshowl2()}}>
-                        <img src={l2} className='preloadImage'></img>
-                    </div>
-                    <div id='l2Bottom' onMouseOver={this.showl2} onMouseOut={() => {this.resetBackground(); this.unshowl2()}}>
-                        <img src={l2} className='preloadImage'></img>
-                    </div>
-                    <div id='l3' onMouseOver={this.showl3} onMouseOut={() => {this.resetBackground(); this.unshowl3()}}>
-                        <img src={l3} className='preloadImage'></img>
-                    </div>
-                    <div id='l4' onMouseOver={this.showl4} onMouseOut={() => {this.resetBackground(); this.unshowl4()}}>
-                        <img src={l4} className='preloadImage'></img>
-                    </div>
-                    <div id='leftAttic' onMouseOver={this.showleftAttic} onMouseOut={() => {this.resetBackground(); this.unshowleftAttic()}}>
-                        <img src={leftAttic} className='preloadImage'></img>
-                    </div>
-                    <div id='leftBox' onMouseOver={this.showleftBox} onMouseOut={() => {this.resetBackground(); this.unshowleftBox()}}>
-                        <img src={leftBox} className='preloadImage'></img>
-                    </div>
-                    <div id='leftBoxLeft' onMouseOver={this.showleftBox} onMouseOut={() => {this.resetBackground(); this.unshowleftBox()}}>
-                        <img src={leftBox} className='preloadImage'></img>
-                    </div>
-                    <div id='leftShoulder' onMouseOver={this.showleftShoulder} onMouseOut={() => {this.resetBackground(); this.unshowleftShoulder()}}>
-                        <img src={leftShoulder} className='preloadImage'></img>
-                    </div>
-                    <div id='leftShoulderLeft' onMouseOver={this.showleftShoulder} onMouseOut={() => {this.resetBackground(); this.unshowleftShoulder()}}>
-                        <img src={leftShoulder} className='preloadImage'></img>
-                    </div>
-                    <div id='lobby' onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>
-                        <img src={lobby} className='preloadImage'></img>
-                    </div>
-                    <div id='lobbyLeft' onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>
-                        <img src={lobby} className='preloadImage'></img>
-                    </div>
-                    <div id='mainCannon' onMouseOver={this.showmainCannon} onMouseOut={() => {this.resetBackground(); this.unshowmainCannon()}}>
-                        <img src={mainCannon} className='preloadImage'></img>
-                    </div>
-                    <div id='mainCannon2' onMouseOver={this.showmainCannon} onMouseOut={() => {this.resetBackground(); this.unshowmainCannon()}}>
-                        <img src={mainCannon} className='preloadImage'></img>
-                    </div>
-                    <div id='mainCannonLeft1' onMouseOver={this.showmainCannon} onMouseOut={() => {this.resetBackground(); this.unshowmainCannon()}}>
-                        <img src={mainCannon} className='preloadImage'></img>
-                    </div>
-                    <div id='mainCannonLeft2' onMouseOver={this.showmainCannon} onMouseOut={() => {this.resetBackground(); this.unshowmainCannon()}}>
-                        <img src={mainCannon} className='preloadImage'></img>
-                    </div>
-                    <div id='miniMohawk' onMouseOver={this.showminiMohawk} onMouseOut={() => {this.resetBackground(); this.unshowminiMohawk()}}>
-                        <img src={miniMohawk} className='preloadImage'></img>
-                    </div>
-                    <div id='miniMohawkLeft' onMouseOver={this.showminiMohawk} onMouseOut={() => {this.resetBackground(); this.unshowminiMohawk()}}>
-                        <img src={miniMohawk} className='preloadImage'></img>
-                    </div>
-                    <div id='mohawk' onMouseOver={this.showmohawk} onMouseOut={() => {this.resetBackground(); this.unshowmohawk()}}>
-                        <img src={mohawk} className='preloadImage'></img>
-                    </div>
-                    <div id='mohawkLeft' onMouseOver={this.showmohawk} onMouseOut={() => {this.resetBackground(); this.unshowmohawk()}}>
-                        <img src={mohawk} className='preloadImage'></img>
-                    </div>
-                    <div id='powerUp1' onMouseOver={this.showpowerUp} onMouseOut={() => {this.resetBackground(); this.unshowpowerUp()}}>
-                        <img src={powerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='powerUp2' onMouseOver={this.showpowerUp} onMouseOut={() => {this.resetBackground(); this.unshowpowerUp()}}>
-                        <img src={powerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='powerUpLeft1' onMouseOver={this.showpowerUp} onMouseOut={() => {this.resetBackground(); this.unshowpowerUp()}}>
-                        <img src={powerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='powerUpLeft2' onMouseOver={this.showpowerUp} onMouseOut={() => {this.resetBackground(); this.unshowpowerUp()}}>
-                        <img src={powerUp} className='preloadImage'></img>
-                    </div>
-                    <div id='r0' onMouseOver={this.showr0} onMouseOut={() => {this.resetBackground(); this.unshowr0()}}>
-                        <img src={r0} className='preloadImage'></img>
-                    </div>
-                    <div id='r1' onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>
-                        <img src={r1} className='preloadImage'></img>
-                    </div>
-                    <div id='r1Bottom' onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>
-                        <img src={r1} className='preloadImage'></img>
-                    </div>
-                    <div id='r21' onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>
-                        <img src={r2} className='preloadImage'></img>
-                    </div>
-                    <div id='r22' onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>
-                        <img src={r2} className='preloadImage'></img>
-                    </div>
-                    <div id='r3' onMouseOver={this.showr3} onMouseOut={() => {this.resetBackground(); this.unshowr3()}}>
-                        <img src={r3} className='preloadImage'></img>
-                    </div>
-                    <div id='r4' onMouseOver={this.showr4} onMouseOut={() => {this.resetBackground(); this.unshowr4()}}>
-                        <img src={r4} className='preloadImage'></img>
-                    </div>
-                    <div id='rightAttic' onMouseOver={this.showrightAttic} onMouseOut={() => {this.resetBackground(); this.unshowrightAttic()}}>
-                        <img src={rightAttic} className='preloadImage'></img>
-                    </div>
-                    <div id='rightBox' onMouseOver={this.showrightBox} onMouseOut={() => {this.resetBackground(); this.unshowrightBox()}}>
-                        <img src={rightBox} className='preloadImage'></img>
-                    </div>
-                    <div id='rightBoxLeft' onMouseOver={this.showrightBox} onMouseOut={() => {this.resetBackground(); this.unshowrightBox()}}>
-                        <img src={rightBox} className='preloadImage'></img>
-                    </div>
-                    <div id='rightShoulder' onMouseOver={this.showrightShoulder} onMouseOut={() => {this.resetBackground(); this.unshowrightShoulder()}}>
-                        <img src={rightShoulder} className='preloadImage'></img>
-                    </div>
-                    <div id='rightShoulderLeft' onMouseOver={this.showrightShoulder} onMouseOut={() => {this.resetBackground(); this.unshowrightShoulder()}}>
-                        <img src={rightShoulder} className='preloadImage'></img>
-                    </div>
-                    <div id='rockets' onMouseOver={this.showrockets} onMouseOut={() => {this.resetBackground(); this.unshowrockets()}}>
-                        <img src={rockets} className='preloadImage'></img>
-                    </div>
-                    <div id='snipe' onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>
-                        <img src={snipe} className='preloadImage'></img>
-                    </div>
-                    <div id='snipe2' onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>
-                        <img src={snipe} className='preloadImage'></img>
-                    </div>
-                    <div id='snipeLeft' onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>
-                        <img src={snipe} className='preloadImage'></img>
-                    </div>
-                    <div id='snipeLeft2' onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>
-                        <img src={snipe} className='preloadImage'></img>
-                    </div>
-                    <div id='stage' onMouseOver={this.showstage} onMouseOut={() => {this.resetBackground(); this.unshowstage()}}>
-                        <img src={stage} className='preloadImage'></img>
-                    </div>
-                    <div id='stageLeft' onMouseOver={this.showstage} onMouseOut={() => {this.resetBackground(); this.unshowstage()}}>
-                        <img src={stage} className='preloadImage'></img>
-                    </div>
-                    <div id='topLeft' onMouseOver={this.showtopLeft} onMouseOut={() => {this.resetBackground(); this.unshowtopLeft()}}>
-                        <img src={topLeft} className='preloadImage'></img>
-                    </div>
-                    <div id='topRight' onMouseOver={this.showtopRight} onMouseOut={() => {this.resetBackground(); this.unshowtopRight()}}>
-                        <img src={topRight} className='preloadImage'></img>
-                    </div>
-                </div>
+                <svg id="narrowsMap" width="750px" height="625px">
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('afroNarrows')); this.textGreen(document.getElementById('afroNarrowsText')); this.turnGreen(document.getElementById('afroNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('afroNarrows')); this.returnTextColor(document.getElementById('afroNarrowsText')); this.returnColor(document.getElementById('afroNarrows2'))}}  id="afroNarrows" points="207,143 199,143 199,153 197,153 197,158 199,158 199,161 197,161 197,167 199,167 199,177 207,177 207,167 209,167 209,161 207,161 207,158 209,158 209,153 207,153"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('afroNarrows')); this.textGreen(document.getElementById('afroNarrowsText')); this.turnGreen(document.getElementById('afroNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('afroNarrows')); this.returnTextColor(document.getElementById('afroNarrowsText')); this.returnColor(document.getElementById('afroNarrows2'))}}  id="afroNarrows2" points="531,143 539,143 539,153 541,153 541,158 539,158 539,161 541,161 541,167 539,167 539,177 531,177 531,167 529,167 529,161 531,161 531,158 529,158 529,153 531,153"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('backCannonNarrows')); this.textGreen(document.getElementById('backCannonNarrowsText')); this.turnGreen(document.getElementById('backCannonNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backCannonNarrows')); this.returnTextColor(document.getElementById('backCannonNarrowsText')); this.returnColor(document.getElementById('backCannonNarrows2'))}}  id="backCannonNarrows" points="63,221 25,221 25,252 63,252"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('backCannonNarrows')); this.textGreen(document.getElementById('backCannonNarrowsText')); this.turnGreen(document.getElementById('backCannonNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backCannonNarrows')); this.returnTextColor(document.getElementById('backCannonNarrowsText')); this.returnColor(document.getElementById('backCannonNarrows2'))}}  id="backCannonNarrows2" points="722,221 684,221 684,252 722,252"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('backFlagNarrows')); this.textGreen(document.getElementById('backFlagNarrowsText')); this.turnGreen(document.getElementById('backFlagNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backFlagNarrows')); this.returnTextColor(document.getElementById('backFlagNarrowsText')); this.returnColor(document.getElementById('backFlagNarrows2'))}}  id="backFlagNarrows" points="80,57 63,57 63,98 80,98"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('backFlagNarrows')); this.textGreen(document.getElementById('backFlagNarrowsText')); this.turnGreen(document.getElementById('backFlagNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backFlagNarrows')); this.returnTextColor(document.getElementById('backFlagNarrowsText')); this.returnColor(document.getElementById('backFlagNarrows2'))}}  id="backFlagNarrows2" points="684,57 667,57 667,98 684,98"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonNarrows')); this.textGreen(document.getElementById('cannonNarrowsText')); this.turnGreen(document.getElementById('cannonNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonNarrows')); this.returnTextColor(document.getElementById('cannonNarrowsText')); this.returnColor(document.getElementById('cannonNarrows2'))}}  id="cannonNarrows" points="163,221 163,278 64,278 64,221"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonNarrows')); this.textGreen(document.getElementById('cannonNarrowsText')); this.turnGreen(document.getElementById('cannonNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonNarrows')); this.returnTextColor(document.getElementById('cannonNarrowsText')); this.returnColor(document.getElementById('cannonNarrows2'))}}  id="cannonNarrows2" points="585,221 683,221 683,278 585,278"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonDoorNarrows')); this.textGreen(document.getElementById('cannonDoorNarrowsText')); this.turnGreen(document.getElementById('cannonDoorNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonDoorNarrows')); this.returnTextColor(document.getElementById('cannonDoorNarrowsText')); this.returnColor(document.getElementById('cannonDoorNarrows2'))}}  id="cannonDoorNarrows" points="206,480 206,492 211,492 211,496 206,496 206,509 190,509 190,500 194,500 194,487 190,487 190,480"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonDoorNarrows')); this.textGreen(document.getElementById('cannonDoorNarrowsText')); this.turnGreen(document.getElementById('cannonDoorNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonDoorNarrows')); this.returnTextColor(document.getElementById('cannonDoorNarrowsText')); this.returnColor(document.getElementById('cannonDoorNarrows2'))}}  id="cannonDoorNarrows2" points="557,480 541,480 541,492 536,492 536,496 541,496 541,509 557,509 557,500 553,500 553,487 557,487"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonLobbyNarrows')); this.textGreen(document.getElementById('cannonLobbyNarrowsText')); this.turnGreen(document.getElementById('cannonLobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonLobbyNarrows')); this.returnTextColor(document.getElementById('cannonLobbyNarrowsText')); this.returnColor(document.getElementById('cannonLobbyNarrows2'))}}  id="cannonLobbyNarrows" points="99,195 81,195 81,214 99,214"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonLobbyNarrows')); this.textGreen(document.getElementById('cannonLobbyNarrowsText')); this.turnGreen(document.getElementById('cannonLobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonLobbyNarrows')); this.returnTextColor(document.getElementById('cannonLobbyNarrowsText')); this.returnColor(document.getElementById('cannonLobbyNarrows2'))}}  id="cannonLobbyNarrows2" points="648,213 665,213 665,195 648,195"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonPowerUpNarrows')); this.textGreen(document.getElementById('cannonPowerUpNarrowsText')); this.turnGreen(document.getElementById('cannonPowerUpNarrows2')); this.turnGreen(document.getElementById('cannonPowerUpNarrows3')); this.turnGreen(document.getElementById('cannonPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonPowerUpNarrows')); this.returnTextColor(document.getElementById('cannonPowerUpNarrowsText')); this.returnColor(document.getElementById('cannonPowerUpNarrows2')); this.returnColor(document.getElementById('cannonPowerUpNarrows3')); this.returnColor(document.getElementById('cannonPowerUpNarrows4'))}}  id="cannonPowerUpNarrows" points="265,209 235,209 234,229 223,242 201,242 201,245 203,245 203,248 201,248 201,251 204,251 204,253 205,253 205,256 201,256 201,263 200,263 200,279 239,279 265,250"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonPowerUpNarrows')); this.textGreen(document.getElementById('cannonPowerUpNarrowsText')); this.turnGreen(document.getElementById('cannonPowerUpNarrows2')); this.turnGreen(document.getElementById('cannonPowerUpNarrows3')); this.turnGreen(document.getElementById('cannonPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonPowerUpNarrows')); this.returnTextColor(document.getElementById('cannonPowerUpNarrowsText')); this.returnColor(document.getElementById('cannonPowerUpNarrows2')); this.returnColor(document.getElementById('cannonPowerUpNarrows3')); this.returnColor(document.getElementById('cannonPowerUpNarrows4'))}}  id="cannonPowerUpNarrows2" points="248,498 248,538 221,569 182,569 182,552 184,552 184,545 188,545 188,542 187,542 187,540 184,540 184,537 186,537 186,534 184,534 184,531 206,531 217,518 217,510 218,510 218,498"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonPowerUpNarrows')); this.textGreen(document.getElementById('cannonPowerUpNarrowsText')); this.turnGreen(document.getElementById('cannonPowerUpNarrows2')); this.turnGreen(document.getElementById('cannonPowerUpNarrows3')); this.turnGreen(document.getElementById('cannonPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonPowerUpNarrows')); this.returnTextColor(document.getElementById('cannonPowerUpNarrowsText')); this.returnColor(document.getElementById('cannonPowerUpNarrows2')); this.returnColor(document.getElementById('cannonPowerUpNarrows3')); this.returnColor(document.getElementById('cannonPowerUpNarrows4'))}}  id="cannonPowerUpNarrows3" points="546,242 546,245 544,245 544,248 546,248 546,251 543,251 543,253 542,253 542,256 546,256 546,263 547,263 547,279 508,279 482,250 482,209 512,209 512,221 513,221 513,229 524,242"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonPowerUpNarrows')); this.textGreen(document.getElementById('cannonPowerUpNarrowsText')); this.turnGreen(document.getElementById('cannonPowerUpNarrows2')); this.turnGreen(document.getElementById('cannonPowerUpNarrows3')); this.turnGreen(document.getElementById('cannonPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonPowerUpNarrows')); this.returnTextColor(document.getElementById('cannonPowerUpNarrowsText')); this.returnColor(document.getElementById('cannonPowerUpNarrows2')); this.returnColor(document.getElementById('cannonPowerUpNarrows3')); this.returnColor(document.getElementById('cannonPowerUpNarrows4'))}}  id="cannonPowerUpNarrows4" points="499,498 529,498 529,510 531,510 531,519 541,531 563,531 563,534 561,534 561,537 563,537 563,540 560,540 560,542 559,543 559,545 563,545 563,552 564,552 564,569 526,569 499,538"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonShockwaveNarrows')); this.textGreen(document.getElementById('cannonShockwaveNarrowsText')); this.turnGreen(document.getElementById('cannonShockwaveNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonShockwaveNarrows')); this.returnTextColor(document.getElementById('cannonShockwaveNarrowsText')); this.returnColor(document.getElementById('cannonShockwaveNarrows2'))}}  id="cannonShockwaveNarrows" points="304,204 304,209 248,209 248,204"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonShockwaveNarrows')); this.textGreen(document.getElementById('cannonShockwaveNarrowsText')); this.turnGreen(document.getElementById('cannonShockwaveNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonShockwaveNarrows')); this.returnTextColor(document.getElementById('cannonShockwaveNarrowsText')); this.returnColor(document.getElementById('cannonShockwaveNarrows2'))}}  id="cannonShockwaveNarrows2" points="440,204 496,204 496,209 440,209"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonSneakyNarrows')); this.textGreen(document.getElementById('cannonSneakyNarrowsText')); this.turnGreen(document.getElementById('cannonSneakyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonSneakyNarrows')); this.returnTextColor(document.getElementById('cannonSneakyNarrowsText')); this.returnColor(document.getElementById('cannonSneakyNarrows2'))}}  id="cannonSneakyNarrows" points="200,215 200,220 163,220 163,215"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonSneakyNarrows')); this.textGreen(document.getElementById('cannonSneakyNarrowsText')); this.turnGreen(document.getElementById('cannonSneakyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonSneakyNarrows')); this.returnTextColor(document.getElementById('cannonSneakyNarrowsText')); this.returnColor(document.getElementById('cannonSneakyNarrows2'))}}  id="cannonSneakyNarrows2" points="547,215 584,215 584,220 547,220"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonSpawnNarrows')); this.textGreen(document.getElementById('cannonSpawnNarrowsText')); this.turnGreen(document.getElementById('cannonSpawnNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonSpawnNarrows')); this.returnTextColor(document.getElementById('cannonSpawnNarrowsText')); this.returnColor(document.getElementById('cannonSpawnNarrows2'))}}  id="cannonSpawnNarrows" points="87,221 64,221 64,252 87,252"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cannonSpawnNarrows')); this.textGreen(document.getElementById('cannonSpawnNarrowsText')); this.turnGreen(document.getElementById('cannonSpawnNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cannonSpawnNarrows')); this.returnTextColor(document.getElementById('cannonSpawnNarrowsText')); this.returnColor(document.getElementById('cannonSpawnNarrows2'))}}  id="cannonSpawnNarrows2" points="665,251 665,221 683,221 683,251"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagNarrows')); this.textGreen(document.getElementById('flagNarrowsText')); this.turnGreen(document.getElementById('flagNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagNarrows')); this.returnTextColor(document.getElementById('flagNarrowsText')); this.returnColor(document.getElementById('flagNarrows2'))}}  id="flagNarrows" points="168,57 81,57 81,98 168,98"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagNarrows')); this.textGreen(document.getElementById('flagNarrowsText')); this.turnGreen(document.getElementById('flagNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagNarrows')); this.returnTextColor(document.getElementById('flagNarrowsText')); this.returnColor(document.getElementById('flagNarrows2'))}}  id="flagNarrows2" points="684,57 580,57 580,98 684,98"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagPowerUpNarrows')); this.textGreen(document.getElementById('flagPowerUpNarrowsText')); this.turnGreen(document.getElementById('flagPowerUpNarrows2')); this.turnGreen(document.getElementById('flagPowerUpNarrows3')); this.turnGreen(document.getElementById('flagPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPowerUpNarrows')); this.returnTextColor(document.getElementById('flagPowerUpNarrowsText')); this.returnColor(document.getElementById('flagPowerUpNarrows2')); this.returnColor(document.getElementById('flagPowerUpNarrows3')); this.returnColor(document.getElementById('flagPowerUpNarrows4'))}}  id="flagPowerUpNarrows" points="217,48 239,48 265,75 265,110 235,110 234,109 234,89 224,77 217,77"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagPowerUpNarrows')); this.textGreen(document.getElementById('flagPowerUpNarrowsText')); this.turnGreen(document.getElementById('flagPowerUpNarrows2')); this.turnGreen(document.getElementById('flagPowerUpNarrows3')); this.turnGreen(document.getElementById('flagPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPowerUpNarrows')); this.returnTextColor(document.getElementById('flagPowerUpNarrowsText')); this.returnColor(document.getElementById('flagPowerUpNarrows2')); this.returnColor(document.getElementById('flagPowerUpNarrows3')); this.returnColor(document.getElementById('flagPowerUpNarrows4'))}}  id="flagPowerUpNarrows2" points="248,400 248,364 221,337 199,337 199,365 205,365 216,378 216,388 218,388 218,400"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagPowerUpNarrows')); this.textGreen(document.getElementById('flagPowerUpNarrowsText')); this.turnGreen(document.getElementById('flagPowerUpNarrows2')); this.turnGreen(document.getElementById('flagPowerUpNarrows3')); this.turnGreen(document.getElementById('flagPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPowerUpNarrows')); this.returnTextColor(document.getElementById('flagPowerUpNarrowsText')); this.returnColor(document.getElementById('flagPowerUpNarrows2')); this.returnColor(document.getElementById('flagPowerUpNarrows3')); this.returnColor(document.getElementById('flagPowerUpNarrows4'))}}  id="flagPowerUpNarrows3" points="530,48 508,48 482,74 482,110 513,110 513,89 523,77 530,77"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagPowerUpNarrows')); this.textGreen(document.getElementById('flagPowerUpNarrowsText')); this.turnGreen(document.getElementById('flagPowerUpNarrows2')); this.turnGreen(document.getElementById('flagPowerUpNarrows3')); this.turnGreen(document.getElementById('flagPowerUpNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPowerUpNarrows')); this.returnTextColor(document.getElementById('flagPowerUpNarrowsText')); this.returnColor(document.getElementById('flagPowerUpNarrows2')); this.returnColor(document.getElementById('flagPowerUpNarrows3')); this.returnColor(document.getElementById('flagPowerUpNarrows4'))}}  id="flagPowerUpNarrows4" points="549,337 526,337 499,364 499,412 529,412 529,407 526,407 526,400 529,400 529,388 531,388 531,378 542,365 549,365"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagDoorNarrows')); this.textGreen(document.getElementById('flagDoorNarrowsText')); this.turnGreen(document.getElementById('flagDoorNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagDoorNarrows')); this.returnTextColor(document.getElementById('flagDoorNarrowsText')); this.returnColor(document.getElementById('flagDoorNarrows2'))}}  id="flagDoorNarrows" points="190,389 206,389 206,401 211,401 211,406 206,406 206,418 190,418 190,409 193,409 193,397 190,397"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagDoorNarrows')); this.textGreen(document.getElementById('flagDoorNarrowsText')); this.turnGreen(document.getElementById('flagDoorNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagDoorNarrows')); this.returnTextColor(document.getElementById('flagDoorNarrowsText')); this.returnColor(document.getElementById('flagDoorNarrows2'))}}  id="flagDoorNarrows2" points="557,389 557,397 553,397 553,409 557,409 557,418 541,418 541,406 536,406 536,401 541,401 541,389"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagLobbyNarrows')); this.textGreen(document.getElementById('flagLobbyNarrowsText')); this.turnGreen(document.getElementById('flagLobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagLobbyNarrows')); this.returnTextColor(document.getElementById('flagLobbyNarrowsText')); this.returnColor(document.getElementById('flagLobbyNarrows2'))}}  id="flagLobbyNarrows" points="81,103 99,103 99,125 81,125"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagLobbyNarrows')); this.textGreen(document.getElementById('flagLobbyNarrowsText')); this.turnGreen(document.getElementById('flagLobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagLobbyNarrows')); this.returnTextColor(document.getElementById('flagLobbyNarrowsText')); this.returnColor(document.getElementById('flagLobbyNarrows2'))}}  id="flagLobbyNarrows2" points="665,103 648,103 648,125 665,125"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagBoxNarrows')); this.textGreen(document.getElementById('flagBoxNarrowsText')); this.turnGreen(document.getElementById('flagBoxNarrows2')); this.turnGreen(document.getElementById('flagBoxNarrows3')); this.turnGreen(document.getElementById('flagBoxNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagBoxNarrows')); this.returnTextColor(document.getElementById('flagBoxNarrowsText')); this.returnColor(document.getElementById('flagBoxNarrows2')); this.returnColor(document.getElementById('flagBoxNarrows3')); this.returnColor(document.getElementById('flagBoxNarrows4'))}}  id="flagBoxNarrows" points="203,55 167,55 167,79 203,79"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagBoxNarrows')); this.textGreen(document.getElementById('flagBoxNarrowsText')); this.turnGreen(document.getElementById('flagBoxNarrows2')); this.turnGreen(document.getElementById('flagBoxNarrows3')); this.turnGreen(document.getElementById('flagBoxNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagBoxNarrows')); this.returnTextColor(document.getElementById('flagBoxNarrowsText')); this.returnColor(document.getElementById('flagBoxNarrows2')); this.returnColor(document.getElementById('flagBoxNarrows3')); this.returnColor(document.getElementById('flagBoxNarrows4'))}}  id="flagBoxNarrows2" points="147,345 183,345 183,369 147,369"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagBoxNarrows')); this.textGreen(document.getElementById('flagBoxNarrowsText')); this.turnGreen(document.getElementById('flagBoxNarrows2')); this.turnGreen(document.getElementById('flagBoxNarrows3')); this.turnGreen(document.getElementById('flagBoxNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagBoxNarrows')); this.returnTextColor(document.getElementById('flagBoxNarrowsText')); this.returnColor(document.getElementById('flagBoxNarrows2')); this.returnColor(document.getElementById('flagBoxNarrows3')); this.returnColor(document.getElementById('flagBoxNarrows4'))}}  id="flagBoxNarrows3" points="546,56 582,56 582,80 546,80"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagBoxNarrows')); this.textGreen(document.getElementById('flagBoxNarrowsText')); this.turnGreen(document.getElementById('flagBoxNarrows2')); this.turnGreen(document.getElementById('flagBoxNarrows3')); this.turnGreen(document.getElementById('flagBoxNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagBoxNarrows')); this.returnTextColor(document.getElementById('flagBoxNarrowsText')); this.returnColor(document.getElementById('flagBoxNarrows2')); this.returnColor(document.getElementById('flagBoxNarrows3')); this.returnColor(document.getElementById('flagBoxNarrows4'))}}  id="flagBoxNarrows4" points="599,345 563,345 563,369 599,369"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagShockwaveNarrows')); this.textGreen(document.getElementById('flagShockwaveNarrowsText')); this.turnGreen(document.getElementById('flagShockwaveNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagShockwaveNarrows')); this.returnTextColor(document.getElementById('flagShockwaveNarrowsText')); this.returnColor(document.getElementById('flagShockwaveNarrows2'))}}  id="flagShockwaveNarrows" points="304,110 250,110 250,115 304,115"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagShockwaveNarrows')); this.textGreen(document.getElementById('flagShockwaveNarrowsText')); this.turnGreen(document.getElementById('flagShockwaveNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagShockwaveNarrows')); this.returnTextColor(document.getElementById('flagShockwaveNarrowsText')); this.returnColor(document.getElementById('flagShockwaveNarrows2'))}}  id="flagShockwaveNarrows2" points="442,110 496,110 496,115 442,115"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagSneakyNarrows')); this.textGreen(document.getElementById('flagSneakyNarrowsText')); this.turnGreen(document.getElementById('flagSneakyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagSneakyNarrows')); this.returnTextColor(document.getElementById('flagSneakyNarrowsText')); this.returnColor(document.getElementById('flagSneakyNarrows2'))}}  id="flagSneakyNarrows" points="200,99 166,99 166,104 200,104"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagSneakyNarrows')); this.textGreen(document.getElementById('flagSneakyNarrowsText')); this.turnGreen(document.getElementById('flagSneakyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagSneakyNarrows')); this.returnTextColor(document.getElementById('flagSneakyNarrowsText')); this.returnColor(document.getElementById('flagSneakyNarrows2'))}}  id="flagSneakyNarrows2" points="547,104 547,99 581,99 581,104"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('l0Narrows')); this.textGreen(document.getElementById('l0NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('l0Narrows')); this.returnTextColor(document.getElementById('l0NarrowsText'))}}  id="l0Narrows" points="526,187 503,187 499,191 499,203 511,203 511,199 526,199"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('l1Narrows')); this.textGreen(document.getElementById('l1NarrowsText')); this.turnGreen(document.getElementById('l1Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('l1Narrows')); this.returnTextColor(document.getElementById('l1NarrowsText')); this.returnColor(document.getElementById('l1Narrows2'))}}  id="l1Narrows" points="481,189 480,188 393,188 393,203 480,203 481,202"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('l1Narrows')); this.textGreen(document.getElementById('l1NarrowsText')); this.turnGreen(document.getElementById('l1Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('l1Narrows')); this.returnTextColor(document.getElementById('l1NarrowsText')); this.returnColor(document.getElementById('l1Narrows2'))}}  id="l1Narrows2" points="412,485 412,498 482,498 482,485"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('l2Narrows')); this.textGreen(document.getElementById('l2NarrowsText')); this.turnGreen(document.getElementById('l2Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('l2Narrows')); this.returnTextColor(document.getElementById('l2NarrowsText')); this.returnColor(document.getElementById('l2Narrows2'))}}  id="l2Narrows" points="266,189 267,188 352,188 352,190 353,190 353,202 352,203 266,203"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('l2Narrows')); this.textGreen(document.getElementById('l2NarrowsText')); this.turnGreen(document.getElementById('l2Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('l2Narrows')); this.returnTextColor(document.getElementById('l2NarrowsText')); this.returnColor(document.getElementById('l2Narrows2'))}}  id="l2Narrows2" points="334,485 265,485 265,498 334,498"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('l3Narrows')); this.textGreen(document.getElementById('l3NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('l3Narrows')); this.returnTextColor(document.getElementById('l3NarrowsText'))}}  id="l3Narrows" points="220,187 243,187 247,191 247,203 235,203 235,199 220,199"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('l4Narrows')); this.textGreen(document.getElementById('l4NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('l4Narrows')); this.returnTextColor(document.getElementById('l4NarrowsText'))}}  id="l4Narrows" points="163,194 163,198 124,198 124,194"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('leftAtticNarrows')); this.textGreen(document.getElementById('leftAtticNarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftAtticNarrows')); this.returnTextColor(document.getElementById('leftAtticNarrowsText'))}}  id="leftAtticNarrows" points="623,194 623,198 584,198 584,194"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('leftBoxNarrows')); this.textGreen(document.getElementById('leftBoxNarrowsText')); this.turnGreen(document.getElementById('leftBoxNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftBoxNarrows')); this.returnTextColor(document.getElementById('leftBoxNarrowsText')); this.returnColor(document.getElementById('leftBoxNarrows2'))}}  id="leftBoxNarrows" points="169,187 188,187 188,199 169,199"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('leftBoxNarrows')); this.textGreen(document.getElementById('leftBoxNarrowsText')); this.turnGreen(document.getElementById('leftBoxNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftBoxNarrows')); this.returnTextColor(document.getElementById('leftBoxNarrowsText'));  this.returnColor(document.getElementById('leftBoxNarrows2'))}}  id="leftBoxNarrows2" points="577,187 558,187 558,199 577,199"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('leftShoulderNarrows')); this.textGreen(document.getElementById('leftShoulderNarrowsText')); this.turnGreen(document.getElementById('leftShoulderNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftShoulderNarrows')); this.returnTextColor(document.getElementById('leftShoulderNarrowsText')); this.returnColor(document.getElementById('leftShoulderNarrows2'))}}  id="leftShoulderNarrows" points="286,467 274,467 274,479 286,479"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('leftShoulderNarrows')); this.textGreen(document.getElementById('leftShoulderNarrowsText')); this.turnGreen(document.getElementById('leftShoulderNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('leftShoulderNarrows')); this.returnTextColor(document.getElementById('leftShoulderNarrowsText')); this.returnColor(document.getElementById('leftShoulderNarrows2'))}}  id="leftShoulderNarrows2" points="473,467 461,467 461,479 473,479"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('lobbyNarrows')); this.textGreen(document.getElementById('lobbyNarrowsText')); this.turnGreen(document.getElementById('lobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('lobbyNarrows')); this.returnTextColor(document.getElementById('lobbyNarrowsText')); this.returnColor(document.getElementById('lobbyNarrows2'))}}  id="lobbyNarrows" points="99,126 64,126 64,135 63,135 63,139 59,143 59,145 55,145 55,175 58,175 63,180 63,194 99,194"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('lobbyNarrows')); this.textGreen(document.getElementById('lobbyNarrowsText')); this.turnGreen(document.getElementById('lobbyNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('lobbyNarrows')); this.returnTextColor(document.getElementById('lobbyNarrowsText')); this.returnColor(document.getElementById('lobbyNarrows2'))}}  id="lobbyNarrows2" points="648,126 683,126 683,138 689,145 692,145 692,175 690,175 683,182 683,194 648,194"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mainCannonNarrows')); this.textGreen(document.getElementById('mainCannonNarrowsText')); this.turnGreen(document.getElementById('mainCannonNarrows2')); this.turnGreen(document.getElementById('mainCannonNarrows3')); this.turnGreen(document.getElementById('mainCannonNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainCannonNarrows')); this.returnTextColor(document.getElementById('mainCannonNarrowsText')); this.returnColor(document.getElementById('mainCannonNarrows2')); this.returnColor(document.getElementById('mainCannonNarrows3')); this.returnColor(document.getElementById('mainCannonNarrows4'))}}  id="mainCannonNarrows" points="164,239 205,239 205,262 164,262"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mainCannonNarrows')); this.textGreen(document.getElementById('mainCannonNarrowsText')); this.turnGreen(document.getElementById('mainCannonNarrows2')); this.turnGreen(document.getElementById('mainCannonNarrows3')); this.turnGreen(document.getElementById('mainCannonNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainCannonNarrows')); this.returnTextColor(document.getElementById('mainCannonNarrowsText')); this.returnColor(document.getElementById('mainCannonNarrows2')); this.returnColor(document.getElementById('mainCannonNarrows3')); this.returnColor(document.getElementById('mainCannonNarrows4'))}}  id="mainCannonNarrows2" points="147,530 188,530 188,553 147,553"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mainCannonNarrows')); this.textGreen(document.getElementById('mainCannonNarrowsText')); this.turnGreen(document.getElementById('mainCannonNarrows2')); this.turnGreen(document.getElementById('mainCannonNarrows3')); this.turnGreen(document.getElementById('mainCannonNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainCannonNarrows')); this.returnTextColor(document.getElementById('mainCannonNarrowsText')); this.returnColor(document.getElementById('mainCannonNarrows2')); this.returnColor(document.getElementById('mainCannonNarrows3')); this.returnColor(document.getElementById('mainCannonNarrows4'))}}  id="mainCannonNarrows3" points="583,240 545,240 545,263 583,263"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mainCannonNarrows')); this.textGreen(document.getElementById('mainCannonNarrowsText')); this.turnGreen(document.getElementById('mainCannonNarrows2')); this.turnGreen(document.getElementById('mainCannonNarrows3')); this.turnGreen(document.getElementById('mainCannonNarrows4'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainCannonNarrows')); this.returnTextColor(document.getElementById('mainCannonNarrowsText')); this.returnColor(document.getElementById('mainCannonNarrows2')); this.returnColor(document.getElementById('mainCannonNarrows3')); this.returnColor(document.getElementById('mainCannonNarrows4'))}}  id="mainCannonNarrows4" points="599,529 558,529 558,552 599,552"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mauler50Narrows')); this.textGreen(document.getElementById('mauler50NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('mauler50Narrows')); this.returnTextColor(document.getElementById('mauler50NarrowsText'))}}  id="mauler50Narrows" points="354,134 392,134 392,185 354,185"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('miniMohawkNarrows')); this.textGreen(document.getElementById('miniMohawkNarrowsText')); this.turnGreen(document.getElementById('miniMohawkNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('miniMohawkNarrows')); this.returnTextColor(document.getElementById('miniMohawkNarrowsText')); this.returnColor(document.getElementById('miniMohawkNarrows2'))}}  id="miniMohawkNarrows" points="133,153 152,153 152,156 162,156 162,153 170,153 170,155 175,155 175,164 170,164 170,165 162,165 162,163 152,163 152,165 133,165"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('miniMohawkNarrows')); this.textGreen(document.getElementById('miniMohawkNarrowsText')); this.turnGreen(document.getElementById('miniMohawkNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('miniMohawkNarrows')); this.returnTextColor(document.getElementById('miniMohawkNarrowsText')); this.returnColor(document.getElementById('miniMohawkNarrows2'))}}  id="miniMohawkNarrows2" points="614,153 595,153 595,156 585,156 585,153 577,153 577,155 572,155 572,164 577,164 577,166 585,166 585,163 595,163 595,166 614,166"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mohawkNarrows')); this.textGreen(document.getElementById('mohawkNarrowsText')); this.turnGreen(document.getElementById('mohawkNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('mohawkNarrows')); this.returnTextColor(document.getElementById('mohawkNarrowsText')); this.returnColor(document.getElementById('mohawkNarrows2'))}}  id="mohawkNarrows" points="320,155 313,155 313,153 305,153 305,156 303,156 303,153 288,153 286,155 286,164 288,166 303,166 303,163 305,163 305,166 313,166 313,164 320,164"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mohawkNarrows')); this.textGreen(document.getElementById('mohawkNarrowsText')); this.turnGreen(document.getElementById('mohawkNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('mohawkNarrows')); this.returnTextColor(document.getElementById('mohawkNarrowsText')); this.returnColor(document.getElementById('mohawkNarrows2'))}}  id="mohawkNarrows2" points="427,155 434,155 434,153 441,153 441,156 444,156 444,153 459,153 461,155 461,164 459,166 444,166 444,163 441,163 441,166 434,166 434,164 427,164"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('powerUpNarrows')); this.textGreen(document.getElementById('powerUpNarrowsText')); this.turnGreen(document.getElementById('powerUpNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('powerUpNarrows')); this.returnTextColor(document.getElementById('powerUpNarrowsText')); this.returnColor(document.getElementById('powerUpNarrows2'))}}  id="powerUpNarrows" points="221,497 248,497 248,401 221,401 221,407 218,407 218,490 221,490"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('powerUpNarrows')); this.textGreen(document.getElementById('powerUpNarrowsText')); this.turnGreen(document.getElementById('powerUpNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('powerUpNarrows')); this.returnTextColor(document.getElementById('powerUpNarrowsText')); this.returnColor(document.getElementById('powerUpNarrows2'))}}  id="powerUpNarrows2" points="526,497 526,490 529,490 529,407 526,407 526,401 499,401 499,497"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r0Narrows')); this.textGreen(document.getElementById('r0NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r0Narrows')); this.returnTextColor(document.getElementById('r0NarrowsText'))}}  id="r0Narrows" points="526,120 511,120 511,116 499,116 499,129 503,133 526,133"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r1Narrows')); this.textGreen(document.getElementById('r1NarrowsText')); this.turnGreen(document.getElementById('r1Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r1Narrows')); this.returnTextColor(document.getElementById('r1NarrowsText')); this.returnColor(document.getElementById('r1Narrows2'))}}  id="r1Narrows" points="393,116 480,116 481,117 481,130 480,131 393,131"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r1Narrows')); this.textGreen(document.getElementById('r1NarrowsText')); this.turnGreen(document.getElementById('r1Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r1Narrows')); this.returnTextColor(document.getElementById('r1NarrowsText')); this.returnColor(document.getElementById('r1Narrows2'))}}  id="r1Narrows2" points="480,399 481,400 481,412 480,413 413,413 413,399"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r2Narrows')); this.textGreen(document.getElementById('r2NarrowsText')); this.turnGreen(document.getElementById('r2Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r2Narrows')); this.returnTextColor(document.getElementById('r2NarrowsText')); this.returnColor(document.getElementById('r2Narrows2'))}}  id="r2Narrows" points="266,117 267,116 352,116 353,117 353,130 352,131 267,131 266,130"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r2Narrows')); this.textGreen(document.getElementById('r2NarrowsText')); this.turnGreen(document.getElementById('r2Narrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r2Narrows')); this.returnTextColor(document.getElementById('r2NarrowsText')); this.returnColor(document.getElementById('r2Narrows2'))}}  id="r2Narrows2" points="266,399 266,412 336,412 336,399"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r3Narrows')); this.textGreen(document.getElementById('r3NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r3Narrows')); this.returnTextColor(document.getElementById('r3NarrowsText'))}}  id="r3Narrows" points="247,116 244,116 244,115 236,115 235,116 235,120 225,120 225,121 223,121 223,122 220,122 220,133 243,133 247,129"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r4Narrows')); this.textGreen(document.getElementById('r4NarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r4Narrows')); this.returnTextColor(document.getElementById('r4NarrowsText'))}}  id="r4Narrows" points="163,120 163,124 124,124 124,120"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('rightAtticNarrows')); this.textGreen(document.getElementById('rightAtticNarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightAtticNarrows')); this.returnTextColor(document.getElementById('rightAtticNarrowsText'))}}  id="rightAtticNarrows" points="623,120 623,125 584,125 584,120"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('rightBoxNarrows')); this.textGreen(document.getElementById('rightBoxNarrowsText')); this.turnGreen(document.getElementById('rightBoxNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightBoxNarrows')); this.returnTextColor(document.getElementById('rightBoxNarrowsText')); this.returnColor(document.getElementById('rightBoxNarrows2'))}}  id="rightBoxNarrows" points="188,120 169,120 169,132 188,132"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('rightBoxNarrows')); this.textGreen(document.getElementById('rightBoxNarrowsText')); this.turnGreen(document.getElementById('rightBoxNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightBoxNarrows')); this.returnTextColor(document.getElementById('rightBoxNarrowsText')); this.returnColor(document.getElementById('rightBoxNarrows2'))}}  id="rightBoxNarrows2" points="577,120 558,120 558,132 577,132"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('rightShoulderNarrows')); this.textGreen(document.getElementById('rightShoulderNarrowsText')); this.turnGreen(document.getElementById('rightShoulderNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightShoulderNarrows')); this.returnTextColor(document.getElementById('rightShoulderNarrowsText')); this.returnColor(document.getElementById('rightShoulderNarrows2'))}}  id="rightShoulderNarrows" points="274,418 286,418 286,429 274,429"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('rightShoulderNarrows')); this.textGreen(document.getElementById('rightShoulderNarrowsText')); this.turnGreen(document.getElementById('rightShoulderNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('rightShoulderNarrows')); this.returnTextColor(document.getElementById('rightShoulderNarrowsText')); this.returnColor(document.getElementById('rightShoulderNarrows2'))}}  id="rightShoulderNarrows2" points="473,419 461,419 461,430 473,430"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('rocketsNarrows')); this.textGreen(document.getElementById('rocketsNarrowsText'))}} onMouseOut={() => {this.returnColor(document.getElementById('rocketsNarrows')); this.returnTextColor(document.getElementById('rocketsNarrowsText'))}}  id="rocketsNarrows" points="414,439 333,439 333,459 414,459"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('stageNarrows')); this.textGreen(document.getElementById('stageNarrowsText')); this.turnGreen(document.getElementById('stageNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('stageNarrows')); this.returnTextColor(document.getElementById('stageNarrowsText')); this.returnColor(document.getElementById('stageNarrows2'))}}  id="stageNarrows" points="52,145 45,145 39,139 39,126 19,126 19,186 39,186 40,185 40,180 45,175 52,175"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('stageNarrows')); this.textGreen(document.getElementById('stageNarrowsText')); this.turnGreen(document.getElementById('stageNarrows2'))}} onMouseOut={() => {this.returnColor(document.getElementById('stageNarrows')); this.returnTextColor(document.getElementById('stageNarrowsText')); this.returnColor(document.getElementById('stageNarrows2'))}}  id="stageNarrows2" points="727,126 708,126 708,139 702,144 695,144 695,175 702,175 708,181 708,186 727,186"/>
+                </svg>
                 <div className="inGamePic">
                     <h2 id="narrowsInGamePicText" class="inGamePicText"></h2>
                     <img id="narrowsScreenShot"></img>

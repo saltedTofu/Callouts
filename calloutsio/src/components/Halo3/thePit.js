@@ -36,623 +36,142 @@ import trainingRamp from './BlueprintPics/thePitBPs/trainingRamp.png';
 import walshy from './BlueprintPics/thePitBPs/walshy.png';
 
 class ThePit extends React.Component{
-    loadAll = () => {
-        document.getElementById('thePitMap').style.backgroundImage=`url(${firstBR})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${secondBR})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${Assault})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${backRamp})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${courtyard})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${customOS})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${cuts})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${flag})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${greenBox})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${greenHall})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${jumpUp})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${longHallCamo})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${mauler})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${midBridge})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${needler})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${needlerPit})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${needlerRamp})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${pit})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${pitRamp})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${platform})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${rockets})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${runway})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${s1})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${s2})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${snipeBridge})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${snipePocket})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${street})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${sword})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${swordRamp})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${swordWindow})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${training})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${trainingPocket})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${trainingRamp})`;
-        document.getElementById('thePitMap').style.backgroundImage=`url(${walshy})`;
+    turnGreen(div){
+        div.style.fill="rgba(0, 255, 0, 0.5)";
     }
-    showfirstBR = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${firstBR})`;
-        document.getElementById('firstBRText').style.color='green';
+    returnColor(div){
+        div.style.fill="rgba(0, 0, 0, 0)";
     }
-    unshowfirstBR = () => {
-        document.getElementById('firstBRText').style.color='white';
+    textGreen(textP){
+        textP.style.color="rgba(0, 255, 0, 1)"
     }
-    showsecondBR = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${secondBR})`;
-        document.getElementById('secondBRText').style.color='green';
-    }
-    unshowsecondBR = () => {
-        document.getElementById('secondBRText').style.color='white';
-    }
-    showAssault = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${Assault})`;
-        document.getElementById('AssaultText').style.color='green';
-    }
-    unshowAssault = () => {
-        document.getElementById('AssaultText').style.color='white';
-    }
-    showbackRamp = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${backRamp})`;
-        document.getElementById('backRampText').style.color='green';
-    }
-    unshowbackRamp = () => {
-        document.getElementById('backRampText').style.color='white';
-    }
-    showcourtyard = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${courtyard})`;
-        document.getElementById('courtyardText').style.color='green';
-    }
-    unshowcourtyard = () => {
-        document.getElementById('courtyardText').style.color='white';
-    }
-    showcustomOS = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${customOS})`;
-        document.getElementById('customOSText').style.color='green';
-    }
-    unshowcustomOS = () => {
-        document.getElementById('customOSText').style.color='white';
-    }
-    showcuts = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${cuts})`;
-        document.getElementById('cutsText').style.color='green';
-    }
-    unshowcuts = () => {
-        document.getElementById('cutsText').style.color='white';
-    }
-    showflag = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${flag})`;
-        document.getElementById('flagTextPit').style.color='green';
-    }
-    unshowflag = () => {
-        document.getElementById('flagTextPit').style.color='white';
-    }
-    showgreenBox = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${greenBox})`;
-        document.getElementById('greenBoxText').style.color='green';
-    }
-    unshowgreenBox = () => {
-        document.getElementById('greenBoxText').style.color='white';
-    }
-    showgreenHall = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${greenHall})`;
-        document.getElementById('greenHallText').style.color='green';
-    }
-    unshowgreenHall = () => {
-        document.getElementById('greenHallText').style.color='white';
-    }
-    showjumpUp = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${jumpUp})`;
-        document.getElementById('jumpUpText').style.color='green';
-    }
-    unshowjumpUp = () => {
-        document.getElementById('jumpUpText').style.color='white';
-    }
-    showlongHallCamo = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${longHallCamo})`;
-        document.getElementById('longHallCamoText').style.color='green';
-    }
-    unshowlongHallCamo = () => {
-        document.getElementById('longHallCamoText').style.color='white';
-    }
-    showmauler = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${mauler})`;
-        document.getElementById('maulerText').style.color='green';
-    }
-    unshowmauler = () => {
-        document.getElementById('maulerText').style.color='white';
-    }
-    showmidBridge = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${midBridge})`;
-        document.getElementById('midBridgeText').style.color='green';
-    }
-    unshowmidBridge = () => {
-        document.getElementById('midBridgeText').style.color='white';
-    }
-    showneedler = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${needler})`;
-        document.getElementById('needlerText').style.color='green';
-    }
-    unshowneedler = () => {
-        document.getElementById('needlerText').style.color='white';
-    }
-    showneedlerPit = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${needlerPit})`;
-        document.getElementById('needlerPitText').style.color='green';
-    }
-    unshowneedlerPit = () => {
-        document.getElementById('needlerPitText').style.color='white';
-    }
-    showneedlerRamp = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${needlerRamp})`;
-        document.getElementById('needlerRampText').style.color='green';
-    }
-    unshowneedlerRamp = () => {
-        document.getElementById('needlerRampText').style.color='white';
-    }
-    showpit = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${pit})`;
-        document.getElementById('pitText').style.color='green';
-    }
-    unshowpit = () => {
-        document.getElementById('pitText').style.color='white';
-    }
-    showpitRamp = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${pitRamp})`;
-        document.getElementById('pitRampText').style.color='green';
-    }
-    unshowpitRamp = () => {
-        document.getElementById('pitRampText').style.color='white';
-    }
-    showplatform = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${platform})`;
-        document.getElementById('platformText').style.color='green';
-    }
-    unshowplatform = () => {
-        document.getElementById('platformText').style.color='white';
-    }
-    showrockets = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${rockets})`;
-        document.getElementById('rocketsText').style.color='green';
-    }
-    unshowrockets = () => {
-        document.getElementById('rocketsText').style.color='white';
-    }
-    showrunway = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${runway})`;
-        document.getElementById('runwayText').style.color='green';
-    }
-    unshowrunway = () => {
-        document.getElementById('runwayText').style.color='white';
-    }
-    shows1 = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${s1})`;
-        document.getElementById('s1Text').style.color='green';
-    }
-    unshows1 = () => {
-        document.getElementById('s1Text').style.color='white';
-    }
-    shows2 = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${s2})`;
-        document.getElementById('s2Text').style.color='green';
-    }
-    unshows2 = () => {
-        document.getElementById('s2Text').style.color='white';
-    }
-    showsnipeBridge = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${snipeBridge})`;
-        document.getElementById('snipeBridgeText').style.color='green';
-    }
-    unshowsnipeBridge = () => {
-        document.getElementById('snipeBridgeText').style.color='white';
-    }
-    showsnipePocket = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${snipePocket})`;
-        document.getElementById('snipePocketText').style.color='green';
-    }
-    unshowsnipePocket = () => {
-        document.getElementById('snipePocketText').style.color='white';
-    }
-    showstreet = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${street})`;
-        document.getElementById('streetText').style.color='green';
-    }
-    unshowstreet = () => {
-        document.getElementById('streetText').style.color='white';
-    }
-    showsword = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${sword})`;
-        document.getElementById('swordTextPit').style.color='green';
-    }
-    unshowsword = () => {
-        document.getElementById('swordTextPit').style.color='white';
-    }
-    showswordRamp = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${swordRamp})`;
-        document.getElementById('swordRampText').style.color='green';
-    }
-    unshowswordRamp = () => {
-        document.getElementById('swordRampText').style.color='white';
-    }
-    showswordWindow = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${swordWindow})`;
-        document.getElementById('swordWindowText').style.color='green';
-    }
-    unshowswordWindow = () => {
-        document.getElementById('swordWindowText').style.color='white';
-    }
-    showtraining = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${training})`;
-        document.getElementById('trainingText').style.color='green';
-    }
-    unshowtraining = () => {
-        document.getElementById('trainingText').style.color='white';
-    }
-    showtrainingPocket = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${trainingPocket})`;
-        document.getElementById('trainingPocketText').style.color='green';
-    }
-    unshowtrainingPocket = () => {
-        document.getElementById('trainingPocketText').style.color='white';
-    }
-    showtrainingRamp = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${trainingRamp})`;
-        document.getElementById('trainingRampText').style.color='green';
-    }
-    unshowtrainingRamp = () => {
-        document.getElementById('trainingRampText').style.color='white';
-    }
-    showwalshy = () => {
-        this.loadAll();
-        document.getElementById('thePitMap').style.backgroundImage=`url(${walshy})`;
-        document.getElementById('walshyText').style.color='green';
-    }
-    unshowwalshy = () => {
-        document.getElementById('walshyText').style.color='white';
-    }
-    resetBackground = () =>{
-        document.getElementById('thePitMap').style.backgroundImage=`url(${thePitBlank})`;
+    returnTextColor(textP){
+        textP.style.color="white";
     }
     render(){
         return(
             <div className="thePitFullGrid">
                 <h1 className="mapTitleThePit">The Pit</h1>
                 <div className="calloutsList" id="pitCallouts">
-                    <p id="firstBRText" onMouseOver={this.showfirstBR} onMouseOut={() => {this.resetBackground(); this.unshowfirstBR()}}>1st Br</p>
-                    <p id="secondBRText" onMouseOver={this.showsecondBR} onMouseOut={() => {this.resetBackground(); this.unshowsecondBR()}}>2nd Br</p>
-                    <p id="AssaultText" onMouseOver={this.showAssault} onMouseOut={() => {this.resetBackground(); this.unshowAssault()}}>Assault</p>
-                    <p id="backRampText" onMouseOver={this.showbackRamp} onMouseOut={() => {this.resetBackground(); this.unshowbackRamp()}}>Back Ramp</p>
-                    <p id="courtyardText" onMouseOver={this.showcourtyard} onMouseOut={() => {this.resetBackground(); this.unshowcourtyard()}}>Courtyard</p>
-                    <p id="customOSText" onMouseOver={this.showcustomOS} onMouseOut={() => {this.resetBackground(); this.unshowcustomOS()}}>Custom/OS</p>
-                    <p id="cutsText" onMouseOver={this.showcuts} onMouseOut={() => {this.resetBackground(); this.unshowcuts()}}>Cuts</p>
-                    <p id="flagTextPit" onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>Flag</p>
-                    <p id="greenBoxText" onMouseOver={this.showgreenBox} onMouseOut={() => {this.resetBackground(); this.unshowgreenBox()}}>Green Box</p>
-                    <p id="greenHallText" onMouseOver={this.showgreenHall} onMouseOut={() => {this.resetBackground(); this.unshowgreenHall()}}>Green Hall</p>
-                    <p id="jumpUpText" onMouseOver={this.showjumpUp} onMouseOut={() => {this.resetBackground(); this.unshowjumpUp()}}>Jump Up</p>
-                    <p id="longHallCamoText" onMouseOver={this.showlongHallCamo} onMouseOut={() => {this.resetBackground(); this.unshowlongHallCamo()}}>Long Hall/Camo</p>
-                    <p id="midBridgeText" onMouseOver={this.showmidBridge} onMouseOut={() => {this.resetBackground(); this.unshowmidBridge()}}>Mid Bridge</p>
-                    <p id="maulerText" onMouseOver={this.showmauler} onMouseOut={() => {this.resetBackground(); this.unshowmauler()}}>Mauler</p>
-                    <p id="needlerText" onMouseOver={this.showneedler} onMouseOut={() => {this.resetBackground(); this.unshowneedler()}}>Needler</p>
-                    <p id="needlerPitText" onMouseOver={this.showneedlerPit} onMouseOut={() => {this.resetBackground(); this.unshowneedlerPit()}}>Needler Pit</p>
-                    <p id="needlerRampText" onMouseOver={this.showneedlerRamp} onMouseOut={() => {this.resetBackground(); this.unshowneedlerRamp()}}>Needler Ramp</p>
-                    <p id="pitText" onMouseOver={this.showpit} onMouseOut={() => {this.resetBackground(); this.unshowpit()}}>Pit</p>
-                    <p id="pitRampText" onMouseOver={this.showpitRamp} onMouseOut={() => {this.resetBackground(); this.unshowpitRamp()}}>Pit Ramp</p>
-                    <p id="platformText" onMouseOver={this.showplatform} onMouseOut={() => {this.resetBackground(); this.unshowplatform()}}>Platform</p>
-                    <p id="rocketsText" onMouseOver={this.showrockets} onMouseOut={() => {this.resetBackground(); this.unshowrockets()}}>Rockets</p>
-                    <p id="runwayText" onMouseOver={this.showrunway} onMouseOut={() => {this.resetBackground(); this.unshowrunway()}}>Runway</p>
-                    <p id="snipeBridgeText" onMouseOver={this.showsnipeBridge} onMouseOut={() => {this.resetBackground(); this.unshowsnipeBridge()}}>Snipe Bridge</p>
-                    <p id="snipePocketText" onMouseOver={this.showsnipePocket} onMouseOut={() => {this.resetBackground(); this.unshowsnipePocket()}}>Snipe Pocket</p>
-                    <p id="streetText" onMouseOver={this.showstreet} onMouseOut={() => {this.resetBackground(); this.unshowstreet()}}>Street</p>
-                    <p id="swordTextPit" onMouseOver={this.showsword} onMouseOut={() => {this.resetBackground(); this.unshowsword()}}>Sword</p>
-                    <p id="swordRampText" onMouseOver={this.showswordRamp} onMouseOut={() => {this.resetBackground(); this.unshowswordRamp()}}>Sword Ramp</p>
-                    <p id="swordWindowText" onMouseOver={this.showswordWindow} onMouseOut={() => {this.resetBackground(); this.unshowswordWindow()}}>Sword Window</p>
-                    <p id="s1Text" onMouseOver={this.shows1} onMouseOut={() => {this.resetBackground(); this.unshows1()}}>S1</p>
-                    <p id="s2Text" onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>S2</p>
-                    <p id="trainingText" onMouseOver={this.showtraining} onMouseOut={() => {this.resetBackground(); this.unshowtraining()}}>Training</p>
-                    <p id="trainingRampText" onMouseOver={this.showtrainingRamp} onMouseOut={() => {this.resetBackground(); this.unshowtrainingRamp()}}>Training Ramp</p>
-                    <p id="trainingPocketText" onMouseOver={this.showtrainingPocket} onMouseOut={() => {this.resetBackground(); this.unshowtrainingPocket()}}>Training Pocket</p>
-                    <p id="walshyText" onMouseOver={this.showwalshy} onMouseOut={() => {this.resetBackground(); this.unshowwalshy()}}>Walshy</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('firstBrPit')); this.textGreen(document.getElementById('firstBrPitText')); this.turnGreen(document.getElementById('firstBrPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('firstBrPit')); this.returnTextColor(document.getElementById('firstBrPitText')); this.returnColor(document.getElementById('firstBrPit2'))}} id="firstBrPitText">1st BR</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('secondBrPit')); this.textGreen(document.getElementById('secondBrPitText')); this.turnGreen(document.getElementById('secondBrPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('secondBrPit')); this.returnTextColor(document.getElementById('secondBrPitText')); this.returnColor(document.getElementById('secondBrPit2'))}} id="secondBrPitText">2nd BR</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('assaultPit')); this.textGreen(document.getElementById('assaultPitText')); this.turnGreen(document.getElementById('assaultPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('assaultPit')); this.returnTextColor(document.getElementById('assaultPitText')); this.returnColor(document.getElementById('assaultPit2'))}} id="assaultPitText">Assault</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('backRampPit')); this.textGreen(document.getElementById('backRampPitText')); this.turnGreen(document.getElementById('backRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backRampPit')); this.returnTextColor(document.getElementById('backRampPitText')); this.returnColor(document.getElementById('backRampPit2'))}} id="backRampPitText">Back Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('courtyardPit')); this.textGreen(document.getElementById('courtyardPitText')); this.turnGreen(document.getElementById('courtyardPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('courtyardPit')); this.returnTextColor(document.getElementById('courtyardPitText')); this.returnColor(document.getElementById('courtyardPit2'))}} id="courtyardPitText">Courtyard</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('customOsPit')); this.textGreen(document.getElementById('customOsPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('customOsPit')); this.returnTextColor(document.getElementById('customOsPitText'))}} id="customOsPitText">Custom/OS</p>
+                
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('cutsPit')); this.textGreen(document.getElementById('cutsPitText')); this.turnGreen(document.getElementById('cutsPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cutsPit')); this.returnTextColor(document.getElementById('cutsPitText')); this.returnColor(document.getElementById('cutsPit2'))}} id="cutsPitText">Cuts</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('flagPit')); this.textGreen(document.getElementById('flagPitText')); this.turnGreen(document.getElementById('flagPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPit')); this.returnTextColor(document.getElementById('flagPitText')); this.returnColor(document.getElementById('flagPit2'))}} id="flagPitText">Flag</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('greenBoxPit')); this.textGreen(document.getElementById('greenBoxPitText')); this.turnGreen(document.getElementById('greenBoxPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('greenBoxPit')); this.returnTextColor(document.getElementById('greenBoxPitText')); this.returnColor(document.getElementById('greenBoxPit2'))}} id="greenBoxPitText">Green Box</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('greenHallPit')); this.textGreen(document.getElementById('greenHallPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('greenHallPit')); this.returnTextColor(document.getElementById('greenHallPitText'))}} id="greenHallPitText">Green Hall</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('jumpUpPit')); this.textGreen(document.getElementById('jumpUpPitText')); this.turnGreen(document.getElementById('jumpUpPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('jumpUpPit')); this.returnTextColor(document.getElementById('jumpUpPitText')); this.returnColor(document.getElementById('jumpUpPit2'))}} id="jumpUpPitText">Jump Up</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('longHallCamoPit')); this.textGreen(document.getElementById('longHallCamoPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('longHallCamoPit')); this.returnTextColor(document.getElementById('longHallCamoPitText'))}} id="longHallCamoPitText">Long Hall/Camo</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('midBridgePit')); this.textGreen(document.getElementById('midBridgePitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('midBridgePit')); this.returnTextColor(document.getElementById('midBridgePitText'))}} id="midBridgePitText">Mid Bridge</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('maulerPit')); this.textGreen(document.getElementById('maulerPitText')); this.turnGreen(document.getElementById('maulerPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('maulerPit')); this.returnTextColor(document.getElementById('maulerPitText')); this.returnColor(document.getElementById('maulerPit2'))}} id="maulerPitText">Mauler</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('needlerPit')); this.textGreen(document.getElementById('needlerPitText')); this.turnGreen(document.getElementById('needlerPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerPit')); this.returnTextColor(document.getElementById('needlerPitText')); this.returnColor(document.getElementById('needlerPit2'))}} id="needlerPitText">Needler</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('needlerPitPit')); this.textGreen(document.getElementById('needlerPitPitText')); this.turnGreen(document.getElementById('needlerPitPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerPitPit')); this.returnTextColor(document.getElementById('needlerPitPitText')); this.returnColor(document.getElementById('needlerPitPit2'))}} id="needlerPitPitText">Needler Pit</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('needlerRampPit')); this.textGreen(document.getElementById('needlerRampPitText')); this.turnGreen(document.getElementById('needlerRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerRampPit')); this.returnTextColor(document.getElementById('needlerRampPitText')); this.returnColor(document.getElementById('needlerRampPit2'))}} id="needlerRampPitText">Needler Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('pitPit')); this.textGreen(document.getElementById('pitPitText')); this.turnGreen(document.getElementById('pitPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('pitPit')); this.returnTextColor(document.getElementById('pitPitText')); this.returnColor(document.getElementById('pitPit2'))}} id="pitPitText">Pit</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('pitRampPit')); this.textGreen(document.getElementById('pitRampPitText')); this.turnGreen(document.getElementById('pitRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('pitRampPit')); this.returnTextColor(document.getElementById('pitRampPitText')); this.returnColor(document.getElementById('pitRampPit2'))}} id="pitRampPitText">Pit Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('platformPit')); this.textGreen(document.getElementById('platformPitText')); this.turnGreen(document.getElementById('platformPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('platformPit')); this.returnTextColor(document.getElementById('platformPitText')); this.returnColor(document.getElementById('platformPit2'))}} id="platformPitText">Platform</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('rocketsPit')); this.textGreen(document.getElementById('rocketsPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('rocketsPit')); this.returnTextColor(document.getElementById('rocketsPitText'))}} id="rocketsPitText">Rockets</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('runwayPit')); this.textGreen(document.getElementById('runwayPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('runwayPit')); this.returnTextColor(document.getElementById('runwayPitText'))}} id="runwayPitText">Runway</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipeBridgePit')); this.textGreen(document.getElementById('snipeBridgePitText')); this.turnGreen(document.getElementById('snipeBridgePit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeBridgePit')); this.returnTextColor(document.getElementById('snipeBridgePitText')); this.returnColor(document.getElementById('snipeBridgePit2'))}} id="snipeBridgePitText">Snipe Bridge</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipePocketPit')); this.textGreen(document.getElementById('snipePocketPitText')); this.turnGreen(document.getElementById('snipePocketPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipePocketPit')); this.returnTextColor(document.getElementById('snipePocketPitText')); this.returnColor(document.getElementById('snipePocketPit2'))}} id="snipePocketPitText">Snipe Pocket</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('streetPit')); this.textGreen(document.getElementById('streetPitText')); this.turnGreen(document.getElementById('streetPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('streetPit')); this.returnTextColor(document.getElementById('streetPitText')); this.returnColor(document.getElementById('streetPit2'))}} id="streetPitText">Street</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('swordPit')); this.textGreen(document.getElementById('swordPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordPit')); this.returnTextColor(document.getElementById('swordPitText'))}} id="swordPitText">Sword</p>
+
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('swordRampPit')); this.textGreen(document.getElementById('swordRampPitText')); this.turnGreen(document.getElementById('swordRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordRampPit')); this.returnTextColor(document.getElementById('swordRampPitText')); this.returnColor(document.getElementById('swordRampPit2'))}} id="swordRampPitText">Sword Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('swordWindowPit')); this.textGreen(document.getElementById('swordWindowPitText')); this.turnGreen(document.getElementById('swordWindowPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordWindowPit')); this.returnTextColor(document.getElementById('swordWindowPitText')); this.returnColor(document.getElementById('swordWindowPit2'))}} id="swordWindowPitText">Sword Window</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('s1Pit')); this.textGreen(document.getElementById('s1PitText')); this.turnGreen(document.getElementById('s1Pit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('s1Pit')); this.returnTextColor(document.getElementById('s1PitText')); this.returnColor(document.getElementById('s1Pit2'))}} id="s1PitText">S1</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('s2Pit')); this.textGreen(document.getElementById('s2PitText')); this.turnGreen(document.getElementById('s2Pit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('s2Pit')); this.returnTextColor(document.getElementById('s2PitText')); this.returnColor(document.getElementById('s2Pit2'))}} id="s2PitText">S2</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('trainingPit')); this.textGreen(document.getElementById('trainingPitText')); this.turnGreen(document.getElementById('trainingPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingPit')); this.returnTextColor(document.getElementById('trainingPitText')); this.returnColor(document.getElementById('trainingPit2'))}} id="trainingPitText">Training Pit</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('trainingRampPit')); this.textGreen(document.getElementById('trainingRampPitText')); this.turnGreen(document.getElementById('trainingRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingRampPit')); this.returnTextColor(document.getElementById('trainingRampPitText')); this.returnColor(document.getElementById('trainingRampPit2'))}} id="trainingRampPitText">Training Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('trainingPocketPit')); this.textGreen(document.getElementById('trainingPocketPitText')); this.turnGreen(document.getElementById('trainingPocketPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingPocketPit')); this.returnTextColor(document.getElementById('trainingPocketPitText')); this.returnColor(document.getElementById('trainingPocketPit2'))}} id="trainingPocketPitText">Training Pocket</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('walshyPit')); this.textGreen(document.getElementById('walshyPitText')); this.turnGreen(document.getElementById('walshyPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('walshyPit')); this.returnTextColor(document.getElementById('walshyPitText')); this.returnColor(document.getElementById('walshyPit2'))}} id="walshyPitText">Walshy</p>
                 </div>
-                <div id="thePitMap">
-                    <div id='firstBRLeft' onMouseOver={this.showfirstBR} onMouseOut={() => {this.resetBackground(); this.unshowfirstBR()}}>
-                        <img src={firstBR} className='preloadImage'></img>
-                    </div>
-                    <div id='secondBRLeft' onMouseOver={this.showsecondBR} onMouseOut={() => {this.resetBackground(); this.unshowsecondBR()}}>
-                        <img src={secondBR} className='preloadImage'></img>
-                    </div>
-                    <div id='secondBRLeftTwo' onMouseOver={this.showsecondBR} onMouseOut={() => {this.resetBackground(); this.unshowsecondBR()}}>
-                        <img src={secondBR} className='preloadImage'></img>
-                    </div>
-                    <div id='assaultLeft' onMouseOver={this.showAssault} onMouseOut={() => {this.resetBackground(); this.unshowAssault()}}>
-                        <img src={Assault} className='preloadImage'></img>
-                    </div>
-                    <div id='backRampLeft' onMouseOver={this.showbackRamp} onMouseOut={() => {this.resetBackground(); this.unshowbackRamp()}}>
-                        <img src={backRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='courtyardLeft' onMouseOver={this.showcourtyard} onMouseOut={() => {this.resetBackground(); this.unshowcourtyard()}}>
-                        <img src={courtyard} className='preloadImage'></img>
-                    </div>
-                    <div id='cutsLeft' onMouseOver={this.showcuts} onMouseOut={() => {this.resetBackground(); this.unshowcuts()}}>
-                        <img src={cuts} className='preloadImage'></img>
-                    </div>
-                    <div id='flagLeft' onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>
-                        <img src={flag} className='preloadImage'></img>
-                    </div>
-                    <div id='greenBoxLeft' onMouseOver={this.showgreenBox} onMouseOut={() => {this.resetBackground(); this.unshowgreenBox()}}>
-                        <img src={greenBox} className='preloadImage'></img>
-                    </div>
-                    <div id='jumpUpLeft' onMouseOver={this.showjumpUp} onMouseOut={() => {this.resetBackground(); this.unshowjumpUp()}}>
-                        <img src={jumpUp} className='preloadImage'></img>
-                    </div>
-                    <div id='maulerLeft' onMouseOver={this.showmauler} onMouseOut={() => {this.resetBackground(); this.unshowmauler()}}>
-                        <img src={mauler} className='preloadImage'></img>
-                    </div>
-                    <div id='maulerLeftTwo' onMouseOver={this.showmauler} onMouseOut={() => {this.resetBackground(); this.unshowmauler()}}>
-                        <img src={mauler} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerLeft' onMouseOver={this.showneedler} onMouseOut={() => {this.resetBackground(); this.unshowneedler()}}>
-                        <img src={needler} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerLeftTwo' onMouseOver={this.showneedler} onMouseOut={() => {this.resetBackground(); this.unshowneedler()}}>
-                        <img src={needler} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerPitLeft' onMouseOver={this.showneedlerPit} onMouseOut={() => {this.resetBackground(); this.unshowneedlerPit()}}>
-                        <img src={needlerPit} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerPitLeftTwo' onMouseOver={this.showneedlerPit} onMouseOut={() => {this.resetBackground(); this.unshowneedlerPit()}}>
-                        <img src={needlerPit} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerRampLeft' onMouseOver={this.showneedlerRamp} onMouseOut={() => {this.resetBackground(); this.unshowneedlerRamp()}}>
-                        <img src={needlerRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='pitLeft' onMouseOver={this.showpit} onMouseOut={() => {this.resetBackground(); this.unshowpit()}}>
-                        <img src={pit} className='preloadImage'></img>
-                    </div>
-                    <div id='pitLeftTwo' onMouseOver={this.showpit} onMouseOut={() => {this.resetBackground(); this.unshowpit()}}>
-                        <img src={pit} className='preloadImage'></img>
-                    </div>
-                    <div id='pitRampLeft' onMouseOver={this.showpitRamp} onMouseOut={() => {this.resetBackground(); this.unshowpitRamp()}}>
-                        <img src={pitRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='platformLeft' onMouseOver={this.showplatform} onMouseOut={() => {this.resetBackground(); this.unshowplatform()}}>
-                        <img src={platform} className='preloadImage'></img>
-                    </div>
-                    <div id='platformLeftTwo' onMouseOver={this.showplatform} onMouseOut={() => {this.resetBackground(); this.unshowplatform()}}>
-                        <img src={platform} className='preloadImage'></img>
-                    </div>
-                    <div id='snipeBridgeLeft' onMouseOver={this.showsnipeBridge} onMouseOut={() => {this.resetBackground(); this.unshowsnipeBridge()}}>
-                        <img src={snipeBridge} className='preloadImage'></img>
-                    </div>
-                    <div id='snipePocketLeft' onMouseOver={this.showsnipePocket} onMouseOut={() => {this.resetBackground(); this.unshowsnipePocket()}}>
-                        <img src={snipePocket} className='preloadImage'></img>
-                    </div>
-                    <div id='streetLeft' onMouseOver={this.showstreet} onMouseOut={() => {this.resetBackground(); this.unshowstreet()}}>
-                        <img src={street} className='preloadImage'></img>
-                    </div>
-                    <div id='streetLeftTwo' onMouseOver={this.showstreet} onMouseOut={() => {this.resetBackground(); this.unshowstreet()}}>
-                        <img src={street} className='preloadImage'></img>
-                    </div>
-                    <div id='swordRampLeft' onMouseOver={this.showswordRamp} onMouseOut={() => {this.resetBackground(); this.unshowswordRamp()}}>
-                        <img src={swordRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='swordRampLeftTwo' onMouseOver={this.showswordRamp} onMouseOut={() => {this.resetBackground(); this.unshowswordRamp()}}>
-                        <img src={swordRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='swordWindowLeft' onMouseOver={this.showswordWindow} onMouseOut={() => {this.resetBackground(); this.unshowswordWindow()}}>
-                        <img src={swordWindow} className='preloadImage'></img>
-                    </div>
-                    <div id='s1PitLeft' onMouseOver={this.shows1} onMouseOut={() => {this.resetBackground(); this.unshows1()}}>
-                        <img src={s1} className='preloadImage'></img>
-                    </div>
-                    <div id='s2PitLeft' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='s2PitLeftTwo' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='s2PitLeftThree' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='s2PitLeftFour' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingLeft' onMouseOver={this.showtraining} onMouseOut={() => {this.resetBackground(); this.unshowtraining()}}>
-                        <img src={training} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingLeftTwo' onMouseOver={this.showtraining} onMouseOut={() => {this.resetBackground(); this.unshowtraining()}}>
-                        <img src={training} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingLeftThree' onMouseOver={this.showtraining} onMouseOut={() => {this.resetBackground(); this.unshowtraining()}}>
-                        <img src={training} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingRampLeft' onMouseOver={this.showtrainingRamp} onMouseOut={() => {this.resetBackground(); this.unshowtrainingRamp()}}>
-                        <img src={trainingRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingPocketLeft' onMouseOver={this.showtrainingPocket} onMouseOut={() => {this.resetBackground(); this.unshowtrainingPocket()}}>
-                        <img src={trainingPocket} className='preloadImage'></img>
-                    </div>
-                    <div id='walshyLeft' onMouseOver={this.showwalshy} onMouseOut={() => {this.resetBackground(); this.unshowwalshy()}}>
-                        <img src={walshy} className='preloadImage'></img>
-                    </div>
-                    <div id='firstBR' onMouseOver={this.showfirstBR} onMouseOut={() => {this.resetBackground(); this.unshowfirstBR()}}>
-                        <img src={firstBR} className='preloadImage'></img>
-                    </div>
-                    <div id='secondBR' onMouseOver={this.showsecondBR} onMouseOut={() => {this.resetBackground(); this.unshowsecondBR()}}>
-                        <img src={secondBR} className='preloadImage'></img>
-                    </div>
-                    <div id='secondBRTwo' onMouseOver={this.showsecondBR} onMouseOut={() => {this.resetBackground(); this.unshowsecondBR()}}>
-                        <img src={secondBR} className='preloadImage'></img>
-                    </div>
-                    <div id='assault' onMouseOver={this.showAssault} onMouseOut={() => {this.resetBackground(); this.unshowAssault()}}>
-                        <img src={Assault} className='preloadImage'></img>
-                    </div>
-                    <div id='backRamp' onMouseOver={this.showbackRamp} onMouseOut={() => {this.resetBackground(); this.unshowbackRamp()}}>
-                        <img src={backRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='courtyard' onMouseOver={this.showcourtyard} onMouseOut={() => {this.resetBackground(); this.unshowcourtyard()}}>
-                        <img src={courtyard} className='preloadImage'></img>
-                    </div>
-                    <div id='customOS' onMouseOver={this.showcustomOS} onMouseOut={() => {this.resetBackground(); this.unshowcustomOS()}}>
-                        <img src={customOS} className='preloadImage'></img>
-                    </div>
-                    <div id='cuts' onMouseOver={this.showcuts} onMouseOut={() => {this.resetBackground(); this.unshowcuts()}}>
-                        <img src={cuts} className='preloadImage'></img>
-                    </div>
-                    <div id='flag' onMouseOver={this.showflag} onMouseOut={() => {this.resetBackground(); this.unshowflag()}}>
-                        <img src={flag} className='preloadImage'></img>
-                    </div>
-                    <div id='greenBox' onMouseOver={this.showgreenBox} onMouseOut={() => {this.resetBackground(); this.unshowgreenBox()}}>
-                        <img src={greenBox} className='preloadImage'></img>
-                    </div>
-                    <div id='greenHall' onMouseOver={this.showgreenHall} onMouseOut={() => {this.resetBackground(); this.unshowgreenHall()}}>
-                        <img src={greenHall} className='preloadImage'></img>
-                    </div>
-                    <div id='jumpUp' onMouseOver={this.showjumpUp} onMouseOut={() => {this.resetBackground(); this.unshowjumpUp()}}>
-                        <img src={jumpUp} className='preloadImage'></img>
-                    </div>
-                    <div id='longHallCamo' onMouseOver={this.showlongHallCamo} onMouseOut={() => {this.resetBackground(); this.unshowlongHallCamo()}}>
-                        <img src={longHallCamo} className='preloadImage'></img>
-                    </div>
-                    <div id='mauler' onMouseOver={this.showmauler} onMouseOut={() => {this.resetBackground(); this.unshowmauler()}}>
-                        <img src={mauler} className='preloadImage'></img>
-                    </div>
-                    <div id='maulerTwo' onMouseOver={this.showmauler} onMouseOut={() => {this.resetBackground(); this.unshowmauler()}}>
-                        <img src={mauler} className='preloadImage'></img>
-                    </div>
-                    <div id='maulerThree' onMouseOver={this.showmauler} onMouseOut={() => {this.resetBackground(); this.unshowmauler()}}>
-                        <img src={mauler} className='preloadImage'></img>
-                    </div>
-                    <div id='midBridge' onMouseOver={this.showmidBridge} onMouseOut={() => {this.resetBackground(); this.unshowmidBridge()}}>
-                        <img src={midBridge} className='preloadImage'></img>
-                    </div>
-                    <div id='needler' onMouseOver={this.showneedler} onMouseOut={() => {this.resetBackground(); this.unshowneedler()}}>
-                        <img src={needler} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerTwo' onMouseOver={this.showneedler} onMouseOut={() => {this.resetBackground(); this.unshowneedler()}}>
-                        <img src={needler} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerPit' onMouseOver={this.showneedlerPit} onMouseOut={() => {this.resetBackground(); this.unshowneedlerPit()}}>
-                        <img src={needlerPit} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerPitTwo' onMouseOver={this.showneedlerPit} onMouseOut={() => {this.resetBackground(); this.unshowneedlerPit()}}>
-                        <img src={needlerPit} className='preloadImage'></img>
-                    </div>
-                    <div id='needlerRamp' onMouseOver={this.showneedlerRamp} onMouseOut={() => {this.resetBackground(); this.unshowneedlerRamp()}}>
-                        <img src={needlerRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='pit' onMouseOver={this.showpit} onMouseOut={() => {this.resetBackground(); this.unshowpit()}}>
-                        <img src={pit} className='preloadImage'></img>
-                    </div>
-                    <div id='pitTwo' onMouseOver={this.showpit} onMouseOut={() => {this.resetBackground(); this.unshowpit()}}>
-                        <img src={pit} className='preloadImage'></img>
-                    </div>
-                    <div id='pitThree' onMouseOver={this.showpit} onMouseOut={() => {this.resetBackground(); this.unshowpit()}}>
-                        <img src={pit} className='preloadImage'></img>
-                    </div>
-                    <div id='pitRamp' onMouseOver={this.showpitRamp} onMouseOut={() => {this.resetBackground(); this.unshowpitRamp()}}>
-                        <img src={pitRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='platform' onMouseOver={this.showplatform} onMouseOut={() => {this.resetBackground(); this.unshowplatform()}}>
-                        <img src={platform} className='preloadImage'></img>
-                    </div>
-                    <div id='platformTwo' onMouseOver={this.showplatform} onMouseOut={() => {this.resetBackground(); this.unshowplatform()}}>
-                        <img src={platform} className='preloadImage'></img>
-                    </div>
-                    <div id='rockets' onMouseOver={this.showrockets} onMouseOut={() => {this.resetBackground(); this.unshowrockets()}}>
-                        <img src={rockets} className='preloadImage'></img>
-                    </div>
-                    <div id='runway' onMouseOver={this.showrunway} onMouseOut={() => {this.resetBackground(); this.unshowrunway()}}>
-                        <img src={runway} className='preloadImage'></img>
-                    </div>
-                    <div id='snipeBridge' onMouseOver={this.showsnipeBridge} onMouseOut={() => {this.resetBackground(); this.unshowsnipeBridge()}}>
-                        <img src={snipeBridge} className='preloadImage'></img>
-                    </div>
-                    <div id='snipePocket' onMouseOver={this.showsnipePocket} onMouseOut={() => {this.resetBackground(); this.unshowsnipePocket()}}>
-                        <img src={snipePocket} className='preloadImage'></img>
-                    </div>
-                    <div id='street' onMouseOver={this.showstreet} onMouseOut={() => {this.resetBackground(); this.unshowstreet()}}>
-                        <img src={street} className='preloadImage'></img>
-                    </div>
-                    <div id='sword' onMouseOver={this.showsword} onMouseOut={() => {this.resetBackground(); this.unshowsword()}}>
-                        <img src={sword} className='preloadImage'></img>
-                    </div>
-                    <div id='swordRamp' onMouseOver={this.showswordRamp} onMouseOut={() => {this.resetBackground(); this.unshowswordRamp()}}>
-                        <img src={swordRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='swordRampTwo' onMouseOver={this.showswordRamp} onMouseOut={() => {this.resetBackground(); this.unshowswordRamp()}}>
-                        <img src={swordRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='swordWindow' onMouseOver={this.showswordWindow} onMouseOut={() => {this.resetBackground(); this.unshowswordWindow()}}>
-                        <img src={swordWindow} className='preloadImage'></img>
-                    </div>
-                    <div id='s1Pit' onMouseOver={this.shows1} onMouseOut={() => {this.resetBackground(); this.unshows1()}}>
-                        <img src={s1} className='preloadImage'></img>
-                    </div>
-                    <div id='s2Pit' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='s2PitTwo' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='s2PitThree' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='s2PitFour' onMouseOver={this.shows2} onMouseOut={() => {this.resetBackground(); this.unshows2()}}>
-                        <img src={s2} className='preloadImage'></img>
-                    </div>
-                    <div id='training' onMouseOver={this.showtraining} onMouseOut={() => {this.resetBackground(); this.unshowtraining()}}>
-                        <img src={training} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingTwo' onMouseOver={this.showtraining} onMouseOut={() => {this.resetBackground(); this.unshowtraining()}}>
-                        <img src={training} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingThree' onMouseOver={this.showtraining} onMouseOut={() => {this.resetBackground(); this.unshowtraining()}}>
-                        <img src={training} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingPocket' onMouseOver={this.showtrainingPocket} onMouseOut={() => {this.resetBackground(); this.unshowtrainingPocket()}}>
-                        <img src={trainingPocket} className='preloadImage'></img>
-                    </div>
-                    <div id='trainingRamp' onMouseOver={this.showtrainingRamp} onMouseOut={() => {this.resetBackground(); this.unshowtrainingRamp()}}>
-                        <img src={trainingRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='walshy' onMouseOver={this.showwalshy} onMouseOut={() => {this.resetBackground(); this.unshowwalshy()}}>
-                        <img src={walshy} className='preloadImage'></img>
-                    </div>
-                </div>
+                <svg id="thePitMap" width="750px" height="625px">
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('firstBrPit')); this.textGreen(document.getElementById('firstBrPitText')); this.turnGreen(document.getElementById('firstBrPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('firstBrPit')); this.returnTextColor(document.getElementById('firstBrPitText')); this.returnColor(document.getElementById('firstBrPit2'))}}  id="firstBrPit" points="128,489 193,489 193,507 166,507 166,510 128, 510"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('firstBrPit')); this.textGreen(document.getElementById('firstBrPitText')); this.turnGreen(document.getElementById('firstBrPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('firstBrPit')); this.returnTextColor(document.getElementById('firstBrPitText')); this.returnColor(document.getElementById('firstBrPit2'))}}  id="firstBrPit2" points="562,489 626,489 626,510 589,510 589,507 562,507"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('secondBrPit')); this.textGreen(document.getElementById('secondBrPitText')); this.turnGreen(document.getElementById('secondBrPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('secondBrPit')); this.returnTextColor(document.getElementById('secondBrPitText')); this.returnColor(document.getElementById('secondBrPit2'))}}  id="secondBrPit" points="288,469 323,469 323,526 311,535 300,535 300,497 288,485"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('secondBrPit')); this.textGreen(document.getElementById('secondBrPitText')); this.turnGreen(document.getElementById('secondBrPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('secondBrPit')); this.returnTextColor(document.getElementById('secondBrPitText')); this.returnColor(document.getElementById('secondBrPit2'))}}  id="secondBrPit2" points="432,469 467,469 467,485 456,497 456,535 444,535 432,526"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('assaultPit')); this.textGreen(document.getElementById('assaultPitText')); this.turnGreen(document.getElementById('assaultPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('assaultPit')); this.returnTextColor(document.getElementById('assaultPitText')); this.returnColor(document.getElementById('assaultPit2'))}}  id="assaultPit" points="170,333 212,333 212,373 170,373"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('assaultPit')); this.textGreen(document.getElementById('assaultPitText')); this.turnGreen(document.getElementById('assaultPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('assaultPit')); this.returnTextColor(document.getElementById('assaultPitText')); this.returnColor(document.getElementById('assaultPit2'))}}  id="assaultPit2" points="587,333 544,333 544,373 587,373"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('backRampPit')); this.textGreen(document.getElementById('backRampPitText')); this.turnGreen(document.getElementById('backRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backRampPit')); this.returnTextColor(document.getElementById('backRampPitText')); this.returnColor(document.getElementById('backRampPit2'))}}  id="backRampPit" points="166,253 154,253 154,338 166,338"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('backRampPit')); this.textGreen(document.getElementById('backRampPitText')); this.turnGreen(document.getElementById('backRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('backRampPit')); this.returnTextColor(document.getElementById('backRampPitText')); this.returnColor(document.getElementById('backRampPit2'))}}  id="backRampPit2" points="601,253 589,253 589,335 601,335"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('courtyardPit')); this.textGreen(document.getElementById('courtyardPitText')); this.turnGreen(document.getElementById('courtyardPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('courtyardPit')); this.returnTextColor(document.getElementById('courtyardPitText')); this.returnColor(document.getElementById('courtyardPit2'))}}  id="courtyardPit" points="153,199 230,199 230,247 153,247"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('courtyardPit')); this.textGreen(document.getElementById('courtyardPitText')); this.turnGreen(document.getElementById('courtyardPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('courtyardPit')); this.returnTextColor(document.getElementById('courtyardPitText')); this.returnColor(document.getElementById('courtyardPit2'))}}  id="courtyardPit2" points="602,199 525,199 525,247 602,247"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('customOsPit')); this.textGreen(document.getElementById('customOsPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('customOsPit')); this.returnTextColor(document.getElementById('customOsPitText'))}}  id="customOsPit" points="369,249 386,249 386,255 393,255 393,285 362,285 362,255 369,255"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cutsPit')); this.textGreen(document.getElementById('cutsPitText')); this.turnGreen(document.getElementById('cutsPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cutsPit')); this.returnTextColor(document.getElementById('cutsPitText')); this.returnColor(document.getElementById('cutsPit2'))}}  id="cutsPit" points="188,405 188,374 170,374 170,376 153,376 128,409 147,409 147,405"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('cutsPit')); this.textGreen(document.getElementById('cutsPitText')); this.turnGreen(document.getElementById('cutsPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('cutsPit')); this.returnTextColor(document.getElementById('cutsPitText')); this.returnColor(document.getElementById('cutsPit2'))}}  id="cutsPit2" points="567,374 586,374 586,378 603,378 628,409 608,409 608,405 567,405"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagPit')); this.textGreen(document.getElementById('flagPitText')); this.turnGreen(document.getElementById('flagPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPit')); this.returnTextColor(document.getElementById('flagPitText')); this.returnColor(document.getElementById('flagPit2'))}}  id="flagPit" points="145,410 145,420 179,420 179,432 189,432 189,461 179,461 179,474 126,474 126,476 110,476 110,412 125,412 127,410"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('flagPit')); this.textGreen(document.getElementById('flagPitText')); this.turnGreen(document.getElementById('flagPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('flagPit')); this.returnTextColor(document.getElementById('flagPitText')); this.returnColor(document.getElementById('flagPit2'))}}  id="flagPit2" points="610,410 628,410 630,412 645,412 645,476 630,476 630,474 577,474 577,461 567,461 567,432 575,432 575,420 610,420"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('greenBoxPit')); this.textGreen(document.getElementById('greenBoxPitText')); this.turnGreen(document.getElementById('greenBoxPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('greenBoxPit')); this.returnTextColor(document.getElementById('greenBoxPitText')); this.returnColor(document.getElementById('greenBoxPit2'))}}  id="greenBoxPit" points="323,422 285,422 285,464 323,464"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('greenBoxPit')); this.textGreen(document.getElementById('greenBoxPitText')); this.turnGreen(document.getElementById('greenBoxPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('greenBoxPit')); this.returnTextColor(document.getElementById('greenBoxPitText')); this.returnColor(document.getElementById('greenBoxPit2'))}}  id="greenBoxPit2" points="470,422 432,422 432,464 470,464"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('greenHallPit')); this.textGreen(document.getElementById('greenHallPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('greenHallPit')); this.returnTextColor(document.getElementById('greenHallPitText'))}}  id="greenHallPit" points="324,433 431,433 431,452 324,452"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('jumpUpPit')); this.textGreen(document.getElementById('jumpUpPitText')); this.turnGreen(document.getElementById('jumpUpPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('jumpUpPit')); this.returnTextColor(document.getElementById('jumpUpPitText')); this.returnColor(document.getElementById('jumpUpPit2'))}}  id="jumpUpPit" points="234,394 221,394 221,406 234,419"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('jumpUpPit')); this.textGreen(document.getElementById('jumpUpPitText')); this.turnGreen(document.getElementById('jumpUpPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('jumpUpPit')); this.returnTextColor(document.getElementById('jumpUpPitText')); this.returnColor(document.getElementById('jumpUpPit2'))}}  id="jumpUpPit2" points="535,395 525,395 525,416 535,406"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('longHallCamoPit')); this.textGreen(document.getElementById('longHallCamoPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('longHallCamoPit')); this.returnTextColor(document.getElementById('longHallCamoPitText'))}}  id="longHallCamoPit" points="415,544 415,556 340,556 340,544"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('midBridgePit')); this.textGreen(document.getElementById('midBridgePitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('midBridgePit')); this.returnTextColor(document.getElementById('midBridgePitText'))}}  id="midBridgePit" points="401,141 354,141 354,188 401,188"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('maulerPit')); this.textGreen(document.getElementById('maulerPitText')); this.turnGreen(document.getElementById('maulerPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('maulerPit')); this.returnTextColor(document.getElementById('maulerPitText')); this.returnColor(document.getElementById('maulerPit2'))}}  id="maulerPit" points="183,570 166,570 141,544 125,544 125,512 113,512 113,557 137,582 183,582"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('maulerPit')); this.textGreen(document.getElementById('maulerPitText')); this.turnGreen(document.getElementById('maulerPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('maulerPit')); this.returnTextColor(document.getElementById('maulerPitText')); this.returnColor(document.getElementById('maulerPit2'))}}  id="maulerPit2" points="643,512 630,512 630,543 614,543 589,569 572,569 572,582 619,582 643,556"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('needlerPit')); this.textGreen(document.getElementById('needlerPitText')); this.turnGreen(document.getElementById('needlerPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerPit')); this.returnTextColor(document.getElementById('needlerPitText')); this.returnColor(document.getElementById('needlerPit2'))}}  id="needlerPit" points="251,539 241,539 215,565 184,565 184,582 251,582"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('needlerPit')); this.textGreen(document.getElementById('needlerPitText')); this.turnGreen(document.getElementById('needlerPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerPit')); this.returnTextColor(document.getElementById('needlerPitText')); this.returnColor(document.getElementById('needlerPit2'))}}  id="needlerPit2" points="571,565 541,565 514,539 504,539 504,582 571,582"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('needlerPitPit')); this.textGreen(document.getElementById('needlerPitPitText')); this.turnGreen(document.getElementById('needlerPitPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerPitPit')); this.returnTextColor(document.getElementById('needlerPitPitText')); this.returnColor(document.getElementById('needlerPitPit2'))}}  id="needlerPitPit" points="246,511 194,511 194,530 172,530 184,542 184,562 213,562 240,536 246,536"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('needlerPitPit')); this.textGreen(document.getElementById('needlerPitPitText')); this.turnGreen(document.getElementById('needlerPitPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerPitPit')); this.returnTextColor(document.getElementById('needlerPitPitText')); this.returnColor(document.getElementById('needlerPitPit2'))}}  id="needlerPitPit2" points="509,511 561,511 561,530 583,530 571,541 571,562 542,562 516,536 509,536"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('needlerRampPit')); this.textGreen(document.getElementById('needlerRampPitText')); this.turnGreen(document.getElementById('needlerRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerRampPit')); this.returnTextColor(document.getElementById('needlerRampPitText')); this.returnColor(document.getElementById('needlerRampPit2'))}}  id="needlerRampPit" points="299,524 299,535 248,535 248,524"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('needlerRampPit')); this.textGreen(document.getElementById('needlerRampPitText')); this.turnGreen(document.getElementById('needlerRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('needlerRampPit')); this.returnTextColor(document.getElementById('needlerRampPitText')); this.returnColor(document.getElementById('needlerRampPit2'))}}  id="needlerRampPit2" points="508,524 508,535 457,535 457,524"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('pitPit')); this.textGreen(document.getElementById('pitPitText')); this.turnGreen(document.getElementById('pitPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('pitPit')); this.returnTextColor(document.getElementById('pitPitText')); this.returnColor(document.getElementById('pitPit2'))}}  id="pitPit" points="278,311 225,311 225,319 211,333 211,373 221,373 221,393 235,393 235,420 239,424 279,424 279,416 297,416 297,386 278,386"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('pitPit')); this.textGreen(document.getElementById('pitPitText')); this.turnGreen(document.getElementById('pitPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('pitPit')); this.returnTextColor(document.getElementById('pitPitText')); this.returnColor(document.getElementById('pitPit2'))}}  id="pitPit2" points="477,312 530,312 530,318 543,332 543,373 535,373 535,394 524,394 524,416 509,431 476,431 476,417 459,417 459,386 477,386"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('pitRampPit')); this.textGreen(document.getElementById('pitRampPitText')); this.turnGreen(document.getElementById('pitRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('pitRampPit')); this.returnTextColor(document.getElementById('pitRampPitText')); this.returnColor(document.getElementById('pitRampPit2'))}}  id="pitRampPit" points="297,347 279,347 279,385 297,385"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('pitRampPit')); this.textGreen(document.getElementById('pitRampPitText')); this.turnGreen(document.getElementById('pitRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('pitRampPit')); this.returnTextColor(document.getElementById('pitRampPitText')); this.returnColor(document.getElementById('pitRampPit2'))}}  id="pitRampPit2" points="476,347 459,347 459,385 476,385"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('platformPit')); this.textGreen(document.getElementById('platformPitText')); this.turnGreen(document.getElementById('platformPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('platformPit')); this.returnTextColor(document.getElementById('platformPitText')); this.returnColor(document.getElementById('platformPit2'))}}  id="platformPit" points="193,377 217,377 217,408 243,433 243,485 220,507 194,507 194,463 193,463 193,430 194,430 194,408 193,408"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('platformPit')); this.textGreen(document.getElementById('platformPitText')); this.turnGreen(document.getElementById('platformPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('platformPit')); this.returnTextColor(document.getElementById('platformPitText')); this.returnColor(document.getElementById('platformPit2'))}}  id="platformPit2" points="562,377 538,377 538,408 512,434 512,484 535,507 561,507 561,464 562,464"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('rocketsPit')); this.textGreen(document.getElementById('rocketsPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('rocketsPit')); this.returnTextColor(document.getElementById('rocketsPitText'))}}  id="rocketsPit" points="387,453 387,462 368,462 368,453"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('runwayPit')); this.textGreen(document.getElementById('runwayPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('runwayPit')); this.returnTextColor(document.getElementById('runwayPitText'))}}  id="runwayPit" points="297,199 458,199 458,218 297,218"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipeBridgePit')); this.textGreen(document.getElementById('snipeBridgePitText')); this.turnGreen(document.getElementById('snipeBridgePit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeBridgePit')); this.returnTextColor(document.getElementById('snipeBridgePitText')); this.returnColor(document.getElementById('snipeBridgePit2'))}}  id="snipeBridgePit" points="121,331 109,331 109,362 121,362"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipeBridgePit')); this.textGreen(document.getElementById('snipeBridgePitText')); this.turnGreen(document.getElementById('snipeBridgePit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeBridgePit')); this.returnTextColor(document.getElementById('snipeBridgePitText')); this.returnColor(document.getElementById('snipeBridgePit2'))}}  id="snipeBridgePit2" points="646,331 634,331 634,360 646,360"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipePocketPit')); this.textGreen(document.getElementById('snipePocketPitText')); this.turnGreen(document.getElementById('snipePocketPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipePocketPit')); this.returnTextColor(document.getElementById('snipePocketPitText')); this.returnColor(document.getElementById('snipePocketPit2'))}}  id="snipePocketPit" points="110,287 97,287 97,302 110,302"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipePocketPit')); this.textGreen(document.getElementById('snipePocketPitText')); this.turnGreen(document.getElementById('snipePocketPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipePocketPit')); this.returnTextColor(document.getElementById('snipePocketPitText')); this.returnColor(document.getElementById('snipePocketPit2'))}}  id="snipePocketPit2" points="646,287 658,287 658,301 646,301"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('streetPit')); this.textGreen(document.getElementById('streetPitText')); this.turnGreen(document.getElementById('streetPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('streetPit')); this.returnTextColor(document.getElementById('streetPitText')); this.returnColor(document.getElementById('streetPit2'))}}  id="streetPit" points="326,285 312,271 312,244 296,244 296,238 231,238 231,248 226,248 226,309 326,309"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('streetPit')); this.textGreen(document.getElementById('streetPitText')); this.turnGreen(document.getElementById('streetPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('streetPit')); this.returnTextColor(document.getElementById('streetPitText')); this.returnColor(document.getElementById('streetPit2'))}}  id="streetPit2" points="444,245 524,245 524,248 530,248 530,311 430,311 430,285 444,270"/>
+                    
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('swordPit')); this.textGreen(document.getElementById('swordPitText'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordPit')); this.returnTextColor(document.getElementById('swordPitText'))}}  id="swordPit" points="388,46 367,46 367,57 346,57 346,74 363,87 392,87 409,75 409,57 388,57"/>
+
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('swordRampPit')); this.textGreen(document.getElementById('swordRampPitText')); this.turnGreen(document.getElementById('swordRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordRampPit')); this.returnTextColor(document.getElementById('swordRampPitText')); this.returnColor(document.getElementById('swordRampPit2'))}}  id="swordRampPit" points="247,82 300,82 300,92 247,92"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('swordRampPit')); this.textGreen(document.getElementById('swordRampPitText')); this.turnGreen(document.getElementById('swordRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordRampPit')); this.returnTextColor(document.getElementById('swordRampPitText')); this.returnColor(document.getElementById('swordRampPit2'))}}  id="swordRampPit2" points="455,82 507,82 507,92 455,92"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('swordWindowPit')); this.textGreen(document.getElementById('swordWindowPitText')); this.turnGreen(document.getElementById('swordWindowPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordWindowPit')); this.returnTextColor(document.getElementById('swordWindowPitText')); this.returnColor(document.getElementById('swordWindowPit2'))}}  id="swordWindowPit" points="334,96 334,110 343,119 357,119 357,136 326,136 318,129 318,96"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('swordWindowPit')); this.textGreen(document.getElementById('swordWindowPitText')); this.turnGreen(document.getElementById('swordWindowPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordWindowPit')); this.returnTextColor(document.getElementById('swordWindowPitText')); this.returnColor(document.getElementById('swordWindowPit2'))}}  id="swordWindowPit2" points="421,96 437,96 437,129 429,136 398,136 398,118 412,118 421,110"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('s1Pit')); this.textGreen(document.getElementById('s1PitText')); this.turnGreen(document.getElementById('s1Pit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('s1Pit')); this.returnTextColor(document.getElementById('s1PitText')); this.returnColor(document.getElementById('s1Pit2'))}}  id="s1Pit" points="183,275 212,275 212,280 216,280 216,283 222,283 222,292 217,292 215,294 213,294 213,307 183,307"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('s1Pit')); this.textGreen(document.getElementById('s1PitText')); this.turnGreen(document.getElementById('s1Pit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('s1Pit')); this.returnTextColor(document.getElementById('s1PitText')); this.returnColor(document.getElementById('s1Pit2'))}}  id="s1Pit2" points="573,275 543,275 543,280 539,280 539,283 533,283 533,292 538,292 540,294 543,294 543,307 573,307"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('s2Pit')); this.textGreen(document.getElementById('s2PitText')); this.turnGreen(document.getElementById('s2Pit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('s2Pit')); this.returnTextColor(document.getElementById('s2PitText')); this.returnColor(document.getElementById('s2Pit2'))}}  id="s2Pit" points="119,249 133,249 133,317 121,328 84,328 84,271 119,271"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('s2Pit')); this.textGreen(document.getElementById('s2PitText')); this.turnGreen(document.getElementById('s2Pit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('s2Pit')); this.returnTextColor(document.getElementById('s2PitText')); this.returnColor(document.getElementById('s2Pit2'))}}  id="s2Pit2" points="636,249 636,270 671,270 671,328 633,328 622,317 622,249"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('trainingPit')); this.textGreen(document.getElementById('trainingPitText')); this.turnGreen(document.getElementById('trainingPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingPit')); this.returnTextColor(document.getElementById('trainingPitText')); this.returnColor(document.getElementById('trainingPit2'))}}  id="trainingPit" points="296,333 365,333 365,384 300,384 300,364 313,364 313,346 296,346"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('trainingPit')); this.textGreen(document.getElementById('trainingPitText')); this.turnGreen(document.getElementById('trainingPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingPit')); this.returnTextColor(document.getElementById('trainingPitText')); this.returnColor(document.getElementById('trainingPit2'))}}  id="trainingPit2" points="458,333 458,346 442,346 442,363 455,363 455,384 390,384 390,333"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('trainingRampPit')); this.textGreen(document.getElementById('trainingRampPitText')); this.turnGreen(document.getElementById('trainingRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingRampPit')); this.returnTextColor(document.getElementById('trainingRampPitText')); this.returnColor(document.getElementById('trainingRampPit2'))}}  id="trainingRampPit" points="356,315 282,315 282,329 356,329"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('trainingRampPit')); this.textGreen(document.getElementById('trainingRampPitText')); this.turnGreen(document.getElementById('trainingRampPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingRampPit')); this.returnTextColor(document.getElementById('trainingRampPitText')); this.returnColor(document.getElementById('trainingRampPit2'))}}  id="trainingRampPit2" points="401,315 473,315 473,328 401,328"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('trainingPocketPit')); this.textGreen(document.getElementById('trainingPocketPitText')); this.turnGreen(document.getElementById('trainingPocketPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingPocketPit')); this.returnTextColor(document.getElementById('trainingPocketPitText')); this.returnColor(document.getElementById('trainingPocketPit2'))}}  id="trainingPocketPit" points="312,351 300,351 300,363 312,363"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('trainingPocketPit')); this.textGreen(document.getElementById('trainingPocketPitText')); this.turnGreen(document.getElementById('trainingPocketPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('trainingPocketPit')); this.returnTextColor(document.getElementById('trainingPocketPitText')); this.returnColor(document.getElementById('trainingPocketPit2'))}}  id="trainingPocketPit2" points="455,350 443,350 443,362 455,362"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('walshyPit')); this.textGreen(document.getElementById('walshyPitText')); this.turnGreen(document.getElementById('walshyPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('walshyPit')); this.returnTextColor(document.getElementById('walshyPitText')); this.returnColor(document.getElementById('walshyPit2'))}}  id="walshyPit" points="271,511 287,511 287,490 296,500 296,519 271,519"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('walshyPit')); this.textGreen(document.getElementById('walshyPitText')); this.turnGreen(document.getElementById('walshyPit2'))}} onMouseOut={() => {this.returnColor(document.getElementById('walshyPit')); this.returnTextColor(document.getElementById('walshyPitText')); this.returnColor(document.getElementById('walshyPit2'))}}  id="walshyPit2" points="482,510 468,510 468,490 459,500 459,519 482,519"/>
+                </svg>
                 <div className="inGamePic">
                     <h2 id="thePitInGamePicText" class="inGamePicText"></h2>
                     <img id="thePitScreenShot"></img>
@@ -663,3 +182,67 @@ class ThePit extends React.Component{
 }
 
 export default ThePit;
+
+/*
+1st BR "128,489 193,489 193,507 166,507 166,510 128, 510"
+    "562,489 626,489 626,510 589,510 589,507 562,507"
+2nd BR "288,469 323,469 323,526 311,535 300,535 300,497 288,485"
+    "432,469 467,469 467,485 456,497 456,535 444,535 432,526"
+Assault "170,333 212,333 212,373 170,373"
+    "587,333 544,333 544,373 587,373"
+Back Ramp "166,253 154,253 154,338 166,338"
+    "601,253 589,253 589,335 601,335"
+Courtyard "153,199 230,199 230,247 153,247"
+    "602,199 525,199 525,247 602,247"
+Custom/OS "369,249 386,249 386,255 393,255 393,285 362,285 362,255 369,255"
+Cuts "188,405 188,374 170,374 170,376 153,376 128,409 147,409 147,405"
+    "567,374 586,374 586,378 603,378 628,409 608,409 608,405 567,405"
+Flag "145,410 145,420 179,420 179,432 189,432 189,461 179,461 179,474 126,474 126,476 110,476 110,412 125,412 127,410"
+    "610,410 628,410 630,412 645,412 645,476 630,476 630,474 577,474 577,461 567,461 567,432 575,432 575,420 610,420"
+Green Box "323,422 285,422 285,464 323,464"
+    "470,422 432,422 432,464 470,464"
+Green Hall "324,433 431,433 431,452 324,452"
+Jump Up "234,394 221,394 221,406 234,419"
+    "535,395 525,395 525,416 535,406"
+Long Hall/Camo "415,544 415,556 340,556 340,544"
+Mid Bridge "401,141 354,141 354,188 401,188"
+Mauler "183,570 166,570 141,544 125,544 125,512 113,512 113,557 137,582 183,582"
+    "643,512 630,512 630,543 614,543 589,569 572,569 572,582 619,582 643,556"
+Needler "251,539 241,539 215,565 184,565 184,582 251,582"
+    "571,565 541,565 514,539 504,539 504,582 571,582"
+Needler Pit "246,511 194,511 194,530 172,530 184,542 184,562 213,562 240,536 246,536"
+    "509,511 561,511 561,530 583,530 571,541 571,562 542,562 516,536 509,536"
+Needler Ramp "299,524 299,535 248,535 248,524"
+    "508,524 508,535 457,535 457,524"
+Pit "278,311 225,311 225,319 211,333 211,373 221,373 221,393 235,393 235,420 239,424 279,424 279,416 297,416 297,386 278,386"
+    "477,312 530,312 530,318 543,332 543,373 535,373 535,394 524,394 524,416 509,431 476,431 476,417 459,417 459,386 477,386"
+Pit Ramp "297,347 279,347 279,385 297,385"
+    "476,347 459,347 459,385 476,385"
+Platform "193,377 217,377 217,408 243,433 243,485 220,507 194,507 194,463 193,463 193,430 194,430 194,408 193,408"
+    "562,377 538,377 538,408 512,434 512,484 535,507 561,507 561,464 562,464"
+Rockets "387,453 387,462 368,462 368,453"
+Runway "297,199 458,199 458,218 297,218"
+Snipe Bridge "121,331 109,331 109,362 121,362"
+    "646,331 634,331 634,360 646,360"
+Snipe Pocket "110,287 97,287 97,302 110,302"
+    "646,287 658,287 658,301 646,301"
+Street "326,285 312,271 312,244 296,244 296,238 231,238 231,248 226,248 226,309 326,309"
+    "444,245 524,245 524,248 530,248 530,311 430,311 430,285 444,270"
+Sword "388,46 367,46 367,57 346,57 346,74 363,87 392,87 409,75 409,57 388,57"
+Sword Ramp "247,82 300,82 300,92 247,92"
+    "455,82 507,82 507,92 455,92"
+Sword Window "334,96 334,110 343,119 357,119 357,136 326,136 318,129 318,96"
+    "421,96 437,96 437,129 429,136 398,136 398,118 412,118 421,110"
+S1 "183,275 212,275 212,280 216,280 216,283 222,283 222,292 217,292 215,294 213,294 213,307 183,307"
+    "573,275 543,275 543,280 539,280 539,283 533,283 533,292 538,292 540,294 543,294 543,307 573,307"
+S2 "119,249 133,249 133,317 121,328 84,328 84,271 119,271"
+    "636,249 636,270 671,270 671,328 633,328 622,317 622,249"
+Training "296,333 365,333 365,384 300,384 300,364 313,364 313,346 296,346"
+    "458,333 458,346 442,346 442,363 455,363 455,384 390,384 390,333"
+Training Ramp "356,315 282,315 282,329 356,329"
+    "401,315 473,315 473,328 401,328"
+Training Pocket "312,351 300,351 300,363 312,363"
+    "455,350 443,350 443,362 455,362"
+Walshy "271,511 287,511 287,490 296,500 296,519 271,519"
+    "482,510 468,510 468,490 459,500 459,519 482,519"
+*/

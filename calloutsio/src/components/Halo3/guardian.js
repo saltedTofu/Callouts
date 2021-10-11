@@ -56,482 +56,83 @@ import UnderGlass from './BlueprintPics/UnderGlass.png';
 import UnderGlassSS from './BlueprintPics/guardianSS/underGlassSS.png';
 
 class Guardian extends React.Component{
-    loadAll = () => {
-        document.getElementById('guardianMap').style.backgroundImage=`url(${camoBlueprint})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Barrels})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueEntrance})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueLights})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueRamp})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueWindow})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BottomGold})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BottomGreen})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Elbow})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${FrontBlue})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${GoldLights})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${GoldWindow})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${GreenLights})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${ShortJump})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${ShotgunRoom})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Snipe1})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Snipe2})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Snipe3})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${SnipeLift})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${SnipeLights})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${SnipeRamp})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Stump})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopBlue})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopGold})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopGreen})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopMid})`;
-        document.getElementById('guardianMap').style.backgroundImage=`url(${UnderGlass})`;
-        document.getElementById('guardianScreenShot').src=CamoSS;
-        document.getElementById('guardianScreenShot').src=BarrelsSS;
-        document.getElementById('guardianScreenShot').src=BlueLightsSS;
-        document.getElementById('guardianScreenShot').src=BlueRampSS;
-        document.getElementById('guardianScreenShot').src=BlueWindowSS;
-        document.getElementById('guardianScreenShot').src=BottomGoldSS;
-        document.getElementById('guardianScreenShot').src=ElbowSS;
-        document.getElementById('guardianScreenShot').src=FrontBlueSS;
-        document.getElementById('guardianScreenShot').src=GoldLightsSS;
-        document.getElementById('guardianScreenShot').src=GoldWindowSS;
-        document.getElementById('guardianScreenShot').src=GreenLightsSS;
-        document.getElementById('guardianScreenShot').src=ShortJumpSS;
-        document.getElementById('guardianScreenShot').src=ShotgunRoomSS;
-        document.getElementById('guardianScreenShot').src=Snipe1SS;
-        document.getElementById('guardianScreenShot').src=Snipe2SS;
-        document.getElementById('guardianScreenShot').src=Snipe3SS;
-        document.getElementById('guardianScreenShot').src=SnipeLiftSS;
-        document.getElementById('guardianScreenShot').src=SnipeLightsSS;
-        document.getElementById('guardianScreenShot').src=SnipeRampSS;
-        document.getElementById('guardianScreenShot').src=StumpSS;
-        document.getElementById('guardianScreenShot').src=TopBlueSS;
-        document.getElementById('guardianScreenShot').src=TopGoldSS;
-        document.getElementById('guardianScreenShot').src=TopGreenSS;
-        document.getElementById('guardianScreenShot').src=TopMidSS;
-        document.getElementById('guardianScreenShot').src=UnderGlassSS;
+    turnGreen(div){
+        div.style.fill="rgba(0, 255, 0, 0.5)";
     }
-    showCamo = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${camoBlueprint})`;
-        document.getElementById('guardianScreenShot').src=CamoSS;
-        document.getElementById('camoText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Camo";
+    returnColor(div){
+        div.style.fill="rgba(0, 0, 0, 0)";
     }
-    unshowCamo = () => {
-        document.getElementById('camoText').style.color='white';
+    textGreen(textP){
+        textP.style.color="rgba(0, 255, 0, 1)"
     }
-    showBarrels = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Barrels})`;
-        document.getElementById('guardianScreenShot').src=BarrelsSS;
-        document.getElementById('barrelsText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Barrels";
-    }
-    unshowBarrels = () => {
-        document.getElementById('barrelsText').style.color='white';
-    }
-    showBlueEntrance = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueEntrance})`;
-        document.getElementById('guardianScreenShot').src=BlueEntranceSS;
-        document.getElementById('blueEntranceText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Blue Entrance";
-    }
-    unshowBlueEntrance = () => {
-        document.getElementById('blueEntranceText').style.color='white';
-    }
-    showBlueLights = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueLights})`;
-        document.getElementById('guardianScreenShot').src=BlueLightsSS;
-        document.getElementById('blueLightsText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Blue Lights";
-    }
-    unshowBlueLights = () => {
-        document.getElementById('blueLightsText').style.color='white';
-    }
-    showBlueRamp = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueRamp})`;
-        document.getElementById('guardianScreenShot').src=BlueRampSS;
-        document.getElementById('blueRampText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Blue Ramp";
-    }
-    unshowBlueRamp = () => {
-        document.getElementById('blueRampText').style.color='white';
-    }
-    showBlueWindow = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BlueWindow})`;
-        document.getElementById('guardianScreenShot').src=BlueWindowSS;
-        document.getElementById('blueWindowText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Blue Window";
-    }
-    unshowBlueWindow = () => {
-        document.getElementById('blueWindowText').style.color='white';
-    }
-    showBottomGold = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BottomGold})`;
-        document.getElementById('guardianScreenShot').src=BottomGoldSS;
-        document.getElementById('bottomGoldText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Bottom Gold";
-    }
-    unshowBottomGold = () => {
-        document.getElementById('bottomGoldText').style.color='white';
-    }
-    showBottomGreen = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${BottomGreen})`;
-        document.getElementById('guardianScreenShot').src=BottomGreenSS;
-        document.getElementById('bottomGreenText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Bottom Green";
-    }
-    unshowBottomGreen = () => {
-        document.getElementById('bottomGreenText').style.color='white';
-    }
-    showElbow = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Elbow})`;
-        document.getElementById('guardianScreenShot').src=ElbowSS;
-        document.getElementById('elbowText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Elbow";
-    }
-    unshowElbow = () => {
-        document.getElementById('elbowText').style.color='white';
-    }
-    showFrontBlue = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${FrontBlue})`;
-        document.getElementById('guardianScreenShot').src=FrontBlueSS;
-        document.getElementById('frontBlueText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Front Blue";
-    }
-    unshowFrontBlue = () => {
-        document.getElementById('frontBlueText').style.color='white';
-    }
-    showGoldLights = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${GoldLights})`;
-        document.getElementById('guardianScreenShot').src=GoldLightsSS;
-        document.getElementById('goldLightsText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Gold Lights";
-    }
-    unshowGoldLights = () => {
-        document.getElementById('goldLightsText').style.color='white';
-    }
-    showGoldWindow = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${GoldWindow})`;
-        document.getElementById('guardianScreenShot').src=GoldWindowSS;
-        document.getElementById('goldWindowText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Gold Window";
-    }
-    unshowGoldWindow = () => {
-        document.getElementById('goldWindowText').style.color='white';
-    }
-    showGreenLights = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${GreenLights})`;
-        document.getElementById('guardianScreenShot').src=GreenLightsSS;
-        document.getElementById('greenLightsText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Green Lights";
-    }
-    unshowGreenLights = () => {
-        document.getElementById('greenLightsText').style.color='white';
-    }
-    showShortJump = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${ShortJump})`;
-        document.getElementById('guardianScreenShot').src=ShortJumpSS;
-        document.getElementById('shortJumpText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Short Jump";
-    }
-    unshowShortJump = () => {
-        document.getElementById('shortJumpText').style.color='white';
-    }
-    showShotgunRoom = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${ShotgunRoom})`;
-        document.getElementById('guardianScreenShot').src=ShotgunRoomSS;
-        document.getElementById('shotgunRoomText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Shotgun Room";
-    }
-    unshowShotgunRoom = () => {
-        document.getElementById('shotgunRoomText').style.color='white';
-    }
-    showSnipe1 = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Snipe1})`;
-        document.getElementById('guardianScreenShot').src=Snipe1SS;
-        document.getElementById('snipe1Text').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Snipe 1";
-    }
-    unshowSnipe1 = () => {
-        document.getElementById('snipe1Text').style.color='white';
-    }
-    showSnipe2 = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Snipe2})`;
-        document.getElementById('guardianScreenShot').src=Snipe2SS;
-        document.getElementById('snipe2Text').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Snipe 2";
-    }
-    unshowSnipe2 = () => {
-        document.getElementById('snipe2Text').style.color='white';
-    }
-    showSnipe3 = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Snipe3})`;
-        document.getElementById('guardianScreenShot').src=Snipe3SS;
-        document.getElementById('snipe3Text').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Snipe 3";
-    }
-    unshowSnipe3 = () => {
-        document.getElementById('snipe3Text').style.color='white';
-    }
-    showSnipeLift = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${SnipeLift})`;
-        document.getElementById('guardianScreenShot').src=SnipeLiftSS;
-        document.getElementById('snipeLiftText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Snipe Lift";
-    }
-    unshowSnipeLift = () => {
-        document.getElementById('snipeLiftText').style.color='white';
-    }
-    showSnipeLights = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${SnipeLights})`;
-        document.getElementById('guardianScreenShot').src=SnipeLightsSS;
-        document.getElementById('snipeLightsText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Snipe Lights";
-    }
-    unshowSnipeLights = () => {
-        document.getElementById('snipeLightsText').style.color='white';
-    }
-    showSnipeRamp = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${SnipeRamp})`;
-        document.getElementById('guardianScreenShot').src=SnipeRampSS;
-        document.getElementById('snipeRampText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Snipe Ramp";
-    }
-    unshowSnipeRamp = () => {
-        document.getElementById('snipeRampText').style.color='white';
-    }
-    showStump = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${Stump})`;
-        document.getElementById('guardianScreenShot').src=StumpSS;
-        document.getElementById('stumpText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Stump";
-    }
-    unshowStump = () => {
-        document.getElementById('stumpText').style.color='white';
-    }
-    showTopBlue = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopBlue})`;
-        document.getElementById('guardianScreenShot').src=TopBlueSS;
-        document.getElementById('topBlueText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Top Blue";
-    }
-    unshowTopBlue = () => {
-        document.getElementById('topBlueText').style.color='white';
-    }
-    showTopGold = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopGold})`;
-        document.getElementById('guardianScreenShot').src=TopGoldSS;
-        document.getElementById('topGoldText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Top Gold";
-    }
-    unshowTopGold = () => {
-        document.getElementById('topGoldText').style.color='white';
-    }
-    showTopGreen = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopGreen})`;
-        document.getElementById('guardianScreenShot').src=TopGreenSS;
-        document.getElementById('topGreenText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Top Green";
-    }
-    unshowTopGreen = () => {
-        document.getElementById('topGreenText').style.color='white';
-    }
-    showTopMid = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${TopMid})`;
-        document.getElementById('guardianScreenShot').src=TopMidSS;
-        document.getElementById('topMidText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Top Mid";
-    }
-    unshowTopMid = () => {
-        document.getElementById('topMidText').style.color='white';
-    }
-    showUnderGlass = () => {
-        this.loadAll();
-        document.getElementById('guardianMap').style.backgroundImage=`url(${UnderGlass})`;
-        document.getElementById('guardianScreenShot').src=UnderGlassSS;
-        document.getElementById('underGlassText').style.color='green';
-        document.getElementById('guardianInGamePicText').style.color="white";
-        document.getElementById('guardianInGamePicText').innerHTML="Under Glass";
-    }
-    unshowUnderGlass = () => {
-        document.getElementById('underGlassText').style.color='white';
-    }
-    resetBackground = () =>{
-        document.getElementById('guardianMap').style.backgroundImage=`url(${guardianBlueprint})`;
+    returnTextColor(textP){
+        textP.style.color="white";
     }
     render(){
         return(
             <div className="guardianFullGrid">
                 <h1 className="mapTitleGuardian">Guardian</h1>
                 <div className="calloutsList" id="guardianCallouts">
-                    <p id="barrelsText" onMouseOver={this.showBarrels} onMouseOut={() => {this.resetBackground(); this.unshowBarrels()}}>Barrels</p>
-                    <p id="blueEntranceText" onMouseOver={this.showBlueEntrance} onMouseOut={() => {this.resetBackground(); this.unshowBlueEntrance()}}>Blue Entrance</p>
-                    <p id="blueLightsText" onMouseOver={this.showBlueLights} onMouseOut={() => {this.resetBackground(); this.unshowBlueLights()}}>Blue Lights</p>
-                    <p id="blueRampText" onMouseOver={this.showBlueRamp} onMouseOut={() => {this.resetBackground(); this.unshowBlueRamp()}}>Blue Ramp</p>
-                    <p id="blueWindowText" onMouseOver={this.showBlueWindow} onMouseOut={() => {this.resetBackground(); this.unshowBlueWindow()}}>Blue Window</p>
-                    <p id="bottomGoldText" onMouseOver={this.showBottomGold} onMouseOut={() => {this.resetBackground(); this.unshowBottomGold()}}>Bottom Gold</p>
-                    <p id="bottomGreenText" onMouseOver={this.showBottomGreen} onMouseOut={() => {this.resetBackground(); this.unshowBottomGreen()}}>Bottom Green</p>
-                    <p id="camoText" onMouseOver={this.showCamo} onMouseOut={() => {this.resetBackground(); this.unshowCamo()}}>Camo</p>
-                    <p id="elbowText" onMouseOver={this.showElbow} onMouseOut={() => {this.resetBackground(); this.unshowElbow()}}>Elbow</p>
-                    <p id="frontBlueText" onMouseOver={this.showFrontBlue} onMouseOut={() => {this.resetBackground(); this.unshowFrontBlue()}}>Front Blue</p>
-                    <p id="goldLightsText" onMouseOver={this.showGoldLights} onMouseOut={() => {this.resetBackground(); this.unshowGoldLights()}}>Gold Lights</p>
-                    <p id="goldWindowText" onMouseOver={this.showGoldWindow} onMouseOut={() => {this.resetBackground(); this.unshowGoldWindow()}}>Gold Window</p>
-                    <p id="greenLightsText" onMouseOver={this.showGreenLights} onMouseOut={() => {this.resetBackground(); this.unshowGreenLights()}}>Green Lights</p>
-                    <p id="shortJumpText" onMouseOver={this.showShortJump} onMouseOut={() => {this.resetBackground(); this.unshowShortJump()}}>Short Jump</p>
-                    <p id="shotgunRoomText" onMouseOver={this.showShotgunRoom} onMouseOut={() => {this.resetBackground(); this.unshowShotgunRoom()}}>Shotgun Room</p>
-                    <p id="snipe1Text" onMouseOver={this.showSnipe1} onMouseOut={() => {this.resetBackground(); this.unshowSnipe1()}}>Snipe 1</p>
-                    <p id="snipe2Text" onMouseOver={this.showSnipe2} onMouseOut={() => {this.resetBackground(); this.unshowSnipe2()}}>Snipe 2</p>
-                    <p id="snipe3Text" onMouseOver={this.showSnipe3} onMouseOut={() => {this.resetBackground(); this.unshowSnipe3()}}>Snipe 3</p>
-                    <p id="snipeLiftText" onMouseOver={this.showSnipeLift} onMouseOut={() => {this.resetBackground(); this.unshowSnipeLift()}}>Snipe Lift</p>
-                    <p id="snipeLightsText" onMouseOver={this.showSnipeLights} onMouseOut={() => {this.resetBackground(); this.unshowSnipeLights()}}>Snipe Lights</p>
-                    <p id="snipeRampText" onMouseOver={this.showSnipeRamp} onMouseOut={() => {this.resetBackground(); this.unshowSnipeRamp()}}>Snipe Ramp</p>
-                    <p id="stumpText" onMouseOver={this.showStump} onMouseOut={() => {this.resetBackground(); this.unshowStump()}}>Stump</p>
-                    <p id="topBlueText" onMouseOver={this.showTopBlue} onMouseOut={() => {this.resetBackground(); this.unshowTopBlue()}}>Top Blue</p>
-                    <p id="topGoldText" onMouseOver={this.showTopGold} onMouseOut={() => {this.resetBackground(); this.unshowTopGold()}}>Top Gold</p>
-                    <p id="topGreenText" onMouseOver={this.showTopGreen} onMouseOut={() => {this.resetBackground(); this.unshowTopGreen()}}>Top Green</p>
-                    <p id="topMidText" onMouseOver={this.showTopMid} onMouseOut={() => {this.resetBackground(); this.unshowTopMid()}}>Top Mid</p>
-                    <p id="underGlassText" onMouseOver={this.showUnderGlass} onMouseOut={() => {this.resetBackground(); this.unshowUnderGlass()}}>Under Glass</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('barrelsGuardian')); this.textGreen(document.getElementById('barrelsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('barrelsGuardian')); this.returnTextColor(document.getElementById('barrelsGuardianText'))}} id="barrelsGuardianText">Barrels</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('blueEntranceGuardian')); this.textGreen(document.getElementById('blueEntranceGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueEntranceGuardian')); this.returnTextColor(document.getElementById('blueEntranceGuardianText'))}} id="blueEntranceGuardianText">Blue Entrance</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('blueLightsGuardian')); this.textGreen(document.getElementById('blueLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueLightsGuardian')); this.returnTextColor(document.getElementById('blueLightsGuardianText'))}} id="blueLightsGuardianText">Blue Lights</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('blueRampGuardian')); this.textGreen(document.getElementById('blueRampGuardianText')); this.turnGreen(document.getElementById('blueRampGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueRampGuardian')); this.returnColor(document.getElementById('blueRampGuardian2')); this.returnTextColor(document.getElementById('blueRampGuardianText'))}} id="blueRampGuardianText">Blue Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('blueWindowGuardian')); this.textGreen(document.getElementById('blueWindowGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueWindowGuardian')); this.returnTextColor(document.getElementById('blueWindowGuardianText'))}} id="blueWindowGuardianText">Blue Window</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('bottomGoldGuardian')); this.textGreen(document.getElementById('bottomGoldGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('bottomGoldGuardian')); this.returnTextColor(document.getElementById('bottomGoldGuardianText'))}} id="bottomGoldGuardianText">Bottom Gold</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('bottomGreenGuardian')); this.textGreen(document.getElementById('bottomGreenGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('bottomGreenGuardian')); this.returnTextColor(document.getElementById('bottomGreenGuardianText'))}} id="bottomGreenGuardianText">Bottom Green</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('camoGuardian')); this.textGreen(document.getElementById('camoGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('camoGuardian')); this.returnTextColor(document.getElementById('camoGuardianText'))}} id="camoGuardianText">Camo</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('elbowGuardian')); this.textGreen(document.getElementById('elbowGuardianText')); this.turnGreen(document.getElementById('elbowGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('elbowGuardian')); this.returnTextColor(document.getElementById('elbowGuardianText')); this.returnColor(document.getElementById('elbowGuardian2'))}} id="elbowGuardianText">Elbow</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('frontBlueGuardian')); this.textGreen(document.getElementById('frontBlueGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('frontBlueGuardian')); this.returnTextColor(document.getElementById('frontBlueGuardianText'))}} id="frontBlueGuardianText">Front Blue</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('goldLightsGuardian')); this.textGreen(document.getElementById('goldLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('goldLightsGuardian')); this.returnTextColor(document.getElementById('goldLightsGuardianText'))}} id="goldLightsGuardianText">Gold Lights</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('goldWindowGuardian')); this.textGreen(document.getElementById('goldWindowGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('goldWindowGuardian')); this.returnTextColor(document.getElementById('goldWindowGuardianText'))}} id="goldWindowGuardianText">Gold Window</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('greenLightsGuardian')); this.textGreen(document.getElementById('greenLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('greenLightsGuardian')); this.returnTextColor(document.getElementById('greenLightsGuardianText'))}} id="greenLightsGuardianText">Green Lights</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('shortJumpGuardian')); this.textGreen(document.getElementById('shortJumpGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('shortJumpGuardian')); this.returnTextColor(document.getElementById('shortJumpGuardianText'))}} id="shortJumpGuardianText">Short Jump</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('shotgunRoomGuardian')); this.textGreen(document.getElementById('shotgunRoomGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('shotgunRoomGuardian')); this.returnTextColor(document.getElementById('shotgunRoomGuardianText'))}} id="shotgunRoomGuardianText">Shotgun Room</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipe1Guardian')); this.textGreen(document.getElementById('snipe1GuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipe1Guardian')); this.returnTextColor(document.getElementById('snipe1GuardianText'))}} id="snipe1GuardianText">Snipe1</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipe2Guardian')); this.textGreen(document.getElementById('snipe2GuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipe2Guardian')); this.returnTextColor(document.getElementById('snipe2GuardianText'))}} id="snipe2GuardianText">Snipe2</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipe3Guardian')); this.textGreen(document.getElementById('snipe3GuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipe3Guardian')); this.returnTextColor(document.getElementById('snipe3GuardianText'))}} id="snipe3GuardianText">Snipe3</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipeLiftGuardian')); this.textGreen(document.getElementById('snipeLiftGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeLiftGuardian')); this.returnTextColor(document.getElementById('snipeLiftGuardianText'))}} id="snipeLiftGuardianText">Snipe Lift</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipeLightsGuardian')); this.textGreen(document.getElementById('snipeLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeLightsGuardian')); this.returnTextColor(document.getElementById('snipeLightsGuardianText'))}} id="snipeLightsGuardianText">Snipe Lights</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipeRampGuardian')); this.textGreen(document.getElementById('snipeRampGuardianText')); this.turnGreen(document.getElementById('snipeRampGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeRampGuardian')); this.returnTextColor(document.getElementById('snipeRampGuardianText')); this.returnColor(document.getElementById('snipeRampGuardian2'))}} id="snipeRampGuardianText">Snipe Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('stumpGuardian')); this.textGreen(document.getElementById('stumpGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('stumpGuardian')); this.returnTextColor(document.getElementById('stumpGuardianText'))}} id="stumpGuardianText">Stump</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('topBlueGuardian')); this.textGreen(document.getElementById('topBlueGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topBlueGuardian')); this.returnTextColor(document.getElementById('topBlueGuardianText'))}} id="topBlueGuardianText">Top Blue</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('topGoldGuardian')); this.textGreen(document.getElementById('topGoldGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topGoldGuardian')); this.returnTextColor(document.getElementById('topGoldGuardianText'))}} id="topGoldGuardianText">Top Gold</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('topGreenGuardian')); this.textGreen(document.getElementById('topGreenGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topGreenGuardian')); this.returnTextColor(document.getElementById('topGreenGuardianText'))}} id="topGreenGuardianText">Top Green</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('topMidGuardian')); this.textGreen(document.getElementById('topMidGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topMidGuardian')); this.returnTextColor(document.getElementById('topMidGuardianText'))}} id="topMidGuardianText">Top Mid </p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('underGlassGuardian')); this.textGreen(document.getElementById('underGlassGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('underGlassGuardian')); this.returnTextColor(document.getElementById('underGlassGuardianText'))}} id="underGlassGuardianText">Under Glass</p>
                 </div>
-                <div id="guardianMap">
-                    <div id='camo' onMouseOver={this.showCamo} onMouseOut={() => {this.resetBackground(); this.unshowCamo()}}>
-                        <img src={camoBlueprint} className='preloadImage'></img>
-                    </div>
-                    <div id='barrels' onMouseOver={this.showBarrels} onMouseOut={() => {this.resetBackground(); this.unshowBarrels()}}>
-                        <img src={Barrels} className='preloadImage'></img>
-                    </div>
-                    <div id='barrels2' onMouseOver={this.showBarrels} onMouseOut={() => {this.resetBackground(); this.unshowBarrels()}}></div>
-                    <div id='blueEntrance' onMouseOver={this.showBlueEntrance} onMouseOut={() => {this.resetBackground(); this.unshowBlueEntrance()}}>
-                        <img src={BlueEntrance} className='preloadImage'></img>
-                    </div>
-                    <div id='blueLights' onMouseOver={this.showBlueLights} onMouseOut={() => {this.resetBackground(); this.unshowBlueLights()}}>
-                        <img src={BlueLights} className='preloadImage'></img>
-                    </div>
-                    <div id='blueRamp' onMouseOver={this.showBlueRamp} onMouseOut={() => {this.resetBackground(); this.unshowBlueRamp()}}>
-                        <img src={BlueRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='blueRamp2' onMouseOver={this.showBlueRamp} onMouseOut={() => {this.resetBackground(); this.unshowBlueRamp()}}></div>
-                    <div id='blueWindow' onMouseOver={this.showBlueWindow} onMouseOut={() => {this.resetBackground(); this.unshowBlueWindow()}}>
-                        <img src={BlueWindow} className='preloadImage'></img>
-                    </div>
-                    <div id='bottomGold' onMouseOver={this.showBottomGold} onMouseOut={() => {this.resetBackground(); this.unshowBottomGold()}}>
-                        <img src={BottomGold} className='preloadImage'></img>
-                    </div>
-                    <div id='bottomGreen' onMouseOver={this.showBottomGreen} onMouseOut={() => {this.resetBackground(); this.unshowBottomGreen()}}>
-                        <img src={BottomGreen} className='preloadImage'></img>
-                    </div>
-                    <div id='elbow' onMouseOver={this.showElbow} onMouseOut={() => {this.resetBackground(); this.unshowElbow()}}>
-                        <img src={Elbow} className='preloadImage'></img>
-                    </div>
-                    <div id='elbow2' onMouseOver={this.showElbow} onMouseOut={() => {this.resetBackground(); this.unshowElbow()}}></div>
-                    <div id='frontBlue' onMouseOver={this.showFrontBlue} onMouseOut={() => {this.resetBackground(); this.unshowFrontBlue()}}>
-                        <img src={FrontBlue} className='preloadImage'></img>
-                    </div>
-                    <div id='goldLights' onMouseOver={this.showGoldLights} onMouseOut={() => {this.resetBackground(); this.unshowGoldLights()}}>
-                        <img src={GoldLights} className='preloadImage'></img>
-                    </div>
-                    <div id='goldWindow' onMouseOver={this.showGoldWindow} onMouseOut={() => {this.resetBackground(); this.unshowGoldWindow()}}>
-                        <img src={GoldWindow} className='preloadImage'></img>
-                    </div>
-                    <div id='greenLights' onMouseOver={this.showGreenLights} onMouseOut={() => {this.resetBackground(); this.unshowGreenLights()}}>
-                        <img src={GreenLights} className='preloadImage'></img>
-                    </div>
-                    <div id='shortJump' onMouseOver={this.showShortJump} onMouseOut={() => {this.resetBackground(); this.unshowShortJump()}}>
-                        <img src={ShortJump} className='preloadImage'></img>
-                    </div>
-                    <div id='shotgunRoom' onMouseOver={this.showShotgunRoom} onMouseOut={() => {this.resetBackground(); this.unshowShotgunRoom()}}>
-                        <img src={ShotgunRoom} className='preloadImage'></img>
-                    </div>
-                    <div id='snipe1' onMouseOver={this.showSnipe1} onMouseOut={() => {this.resetBackground(); this.unshowSnipe1()}}>
-                        <img src={Snipe1} className='preloadImage'></img>
-                    </div>
-                    <div id='snipe2' onMouseOver={this.showSnipe2} onMouseOut={() => {this.resetBackground(); this.unshowSnipe2()}}>
-                        <img src={Snipe2} className='preloadImage'></img>
-                    </div>
-                    <div id='snipe3' onMouseOver={this.showSnipe3} onMouseOut={() => {this.resetBackground(); this.unshowSnipe3()}}>
-                        <img src={Snipe3} className='preloadImage'></img>
-                    </div>
-                    <div id='snipe32' onMouseOver={this.showSnipe3} onMouseOut={() => {this.resetBackground(); this.unshowSnipe3()}}></div>
-                    <div id='snipeLift' onMouseOver={this.showSnipeLift} onMouseOut={() => {this.resetBackground(); this.unshowSnipeLift()}}>
-                        <img src={SnipeLift} className='preloadImage'></img>
-                    </div>
-                    <div id='snipeLights' onMouseOver={this.showSnipeLights} onMouseOut={() => {this.resetBackground(); this.unshowSnipeLights()}}>
-                        <img src={SnipeLights} className='preloadImage'></img>
-                    </div>
-                    <div id='snipeRamp' onMouseOver={this.showSnipeRamp} onMouseOut={() => {this.resetBackground(); this.unshowSnipeRamp()}}>
-                        <img src={SnipeRamp} className='preloadImage'></img>
-                    </div>
-                    <div id='snipeRamp2' onMouseOver={this.showSnipeRamp} onMouseOut={() => {this.resetBackground(); this.unshowSnipeRamp()}}></div>
-                    <div id='stump' onMouseOver={this.showStump} onMouseOut={() => {this.resetBackground(); this.unshowStump()}}>
-                        <img src={Stump} className='preloadImage'></img>
-                    </div>
-                    <div id='topBlue' onMouseOver={this.showTopBlue} onMouseOut={() => {this.resetBackground(); this.unshowTopBlue()}}>
-                        <img src={TopBlue} className='preloadImage'></img>
-                    </div>
-                    <div id='topGold' onMouseOver={this.showTopGold} onMouseOut={() => {this.resetBackground(); this.unshowTopGold()}}>
-                        <img src={TopGold} className='preloadImage'></img>
-                    </div>
-                    <div id='topGold2' onMouseOver={this.showTopGold} onMouseOut={() => {this.resetBackground(); this.unshowTopGold()}}></div>
-                    <div id='topGreen' onMouseOver={this.showTopGreen} onMouseOut={() => {this.resetBackground(); this.unshowTopGreen()}}>
-                        <img src={TopGreen} className='preloadImage'></img>
-                    </div>
-                    <div id='topMid' onMouseOver={this.showTopMid} onMouseOut={() => {this.resetBackground(); this.unshowTopMid()}}>
-                        <img src={TopMid} className='preloadImage'></img>
-                    </div>
-                    <div id='underGlass' onMouseOver={this.showUnderGlass} onMouseOut={() => {this.resetBackground(); this.unshowUnderGlass()}}>
-                        <img src={UnderGlass} className='preloadImage'></img>
-                    </div>
-                </div>
+                <svg id="guardianMap" height="625" width="750">
+                    <circle onMouseOver={() => {this.turnGreen(document.getElementById('topMidGuardian')); this.textGreen(document.getElementById('topMidGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topMidGuardian')); this.returnTextColor(document.getElementById('topMidGuardianText'))}} id="topMidGuardian" cx="238.5" cy="162.5" r="58"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('barrelsGuardian')); this.textGreen(document.getElementById('barrelsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('barrelsGuardian')); this.returnTextColor(document.getElementById('barrelsGuardianText'))}}  id="barrelsGuardian" points="51,233 74,232 74,296 139,296 139,318 51,319"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('blueEntranceGuardian')); this.textGreen(document.getElementById('blueEntranceGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueEntranceGuardian')); this.returnTextColor(document.getElementById('blueEntranceGuardianText'))}}  id="blueEntranceGuardian" points="225,286 251,286 251,322 226,321"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('blueLightsGuardian')); this.textGreen(document.getElementById('blueLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueLightsGuardian')); this.returnTextColor(document.getElementById('blueLightsGuardianText'))}}  id="blueLightsGuardian" points="207,219 206,223 208,228 212,231 261,230 265,230 268,225 267,221 266,217 263,211 264,198 212,197 213,209"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('blueRampGuardian')); this.textGreen(document.getElementById('blueRampGuardianText')); this.turnGreen(document.getElementById('blueRampGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueRampGuardian')); this.returnColor(document.getElementById('blueRampGuardian2')); this.returnTextColor(document.getElementById('blueRampGuardianText'))}}  id="blueRampGuardian" points="255,331 256,343 242,356 156,356 156,328"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('blueRampGuardian')); this.textGreen(document.getElementById('blueRampGuardianText')); this.turnGreen(document.getElementById('blueRampGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueRampGuardian')); this.returnColor(document.getElementById('blueRampGuardian2')); this.returnTextColor(document.getElementById('blueRampGuardianText'))}}  id="blueRampGuardian2" points="444,540 522,540 522,554 509,566 444,566"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('blueWindowGuardian')); this.textGreen(document.getElementById('blueWindowGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('blueWindowGuardian')); this.returnTextColor(document.getElementById('blueWindowGuardianText'))}}  id="blueWindowGuardian" points="147,248 123,265 139,279 157,260"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('bottomGoldGuardian')); this.textGreen(document.getElementById('bottomGoldGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('bottomGoldGuardian')); this.returnTextColor(document.getElementById('bottomGoldGuardianText'))}}  id="bottomGoldGuardian" points="393,361 393,343 385,335 338,335 338,340 324,340 324,355 324,408 338,408 364,408 364,405 386,405 393,398"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('bottomGreenGuardian')); this.textGreen(document.getElementById('bottomGreenGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('bottomGreenGuardian')); this.returnTextColor(document.getElementById('bottomGreenGuardianText'))}}  id="bottomGreenGuardian" points="510,300 510,273 497,257 490,241 493,228 488,224 483,224 478,226 472,231 469,230 464,226 471,218 476,213 470,208 474,203 474,197 474,190 481,183 481,164 489,156 504,149 518,146 534,147 545,147 559,152 568,159 578,167 587,176 595,188 601,198 603,205 596,215 591,220 590,240 590,243 587,249 582,254 575,258 567,265 563,267 563,271 563,281 545,300"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('camoGuardian')); this.textGreen(document.getElementById('camoGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('camoGuardian')); this.returnTextColor(document.getElementById('camoGuardianText'))}}  id="camoGuardian" points="155,116 147,115 147,110 142,110 140,99 131,87 121,80 113,77 107,76 71,76 71,63 68,63 66,59 54,59 48,62 37,62 30,67 27,76 27,93 34,103 38,104 38,100 45,101 76,101 92,101 101,106 110,115 118,126 123,133 147,133 155,133"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('elbowGuardian')); this.textGreen(document.getElementById('elbowGuardianText')); this.turnGreen(document.getElementById('elbowGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('elbowGuardian')); this.returnTextColor(document.getElementById('elbowGuardianText')); this.returnColor(document.getElementById('elbowGuardian2'))}}  id="elbowGuardian" points="677,322 677,250 684,242 684,209 648,209 640,217 595,217 596,242 640,242 649,252 649,322"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('elbowGuardian')); this.textGreen(document.getElementById('elbowGuardianText')); this.turnGreen(document.getElementById('elbowGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('elbowGuardian')); this.returnTextColor(document.getElementById('elbowGuardianText')); this.returnColor(document.getElementById('elbowGuardian2'))}}  id="elbowGuardian2" points="358,41 389,41 389,131 358,131"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('frontBlueGuardian')); this.textGreen(document.getElementById('frontBlueGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('frontBlueGuardian')); this.returnTextColor(document.getElementById('frontBlueGuardianText'))}}  id="frontBlueGuardian" points="226,216 250,216 250,285 226,285"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('goldLightsGuardian')); this.textGreen(document.getElementById('goldLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('goldLightsGuardian')); this.returnTextColor(document.getElementById('goldLightsGuardianText'))}}  id="goldLightsGuardian" points="198,136 186,136 180,133 175,131 173,132 170,135 171,139 171,144 171,151 171,173 171,180 170,185 169,188 171,191 174,193 178,193 181,191 190,186 199,186"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('goldWindowGuardian')); this.textGreen(document.getElementById('goldWindowGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('goldWindowGuardian')); this.returnTextColor(document.getElementById('goldWindowGuardianText'))}}  id="goldWindowGuardian" points="98,202 113,217 96,235 81,220"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('greenLightsGuardian')); this.textGreen(document.getElementById('greenLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('greenLightsGuardian')); this.returnTextColor(document.getElementById('greenLightsGuardianText'))}}  id="greenLightsGuardian" points="214,116 211,112 208,105 206,101 207,98 210,95 264,95 267,97 268,101 264,110 263,116 263,129 214,129"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('shortJumpGuardian')); this.textGreen(document.getElementById('shortJumpGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('shortJumpGuardian')); this.returnTextColor(document.getElementById('shortJumpGuardianText'))}}  id="shortJumpGuardian" points="376,452 384,452 384,460 391,460 397,463 456,463 454,454 451,448 448,442 444,436 438,430 432,425 425,420 415,415 406,411 399,411 399,416 376,416"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('shotgunRoomGuardian')); this.textGreen(document.getElementById('shotgunRoomGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('shotgunRoomGuardian')); this.returnTextColor(document.getElementById('shotgunRoomGuardianText'))}}  id="shotgunRoomGuardian" points="335,505 450,505 450,533 410,533 334,534 334,531 317,531 317,507 333,507"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipe1Guardian')); this.textGreen(document.getElementById('snipe1GuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipe1Guardian')); this.returnTextColor(document.getElementById('snipe1GuardianText'))}}  id="snipe1Guardian" points="633,356 641,356 641,350 690,350 690,352 690,393 640,393 640,388 633,388"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipe2Guardian')); this.textGreen(document.getElementById('snipe2GuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipe2Guardian')); this.returnTextColor(document.getElementById('snipe2GuardianText'))}}  id="snipe2Guardian" points="404,137 404,190 366,190 364,184 359,179 355,175 355,137"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipe3Guardian')); this.textGreen(document.getElementById('snipe3GuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipe3Guardian')); this.returnTextColor(document.getElementById('snipe3GuardianText'))}}  id="snipe3Guardian" points="405,212 377,212 375,218 366,224 356,224 348,217 347,207 350,201 356,195 351,189 345,180 317,180 316,207 321,207 322,216 325,226 333,238 341,247 357,251 405,252"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipeLiftGuardian')); this.textGreen(document.getElementById('snipeLiftGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeLiftGuardian')); this.returnTextColor(document.getElementById('snipeLiftGuardianText'))}}  id="snipeLiftGuardian" points="523,509 547,509 555,509 567,509 573,515 573,530 571,538 571,591 524,591"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipeLightsGuardian')); this.textGreen(document.getElementById('snipeLightsGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeLightsGuardian')); this.returnTextColor(document.getElementById('snipeLightsGuardianText'))}}  id="snipeLightsGuardian" points="304,146 297,145 301,141 304,137 302,133 299,131 291,131 270,131 271,193 285,192 296,192 301,192 303,188 303,185 299,182 296,180 298,178 304,178"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipeRampGuardian')); this.textGreen(document.getElementById('snipeRampGuardianText')); this.turnGreen(document.getElementById('snipeRampGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeRampGuardian')); this.returnTextColor(document.getElementById('snipeRampGuardianText')); this.returnColor(document.getElementById('snipeRampGuardian2'))}}  id="snipeRampGuardian" points="435,172 435,252 407,252 407,172"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipeRampGuardian')); this.textGreen(document.getElementById('snipeRampGuardianText')); this.turnGreen(document.getElementById('snipeRampGuardian2'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeRampGuardian')); this.returnTextColor(document.getElementById('snipeRampGuardianText')); this.returnColor(document.getElementById('snipeRampGuardian2'))}}  id="snipeRampGuardian2" points="693,387 720,387 720,430 716,430 715,429 698,429 697,430 693,430"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('stumpGuardian')); this.textGreen(document.getElementById('stumpGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('stumpGuardian')); this.returnTextColor(document.getElementById('stumpGuardianText'))}}  id="stumpGuardian" points="574,228 579,229 582,230 587,235 588,240 587,246 587,249 583,252 582,254 576,256 575,258 570,260 567,265 563,267 557,267 552,265 550,259 550,253 553,248 558,246 563,244 564,239 564,233 568,230"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('topBlueGuardian')); this.textGreen(document.getElementById('topBlueGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topBlueGuardian')); this.returnTextColor(document.getElementById('topBlueGuardianText'))}}  id="topBlueGuardian" points="205,293 205,274 189,258 164,258 159,262 155,262 140,278 139,296 139,318 140,319 205,319"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('topGoldGuardian')); this.textGreen(document.getElementById('topGoldGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topGoldGuardian')); this.returnTextColor(document.getElementById('topGoldGuardianText'))}}  id="topGoldGuardian" points="46,118 94,118 115,140 115,142 111,142 111,149 136,149 136,176 111,176 111,183 115,183 115,185 97,202 81,220 79,221 75,222 74,230 51,230 51,196 55,192 55,178 53,175 57,170 57,156 53,151 55,147 55,134 48,128 48,124 46,124"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('topGreenGuardian')); this.textGreen(document.getElementById('topGreenGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topGreenGuardian')); this.returnTextColor(document.getElementById('topGreenGuardianText'))}}  id="topGreenGuardian" points="522,241 526,244 529,247 534,247 536,252 538,257 539,262 539,267 533,273 527,276 513,276 510,273 497,257 490,241 493,228 503,224 511,230 515,236"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('underGlassGuardian')); this.textGreen(document.getElementById('underGlassGuardianText'))}} onMouseOut={() => {this.returnColor(document.getElementById('underGlassGuardian')); this.returnTextColor(document.getElementById('underGlassGuardianText'))}}  id="underGlassGuardian" points="510,308 544,308 544,336 552,340 561,348 566,356 576,356 576,387 565,387 562,395 558,394 551,392 546,390 542,390 535,394 525,396 517,394 509,390 491,396 488,387 475,386 475,356 488,356 490,351 494,346 501,340 510,334"/>
+                </svg>
                 <div className="inGamePic">
                     <h2 id="guardianInGamePicText" class="inGamePicText"></h2>
                     <img id="guardianScreenShot"></img>

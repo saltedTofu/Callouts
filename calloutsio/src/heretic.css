@@ -1,10 +1,9 @@
 .hereticFullGrid{
     display:grid;
     justify-content: center;
-    grid-template-columns: 400px 950px 300px;
+    grid-template-columns: 200px 950px 300px;
     grid-template-rows: 80px 500px;
     color:white;
-    
 }
 .mapTitleHeretic{
   grid-column: 1/span 3;
@@ -30,7 +29,7 @@
     border:1px solid white;
   }
   #hereticsCallouts p{
-    font-size: 1.7rem;
+    font-size: 0.8rem;
   }
 
   @media only screen and (max-width: 1259px) {
@@ -45,9 +44,6 @@
     .hereticFullGrid{
       grid-template-columns:150px 950px 150px;
     }
-    #hereticsCallouts p{
-      font-size: 1.1rem;
-    }
     #hereticScreenShot{
       width: 100px;
       height:100px;
@@ -58,7 +54,5 @@
     .hereticFullGrid{
       grid-template-columns:200px 950px 300px;
     }
-    #hereticsCallouts p{
-      font-size: 1.2rem;
-    }
   }
+  

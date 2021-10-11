@@ -7,6 +7,13 @@
 html{
   background-color: black;
 }
+svg{
+  background-image: url('./components/Halo3/BlueprintPics/Heretic.png');
+}
+polygon, circle{
+  fill:rgba(0,0,0,0);
+  stroke:rgba(0,0,0,0);
+}
 .container{
   background-repeat:no-repeat;
   background-attachment: fixed;

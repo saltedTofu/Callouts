@@ -1,595 +1,136 @@
 import React from 'react';
 import constructBlueprint from './BlueprintPics/Construct.png';
-import backGoldRamp from './BlueprintPics/constructBPs/backGoldRamp.png';
 import backGoldRampSS from './BlueprintPics/constructSS/backGoldRamp.png';
-import bottomGold from './BlueprintPics/constructBPs/bottomGold.png';
 import bottomGoldSS from './BlueprintPics/constructSS/bottomGold.png';
-import c1 from './BlueprintPics/constructBPs/c1.png';
 import c1SS from './BlueprintPics/constructSS/c1.png';
-import c2 from './BlueprintPics/constructBPs/c2.png';
 import c2SS from './BlueprintPics/constructSS/c2.png';
-import c3 from './BlueprintPics/constructBPs/c3.png';
 import c3SS from './BlueprintPics/constructSS/c3.png';
-import closedBarrels from './BlueprintPics/constructBPs/closedBarrels.png';
 import closedBarrelsSS from './BlueprintPics/constructSS/closedBarrels.png';
-import closedBR from './BlueprintPics/constructBPs/closedBR.png';
 import closedBRSS from './BlueprintPics/constructSS/closedBR.png';
-import closedBubble from './BlueprintPics/constructBPs/closedBubble.png';
 import closedBubbleSS from './BlueprintPics/constructSS/closedBubble.png';
-import closedSkinny from './BlueprintPics/constructBPs/closedSkinny.png';
 import closedSkinnySS from './BlueprintPics/constructSS/closedSkinny.png';
-import closedStreet from './BlueprintPics/constructBPs/closedStreet.png';
 import closedStreetSS from './BlueprintPics/constructSS/closedStreet.png';
-import closedSwordLeg from './BlueprintPics/constructBPs/closedSwordLeg.png';
 import closedSwordLegSS from './BlueprintPics/constructSS/closedSwordLeg.png';
-import donut from './BlueprintPics/constructBPs/donut.png';
 import donutSS from './BlueprintPics/constructSS/donut.png';
-import laser from './BlueprintPics/constructBPs/laser.png';
 import laserSS from './BlueprintPics/constructSS/laser.png';
-import lobby from './BlueprintPics/constructBPs/lobby.png';
 import lobbySS from './BlueprintPics/constructSS/lobby.png';
-import mainRamp from './BlueprintPics/constructBPs/mainRamp.png'
 import mainRampSS from './BlueprintPics/constructSS/mainRamp.png';
-import midGold from './BlueprintPics/constructBPs/midGold.png';
 import midGoldSS from './BlueprintPics/constructSS/midGold.png';
-import midGoldRamp from './BlueprintPics/constructBPs/midGoldRamp.png';
 import midGoldRampSS from './BlueprintPics/constructSS/midGoldRamp.png';
-import o1 from './BlueprintPics/constructBPs/o1.png';
 import o1SS from './BlueprintPics/constructSS/o1.png';
-import o2 from './BlueprintPics/constructBPs/o2.png';
 import o2SS from './BlueprintPics/constructSS/o2.png';
-import o3 from './BlueprintPics/constructBPs/o3.png';
 import o3SS from './BlueprintPics/constructSS/o3.png';
-import openBarrel from './BlueprintPics/constructBPs/openBarrel.png';
 import openBarrelSS from './BlueprintPics/constructSS/openBarrels.png';
-import openBR from './BlueprintPics/constructBPs/openBR.png';
 import openBRSS from './BlueprintPics/constructSS/openBR.png';
-import openBubble from './BlueprintPics/constructBPs/openBubble.png';
 import openBubbleSS from './BlueprintPics/constructSS/openBubble.png';
-import openRamp from './BlueprintPics/constructBPs/openRamp.png';
 import openRampSS from './BlueprintPics/constructSS/openRamp.png';
-import openSkinny from './BlueprintPics/constructBPs/openSkinny.png';
 import openSkinnySS from './BlueprintPics/constructSS/openSkinny.png';
-import openStreet from './BlueprintPics/constructBPs/openStreet.png';
 import openStreetSS from './BlueprintPics/constructSS/openStreet.png';
-import openSwordLeg from './BlueprintPics/constructBPs/openSwordLeg.png';
 import openSwordLegSS from './BlueprintPics/constructSS/openSwordLeg.png';
-import r1 from './BlueprintPics/constructBPs/r1.png';
 import r1SS from './BlueprintPics/constructSS/r1.png';
-import r2 from './BlueprintPics/constructBPs/r2.png';
 import r2SS from './BlueprintPics/constructSS/r2.png';
-import river from './BlueprintPics/constructBPs/river.png';
 import riverSS from './BlueprintPics/constructSS/river.png';
-import snipe from './BlueprintPics/constructBPs/snipe.png';
 import snipeSS from './BlueprintPics/constructSS/snipe.png';
-import sword from './BlueprintPics/constructBPs/sword.png';
 import swordSS from './BlueprintPics/constructSS/sword.png';
-import topGold from './BlueprintPics/constructBPs/topGold.png';
 import topGoldSS from './BlueprintPics/constructSS/topGold.png';
-import underGlass from './BlueprintPics/constructBPs/underGlass.png';
 import underGlassSS from './BlueprintPics/constructSS/underGlass.png';
 
 class Construct extends React.Component{
-    resetBackground = () =>{
-        document.getElementById('constructMap').style.backgroundImage=`url(${constructBlueprint})`;
+    turnGreen(div,screenShot){
+        div.style.fill="rgba(0, 255, 0, 0.5)";
+        document.getElementById('constructScreenShot').src=screenShot;
     }
-    showbackGoldRamp = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${backGoldRamp})`;
-        document.getElementById('backGoldRampText').style.color='green';
-        document.getElementById('constructScreenShot').src=backGoldRampSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Back Gold Ramp";
+    returnColor(div){
+        div.style.fill="rgba(0, 0, 0, 0)";
     }
-    unshowbackGoldRamp = () => {
-        document.getElementById('backGoldRampText').style.color='white';
+    textGreen(textP){
+        textP.style.color="rgba(0, 255, 0, 1)"
     }
-    showbottomGold = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${bottomGold})`;
-        document.getElementById('botGoldText').style.color='green';
-        document.getElementById('constructScreenShot').src=bottomGoldSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Bottom Gold";
+    returnTextColor(textP){
+        textP.style.color="white";
     }
-    unshowbottomGold = () => {
-        document.getElementById('botGoldText').style.color='white';
-    }
-    showc1 = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${c1})`;
-        document.getElementById('c1Text').style.color='green';
-        document.getElementById('constructScreenShot').src=c1SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="C1";
-    }
-    unshowc1 = () => {
-        document.getElementById('c1Text').style.color='white';
-    }
-    showc2 = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${c2})`;
-        document.getElementById('c2Text').style.color='green';
-        document.getElementById('constructScreenShot').src=c2SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="C2";
-    }
-    unshowc2 = () => {
-        document.getElementById('c2Text').style.color='white';
-    }
-    showc3 = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${c3})`;
-        document.getElementById('c3Text').style.color='green';
-        document.getElementById('constructScreenShot').src=c3SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="C3";
-    }
-    unshowc3 = () => {
-        document.getElementById('c3Text').style.color='white';
-    }
-    showclosedBarrels = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${closedBarrels})`;
-        document.getElementById('closedBarrelsText').style.color='green';
-        document.getElementById('constructScreenShot').src=closedBarrelsSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Closed Barrels";
-    }
-    unshowclosedBarrels = () => {
-        document.getElementById('closedBarrelsText').style.color='white';
-    }
-    showclosedBR = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${closedBR})`;
-        document.getElementById('closedBRText').style.color='green';
-        document.getElementById('constructScreenShot').src=closedBRSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Closed BR";
-    }
-    unshowclosedBR = () => {
-        document.getElementById('closedBRText').style.color='white';
-    }
-    showclosedBubble = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${closedBubble})`;
-        document.getElementById('closedBubbleText').style.color='green';
-        document.getElementById('constructScreenShot').src=closedBubbleSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Closed Bubble";
-    }
-    unshowclosedBubble = () => {
-        document.getElementById('closedBubbleText').style.color='white';
-    }
-    showclosedSkinny = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${closedSkinny})`;
-        document.getElementById('closedSkinnyText').style.color='green';
-        document.getElementById('constructScreenShot').src=closedSkinnySS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Closed Skinny";
-    }
-    unshowclosedSkinny = () => {
-        document.getElementById('closedSkinnyText').style.color='white';
-    }
-    showclosedStreet = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${closedStreet})`;
-        document.getElementById('closedStreetText').style.color='green';
-        document.getElementById('constructScreenShot').src=closedStreetSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Closed Street";
-    }
-    unshowclosedStreet = () => {
-        document.getElementById('closedStreetText').style.color='white';
-    }
-    showclosedSwordLeg = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${closedSwordLeg})`;
-        document.getElementById('closedSwordLegText').style.color='green';
-        document.getElementById('constructScreenShot').src=closedSwordLegSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Closed Sword Leg";
-    }
-    unshowclosedSwordLeg = () => {
-        document.getElementById('closedSwordLegText').style.color='white';
-    }
-    showdonut = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${donut})`;
-        document.getElementById('donutText').style.color='green';
-        document.getElementById('constructScreenShot').src=donutSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Donut";
-    }
-    unshowdonut = () => {
-        document.getElementById('donutText').style.color='white';
-    }
-    showlaser = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${laser})`;
-        document.getElementById('laserText').style.color='green';
-        document.getElementById('constructScreenShot').src=laserSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Laser";
-    }
-    unshowlaser = () => {
-        document.getElementById('laserText').style.color='white';
-    }
-    showlobby = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${lobby})`;
-        document.getElementById('lobbyText').style.color='green';
-        document.getElementById('constructScreenShot').src=lobbySS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Lobby";
-    }
-    unshowlobby = () => {
-        document.getElementById('lobbyText').style.color='white';
-    }
-    showmainRamp = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${mainRamp})`;
-        document.getElementById('mainRampText').style.color='green';
-        document.getElementById('constructScreenShot').src=mainRampSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Main Ramp";
-    }
-    unshowmainRamp = () => {
-        document.getElementById('mainRampText').style.color='white';
-    }
-    showmidGold = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${midGold})`;
-        document.getElementById('midGoldText').style.color='green';
-        document.getElementById('constructScreenShot').src=midGoldSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Mid Gold";
-    }
-    unshowmidGold = () => {
-        document.getElementById('midGoldText').style.color='white';
-    }
-    showmidGoldRamp = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${midGoldRamp})`;
-        document.getElementById('midGoldRampText').style.color='green';
-        document.getElementById('constructScreenShot').src=midGoldRampSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Mid Gold Ramp";
-    }
-    unshowmidGoldRamp = () => {
-        document.getElementById('midGoldRampText').style.color='white';
-    }
-    showo1 = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${o1})`;
-        document.getElementById('o1Text').style.color='green';
-        document.getElementById('constructScreenShot').src=o1SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="O1";
-    }
-    unshowo1 = () => {
-        document.getElementById('o1Text').style.color='white';
-    }
-    showo2 = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${o2})`;
-        document.getElementById('o2Text').style.color='green';
-        document.getElementById('constructScreenShot').src=o2SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="O2";
-    }
-    unshowo2 = () => {
-        document.getElementById('o2Text').style.color='white';
-    }
-    showo3 = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${o3})`;
-        document.getElementById('o3Text').style.color='green';
-        document.getElementById('constructScreenShot').src=o3SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="O3";
-    }
-    unshowo3 = () => {
-        document.getElementById('o3Text').style.color='white';
-    }
-    showopenBarrel = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${openBarrel})`;
-        document.getElementById('openBarrelText').style.color='green';
-        document.getElementById('constructScreenShot').src=openBarrelSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Open Barrel";
-    }
-    unshowopenBarrel = () => {
-        document.getElementById('openBarrelText').style.color='white';
-    }
-    showopenBR = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${openBR})`;
-        document.getElementById('openBRText').style.color='green';
-        document.getElementById('constructScreenShot').src=openBRSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Open BR";
-    }
-    unshowopenBR = () => {
-        document.getElementById('openBRText').style.color='white';
-    }
-    showopenBubble = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${openBubble})`;
-        document.getElementById('openBubbleText').style.color='green';
-        document.getElementById('constructScreenShot').src=openBubbleSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Open Bubble";
-    }
-    unshowopenBubble = () => {
-        document.getElementById('openBubbleText').style.color='white';
-    }
-    showopenRamp = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${openRamp})`;
-        document.getElementById('openRampText').style.color='green';
-        document.getElementById('constructScreenShot').src=openRampSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Open Ramp";
-    }
-    unshowopenRamp = () => {
-        document.getElementById('openRampText').style.color='white';
-    }
-    showopenSkinny = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${openSkinny})`;
-        document.getElementById('openSkinnyText').style.color='green';
-        document.getElementById('constructScreenShot').src=openSkinnySS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Open Skinny";
-    }
-    unshowopenSkinny = () => {
-        document.getElementById('openSkinnyText').style.color='white';
-    }
-    showopenStreet = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${openStreet})`;
-        document.getElementById('openStreetText').style.color='green';
-        document.getElementById('constructScreenShot').src=openStreetSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Open Street";
-    }
-    unshowopenStreet = () => {
-        document.getElementById('openStreetText').style.color='white';
-    }
-    showopenSwordLeg = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${openSwordLeg})`;
-        document.getElementById('openSwordLegText').style.color='green';
-        document.getElementById('constructScreenShot').src=openSwordLegSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Open Sword Leg";
-    }
-    unshowopenSwordLeg = () => {
-        document.getElementById('openSwordLegText').style.color='white';
-    }
-    showr1 = () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${r1})`;
-        document.getElementById('r1Text').style.color='green';
-        document.getElementById('constructScreenShot').src=r1SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="R1";
-    }
-    unshowr1 = () => {
-        document.getElementById('r1Text').style.color='white';
-    }
-    showr2= () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${r2})`;
-        document.getElementById('r2Text').style.color='green';
-        document.getElementById('constructScreenShot').src=r2SS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="R2";
-    }
-    unshowr2 = () => {
-        document.getElementById('r2Text').style.color='white';
-    }
-    showriver= () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${river})`;
-        document.getElementById('riverText').style.color='green';
-        document.getElementById('constructScreenShot').src=riverSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="River";
-    }
-    unshowriver = () => {
-        document.getElementById('riverText').style.color='white';
-    }
-    showsnipe= () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${snipe})`;
-        document.getElementById('snipeText').style.color='green';
-        document.getElementById('constructScreenShot').src=snipeSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Snipe";
-    }
-    unshowsnipe = () => {
-        document.getElementById('snipeText').style.color='white';
-    }
-    showsword= () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${sword})`;
-        document.getElementById('swordText').style.color='green';
-        document.getElementById('constructScreenShot').src=swordSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Sword";
-    }
-    unshowsword = () => {
-        document.getElementById('swordText').style.color='white';
-    }
-    showtopGold= () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${topGold})`;
-        document.getElementById('topGoldoText').style.color='green';
-        document.getElementById('constructScreenShot').src=topGoldSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Top Gold";
-    }
-    unshowtopGold = () => {
-        document.getElementById('topGoldoText').style.color='white';
-    }
-    showunderGlass= () => {
-        document.getElementById('constructMap').style.backgroundImage=`url(${underGlass})`;
-        document.getElementById('undGlassText').style.color='green';
-        document.getElementById('constructScreenShot').src=underGlassSS;
-        document.getElementById('constructInGamePicText').style.color="white";
-        document.getElementById('constructInGamePicText').innerHTML="Under Glass";
-    }
-    unshowunderGlass = () => {
-        document.getElementById('undGlassText').style.color='white';
-    } 
     render(){
         return(
             <div className="constructFullGrid">
                 <h1 className="mapTitleConstruct">Construct</h1>
                 <div className="calloutsList" id="constructCallouts">
-                    <p id="backGoldRampText" onMouseOver={this.showbackGoldRamp} onMouseOut={() => {this.resetBackground(); this.unshowbackGoldRamp()}}>Back Gold Ramp</p>
-                    <p id="botGoldText" onMouseOver={this.showbottomGold} onMouseOut={() => {this.resetBackground(); this.unshowbottomGold()}}>Bottom Gold</p>
-                    <p id="c1Text" onMouseOver={this.showc1} onMouseOut={() => {this.resetBackground(); this.unshowc1()}}>C1</p>
-                    <p id="c2Text" onMouseOver={this.showc2} onMouseOut={() => {this.resetBackground(); this.unshowc2()}}>C2</p>
-                    <p id="c3Text" onMouseOver={this.showc3} onMouseOut={() => {this.resetBackground(); this.unshowc3()}}>C3</p>
-                    <p id="closedBarrelsText" onMouseOver={this.showclosedBarrels} onMouseOut={() => {this.resetBackground(); this.unshowclosedBarrels()}}>Closed Barrels</p>
-                    <p id="closedBRText" onMouseOver={this.showclosedBR} onMouseOut={() => {this.resetBackground(); this.unshowclosedBR()}}>Closed BR</p>
-                    <p id="closedBubbleText" onMouseOver={this.showclosedBubble} onMouseOut={() => {this.resetBackground(); this.unshowclosedBubble()}}>Closed Bubble</p>
-                    <p id="closedSkinnyText" onMouseOver={this.showclosedSkinny} onMouseOut={() => {this.resetBackground(); this.unshowclosedSkinny()}}>Closed Skinny</p>
-                    <p id="closedStreetText" onMouseOver={this.showclosedStreet} onMouseOut={() => {this.resetBackground(); this.unshowclosedStreet()}}>Closed Street</p>
-                    <p id="closedSwordLegText" onMouseOver={this.showclosedSwordLeg} onMouseOut={() => {this.resetBackground(); this.unshowclosedSwordLeg()}}>Closed Sword Leg</p>
-                    <p id="donutText" onMouseOver={this.showdonut} onMouseOut={() => {this.resetBackground(); this.unshowdonut()}}>Donut</p>
-                    <p id="laserText" onMouseOver={this.showlaser} onMouseOut={() => {this.resetBackground(); this.unshowlaser()}}>Laser</p>
-                    <p id="lobbyText" onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>Lobby</p>
-                    <p id="mainRampText" onMouseOver={this.showmainRamp} onMouseOut={() => {this.resetBackground(); this.unshowmainRamp()}}>Main Ramp</p>
-                    <p id="midGoldText" onMouseOver={this.showmidGold} onMouseOut={() => {this.resetBackground(); this.unshowmidGold()}}>Mid Gold</p>
-                    <p id="midGoldRampText" onMouseOver={this.showmidGoldRamp} onMouseOut={() => {this.resetBackground(); this.unshowmidGoldRamp()}}>Mid Gold Ramp</p>
-                    <p id="o1Text" onMouseOver={this.showo1} onMouseOut={() => {this.resetBackground(); this.unshowo1()}}>O1</p>
-                    <p id="o2Text" onMouseOver={this.showo2} onMouseOut={() => {this.resetBackground(); this.unshowo2()}}>O2</p>
-                    <p id="o3Text" onMouseOver={this.showo3} onMouseOut={() => {this.resetBackground(); this.unshowo3()}}>O3</p>
-                    <p id="openBarrelText" onMouseOver={this.showopenBarrel} onMouseOut={() => {this.resetBackground(); this.unshowopenBarrel()}}>Open Barrels</p>
-                    <p id="openBRText" onMouseOver={this.showopenBR} onMouseOut={() => {this.resetBackground(); this.unshowopenBR()}}>Open BR</p>
-                    <p id="openBubbleText" onMouseOver={this.showopenBubble} onMouseOut={() => {this.resetBackground(); this.unshowopenBubble()}}>Open Bubble</p>
-                    <p id="openRampText" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}>Open Ramp</p>
-                    <p id="openSkinnyText" onMouseOver={this.showopenSkinny} onMouseOut={() => {this.resetBackground(); this.unshowopenSkinny()}}>Open Skinny</p>
-                    <p id="openStreetText" onMouseOver={this.showopenStreet} onMouseOut={() => {this.resetBackground(); this.unshowopenStreet()}}>Open Street</p>
-                    <p id="openSwordLegText" onMouseOver={this.showopenSwordLeg} onMouseOut={() => {this.resetBackground(); this.unshowopenSwordLeg()}}>Open Sword Leg</p>
-                    <p id="r1Text" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>R1</p>
-                    <p id="r2Text" onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>R2</p>
-                    <p id="riverText" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}>River</p>
-                    <p id="snipeText" onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>Snipe</p>
-                    <p id="swordText" onMouseOver={this.showsword} onMouseOut={() => {this.resetBackground(); this.unshowsword()}}>Sword</p>
-                    <p id="topGoldoText" onMouseOver={this.showtopGold} onMouseOut={() => {this.resetBackground(); this.unshowtopGold()}}>Top Gold</p>
-                    <p id="undGlassText" onMouseOver={this.showunderGlass} onMouseOut={() => {this.resetBackground(); this.unshowunderGlass()}}>Under Glass</p>     
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('backGoldRampConstruct'),backGoldRampSS); this.textGreen(document.getElementById('backGoldRampConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('backGoldRampConstruct')); this.returnTextColor(document.getElementById('backGoldRampConstructText'))}} id="backGoldRampConstructText">Back Gold Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('bottomGoldConstruct'),bottomGoldSS); this.textGreen(document.getElementById('bottomGoldConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('bottomGoldConstruct')); this.returnTextColor(document.getElementById('bottomGoldConstructText'))}} id="bottomGoldConstructText">Bottom Gold</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('c1Construct'),c1SS); this.textGreen(document.getElementById('c1ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('c1Construct')); this.returnTextColor(document.getElementById('c1ConstructText'))}} id="c1ConstructText">C1</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('c2Construct'),c2SS); this.textGreen(document.getElementById('c2ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('c2Construct')); this.returnTextColor(document.getElementById('c2ConstructText'))}} id="c2ConstructText">C2</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('c3Construct'),c3SS); this.textGreen(document.getElementById('c3ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('c3Construct')); this.returnTextColor(document.getElementById('c3ConstructText'))}} id="c3ConstructText">C3</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('closedBarrelsConstruct'),closedBarrelsSS); this.textGreen(document.getElementById('closedBarrelsConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedBarrelsConstruct')); this.returnTextColor(document.getElementById('closedBarrelsConstructText'))}} id="closedBarrelsConstructText">Closed Barrels</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('closedBRConstruct'),closedBRSS); this.textGreen(document.getElementById('closedBRConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedBRConstruct')); this.returnTextColor(document.getElementById('closedBRConstructText'))}} id="closedBRConstructText">Closed BR</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('closedBubbleConstruct'),closedBubbleSS); this.textGreen(document.getElementById('closedBubbleConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedBubbleConstruct')); this.returnTextColor(document.getElementById('closedBubbleConstructText'))}} id="closedBubbleConstructText">Closed Bubble</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('closedSkinnyConstruct'),closedSkinnySS); this.textGreen(document.getElementById('closedSkinnyConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedSkinnyConstruct')); this.returnTextColor(document.getElementById('closedSkinnyConstructText'))}} id="closedSkinnyConstructText">Closed Skinny</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('closedStreetConstruct'),closedStreetSS); this.textGreen(document.getElementById('closedStreetConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedStreetConstruct')); this.returnTextColor(document.getElementById('closedStreetConstructText'))}} id="closedStreetConstructText">Closed Street</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('closedStreetConstruct'),closedStreetSS); this.textGreen(document.getElementById('closedStreetConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedStreetConstruct')); this.returnTextColor(document.getElementById('closedStreetConstructText'))}} id="closedStreetConstructText">Closed Street</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('closedSwordLegConstruct'),closedSwordLegSS); this.textGreen(document.getElementById('closedSwordLegConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedSwordLegConstruct')); this.returnTextColor(document.getElementById('closedSwordLegConstructText'))}} id="closedSwordLegConstructText">Closed Sword Leg</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('laserConstruct'),laserSS); this.textGreen(document.getElementById('laserConstructText')); this.turnGreen(document.getElementById('laserConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('laserConstruct')); this.returnTextColor(document.getElementById('laserConstructText')); this.returnColor(document.getElementById('laserConstruct2'))}} id="laserConstructText">Laser</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('donutConstruct'),donutSS); this.textGreen(document.getElementById('donutConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('donutConstruct')); this.returnTextColor(document.getElementById('donutConstructText'))}} id="donutConstructText">Donut</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('lobbyConstruct'),lobbySS); this.textGreen(document.getElementById('lobbyConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('lobbyConstruct')); this.returnTextColor(document.getElementById('lobbyConstructText'))}} id="lobbyConstructText">Lobby</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('mainRampConstruct'),mainRampSS); this.textGreen(document.getElementById('mainRampConstructText')); this.turnGreen(document.getElementById('mainRampConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainRampConstruct')); this.returnTextColor(document.getElementById('mainRampConstructText')); this.returnColor(document.getElementById('mainRampConstruct2'))}} id="mainRampConstructText">Main Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('midGoldConstruct'),midGoldSS); this.textGreen(document.getElementById('midGoldConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('midGoldConstruct')); this.returnTextColor(document.getElementById('midGoldConstructText'))}} id="midGoldConstructText">Mid Gold</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('midGoldRampConstruct'),midGoldRampSS); this.textGreen(document.getElementById('midGoldRampConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('midGoldRampConstruct')); this.returnTextColor(document.getElementById('midGoldRampConstructText'))}} id="midGoldRampConstructText">Mid Gold Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('o1Construct'),o1SS); this.textGreen(document.getElementById('o1ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('o1Construct')); this.returnTextColor(document.getElementById('o1ConstructText'))}} id="o1ConstructText">O1</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('o2Construct'),o2SS); this.textGreen(document.getElementById('o2ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('o2Construct')); this.returnTextColor(document.getElementById('o2ConstructText'))}} id="o2ConstructText">O2</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('o3Construct'),o3SS); this.textGreen(document.getElementById('o3ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('o3Construct')); this.returnTextColor(document.getElementById('o3ConstructText'))}} id="o3ConstructText">O3</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('openBarrelsConstruct'),openBarrelSS); this.textGreen(document.getElementById('openBarrelsConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openBarrelsConstruct')); this.returnTextColor(document.getElementById('openBarrelsConstructText'))}} id="openBarrelsConstructText">Open Barrels</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('openBRConstruct'),openBRSS); this.textGreen(document.getElementById('openBRConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openBRConstruct')); this.returnTextColor(document.getElementById('openBRConstructText'))}} id="openBRConstructText">Open BR</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('openBubbleConstruct'),openBubbleSS); this.textGreen(document.getElementById('openBubbleConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openBubbleConstruct')); this.returnTextColor(document.getElementById('openBubbleConstructText'))}} id="openBubbleConstructText">Open Bubble</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('openRampConstruct'),openRampSS); this.textGreen(document.getElementById('openRampConstructText')); this.turnGreen(document.getElementById('openRampConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('openRampConstruct')); this.returnTextColor(document.getElementById('openRampConstructText')); this.returnColor(document.getElementById('openRampConstruct2'))}} id="openRampConstructText">Open Ramp</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('openSkinnyConstruct'),openSkinnySS); this.textGreen(document.getElementById('openSkinnyConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openSkinnyConstruct')); this.returnTextColor(document.getElementById('openSkinnyConstructText'))}} id="openSkinnyConstructText">Open Skinny</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('openStreetConstruct'),openStreetSS); this.textGreen(document.getElementById('openStreetConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openStreetConstruct')); this.returnTextColor(document.getElementById('openStreetConstructText'))}} id="openStreetConstructText">Open Street</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('openSwordLegConstruct'),openSwordLegSS); this.textGreen(document.getElementById('openSwordLegConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openSwordLegConstruct')); this.returnTextColor(document.getElementById('openSwordLegConstructText'))}} id="openSwordLegConstructText">Open Sword Leg</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('r1Construct'),r1SS); this.textGreen(document.getElementById('r1ConstructText')); this.turnGreen(document.getElementById('r1Construct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r1Construct')); this.returnTextColor(document.getElementById('r1ConstructText')); this.returnColor(document.getElementById('r1Construct2'))}} id="r1ConstructText">R1</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('r2Construct'),r2SS); this.textGreen(document.getElementById('r2ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r2Construct')); this.returnTextColor(document.getElementById('r2ConstructText'))}} id="r2ConstructText">r2</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('riverConstruct'),riverSS); this.textGreen(document.getElementById('riverConstructText')); this.turnGreen(document.getElementById('riverConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('riverConstruct')); this.returnTextColor(document.getElementById('riverConstructText')); this.returnColor(document.getElementById('riverConstruct2'))}} id="riverConstructText">River</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('snipeConstruct'),snipeSS); this.textGreen(document.getElementById('snipeConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeConstruct')); this.returnTextColor(document.getElementById('snipeConstructText'))}} id="snipeConstructText">Snipe</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('swordConstruct'),swordSS); this.textGreen(document.getElementById('swordConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordConstruct')); this.returnTextColor(document.getElementById('swordConstructText'))}} id="swordConstructText">Sword</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('topGoldConstruct'),topGoldSS); this.textGreen(document.getElementById('topGoldConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topGoldConstruct')); this.returnTextColor(document.getElementById('topGoldConstructText'))}} id="topGoldConstructText">Top Gold</p>
+                    <p onMouseOver={() => {this.turnGreen(document.getElementById('underGlassConstruct'),underGlassSS); this.textGreen(document.getElementById('underGlassConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('underGlassConstruct')); this.returnTextColor(document.getElementById('underGlassConstructText'))}} id="underGlassConstructText">Under Glass</p>
                 </div>
-                <div id="constructMap">
-                    <div id="backGoldRamp" onMouseOver={this.showbackGoldRamp} onMouseOut={() => {this.resetBackground(); this.unshowbackGoldRamp()}}>
-                        <img src={backGoldRamp} className='preloadImage'></img>
-                    </div>
-                    <div id="bottomGoldo" onMouseOver={this.showbottomGold} onMouseOut={() => {this.resetBackground(); this.unshowbottomGold()}}>
-                        <img src={bottomGold} className='preloadImage'></img>
-                    </div>
-                    <div id="c1One" onMouseOver={this.showc1} onMouseOut={() => {this.resetBackground(); this.unshowc1()}}>
-                        <img src={c1} className='preloadImage'></img>
-                    </div>
-                    <div id="c1Two" onMouseOver={this.showc1} onMouseOut={() => {this.resetBackground(); this.unshowc1()}}></div>
-                    <div id="c2" onMouseOver={this.showc2} onMouseOut={() => {this.resetBackground(); this.unshowc2()}}>
-                        <img src={c2} className='preloadImage'></img>
-                    </div>
-                    <div id="c3One" onMouseOver={this.showc3} onMouseOut={() => {this.resetBackground(); this.unshowc3()}}>
-                        <img src={c3} className='preloadImage'></img>
-                    </div>
-                    <div id="c3Two" onMouseOver={this.showc3} onMouseOut={() => {this.resetBackground(); this.unshowc3()}}></div>
-                    <div id="c3Three" onMouseOver={this.showc3} onMouseOut={() => {this.resetBackground(); this.unshowc3()}}></div>
-                    <div id="closedBarrelsOne" onMouseOver={this.showclosedBarrels} onMouseOut={() => {this.resetBackground(); this.unshowclosedBarrels()}}>
-                        <img src={closedBarrels} className='preloadImage'></img>
-                    </div>
-                    <div id="closedBarrelsTwo" onMouseOver={this.showclosedBarrels} onMouseOut={() => {this.resetBackground(); this.unshowclosedBarrels()}}></div>
-                    <div id="closedBarrelsThree" onMouseOver={this.showclosedBarrels} onMouseOut={() => {this.resetBackground(); this.unshowclosedBarrels()}}></div>
-                    <div id="closedBR" onMouseOver={this.showclosedBR} onMouseOut={() => {this.resetBackground(); this.unshowclosedBR()}}>
-                        <img src={closedBR} className='preloadImage'></img>
-                    </div>
-                    <div id="closedBubble" onMouseOver={this.showclosedBubble} onMouseOut={() => {this.resetBackground(); this.unshowclosedBubble()}}>
-                        <img src={closedBubble} className='preloadImage'></img>
-                    </div>
-                    <div id="closedSkinny" onMouseOver={this.showclosedSkinny} onMouseOut={() => {this.resetBackground(); this.unshowclosedSkinny()}}>
-                        <img src={closedSkinny} className='preloadImage'></img>
-                    </div>
-                    <div id="closedStreet" onMouseOver={this.showclosedStreet} onMouseOut={() => {this.resetBackground(); this.unshowclosedStreet()}}>
-                        <img src={closedStreet} className='preloadImage'></img>
-                    </div>
-                    <div id="closedSwordLeg" onMouseOver={this.showclosedSwordLeg} onMouseOut={() => {this.resetBackground(); this.unshowclosedSwordLeg()}}>
-                        <img src={closedSwordLeg} className='preloadImage'></img>
-                    </div>
-                    <div id="donut" onMouseOver={this.showdonut} onMouseOut={() => {this.resetBackground(); this.unshowdonut()}}>
-                        <img src={donut} className='preloadImage'></img>
-                    </div>
-                    <div id="laserOne" onMouseOver={this.showlaser} onMouseOut={() => {this.resetBackground(); this.unshowlaser()}}>
-                        <img src={laser} className='preloadImage'></img>
-                    </div>
-                    <div id="laserTwo" onMouseOver={this.showlaser} onMouseOut={() => {this.resetBackground(); this.unshowlaser()}}></div>
-                    <div id="lobby" onMouseOver={this.showlobby} onMouseOut={() => {this.resetBackground(); this.unshowlobby()}}>
-                        <img src={lobby} className='preloadImage'></img>
-                    </div>
-                    <div id="mainRampOne" onMouseOver={this.showmainRamp} onMouseOut={() => {this.resetBackground(); this.unshowmainRamp()}}>
-                        <img src={mainRamp} className='preloadImage'></img>
-                    </div>
-                    <div id="mainRampTwo" onMouseOver={this.showmainRamp} onMouseOut={() => {this.resetBackground(); this.unshowmainRamp()}}></div>
-                    <div id="midGold" onMouseOver={this.showmidGold} onMouseOut={() => {this.resetBackground(); this.unshowmidGold()}}>
-                        <img src={midGold} className='preloadImage'></img>
-                    </div>
-                    <div id="midGoldRamp" onMouseOver={this.showmidGoldRamp} onMouseOut={() => {this.resetBackground(); this.unshowmidGoldRamp()}}>
-                        <img src={midGoldRamp} className='preloadImage'></img>
-                    </div>
-                    <div id="o1One" onMouseOver={this.showo1} onMouseOut={() => {this.resetBackground(); this.unshowo1()}}>
-                        <img src={o1} className='preloadImage'></img>
-                    </div>
-                    <div id="o1Two" onMouseOver={this.showo1} onMouseOut={() => {this.resetBackground(); this.unshowo1()}}></div>
-                    <div id="o2" onMouseOver={this.showo2} onMouseOut={() => {this.resetBackground(); this.unshowo2()}}>
-                        <img src={o2} className='preloadImage'></img>
-                    </div>
-                    <div id="o3One" onMouseOver={this.showo3} onMouseOut={() => {this.resetBackground(); this.unshowo3()}}>
-                        <img src={o3} className='preloadImage'></img>
-                    </div>
-                    <div id="o3Two" onMouseOver={this.showo3} onMouseOut={() => {this.resetBackground(); this.unshowo3()}}></div>
-                    <div id="o3Three" onMouseOver={this.showo3} onMouseOut={() => {this.resetBackground(); this.unshowo3()}}></div>
-                    <div id="openBarrelOne" onMouseOver={this.showopenBarrel} onMouseOut={() => {this.resetBackground(); this.unshowopenBarrel()}}>
-                        <img src={openBarrel} className='preloadImage'></img>
-                    </div>
-                    <div id="openBarrelTwo" onMouseOver={this.showopenBarrel} onMouseOut={() => {this.resetBackground(); this.unshowopenBarrel()}}></div>
-                    <div id="openBarrelThree" onMouseOver={this.showopenBarrel} onMouseOut={() => {this.resetBackground(); this.unshowopenBarrel()}}></div>
-                    <div id="openBarrelFour" onMouseOver={this.showopenBarrel} onMouseOut={() => {this.resetBackground(); this.unshowopenBarrel()}}></div>
-                    <div id="openBR" onMouseOver={this.showopenBR} onMouseOut={() => {this.resetBackground(); this.unshowopenBR()}}>
-                        <img src={openBR} className='preloadImage'></img>
-                    </div>
-                    <div id="openBubble" onMouseOver={this.showopenBubble} onMouseOut={() => {this.resetBackground(); this.unshowopenBubble()}}>
-                        <img src={openBubble} className='preloadImage'></img>
-                    </div>
-                    <div id="openRampOne" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}>
-                        <img src={openRamp} className='preloadImage'></img>
-                    </div>
-                    <div id="openRampTwo" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}></div>
-                    <div id="openRampThree" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}></div>
-                    <div id="openRampFour" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}></div>
-                    <div id="openRampFive" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}></div>
-                    <div id="openRampSix" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}></div>
-                    <div id="openRampSeven" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}></div>
-                    <div id="openRampEight" onMouseOver={this.showopenRamp} onMouseOut={() => {this.resetBackground(); this.unshowopenRamp()}}></div>
-                    <div id="openSkinny" onMouseOver={this.showopenSkinny} onMouseOut={() => {this.resetBackground(); this.unshowopenSkinny()}}>
-                        <img src={openSkinny} className='preloadImage'></img>
-                    </div>
-                    <div id="openStreetOne" onMouseOver={this.showopenStreet} onMouseOut={() => {this.resetBackground(); this.unshowopenStreet()}}>
-                        <img src={openStreet} className='preloadImage'></img>
-                    </div>
-                    <div id="openStreetTwo" onMouseOver={this.showopenStreet} onMouseOut={() => {this.resetBackground(); this.unshowopenStreet()}}></div>
-                    <div id="openStreetThree" onMouseOver={this.showopenStreet} onMouseOut={() => {this.resetBackground(); this.unshowopenStreet()}}></div>
-                    <div id="openStreetFour" onMouseOver={this.showopenStreet} onMouseOut={() => {this.resetBackground(); this.unshowopenStreet()}}></div>
-                    <div id="openSwordLeg" onMouseOver={this.showopenSwordLeg} onMouseOut={() => {this.resetBackground(); this.unshowopenSwordLeg()}}>
-                        <img src={openSwordLeg} className='preloadImage'></img>
-                    </div>
-                    <div id="r1One" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}>
-                        <img src={r1} className='preloadImage'></img>
-                    </div>
-                    <div id="r1Two" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}></div>
-                    <div id="r1Three" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}></div>
-                    <div id="r1Four" onMouseOver={this.showr1} onMouseOut={() => {this.resetBackground(); this.unshowr1()}}></div>
-                    <div id="r2" onMouseOver={this.showr2} onMouseOut={() => {this.resetBackground(); this.unshowr2()}}>
-                        <img src={r2} className='preloadImage'></img>
-                    </div>
-                    <div id="riverOne" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}>
-                        <img src={river} className='preloadImage'></img>
-                    </div>
-                    <div id="riverTwo" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}></div>
-                    <div id="riverThree" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}></div>
-                    <div id="riverFour" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}></div>
-                    <div id="riverFive" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}></div>
-                    <div id="riverSix" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}></div>
-                    <div id="riverSeven" onMouseOver={this.showriver} onMouseOut={() => {this.resetBackground(); this.unshowriver()}}></div>
-                    <div id="snipe" onMouseOver={this.showsnipe} onMouseOut={() => {this.resetBackground(); this.unshowsnipe()}}>
-                        <img src={snipe} className='preloadImage'></img>
-                    </div>
-                    <div id="sword" onMouseOver={this.showsword} onMouseOut={() => {this.resetBackground(); this.unshowsword()}}>
-                        <img src={sword} className='preloadImage'></img>
-                    </div>
-                    <div id="topGoldo" onMouseOver={this.showtopGold} onMouseOut={() => {this.resetBackground(); this.unshowtopGold()}}>
-                        <img src={topGold} className='preloadImage'></img>
-                    </div>
-                    <div id="underGlassOne" onMouseOver={this.showunderGlass} onMouseOut={() => {this.resetBackground(); this.unshowunderGlass()}}>
-                        <img src={underGlass} className='preloadImage'></img>
-                    </div>
-                    <div id="underGlassTwo" onMouseOver={this.showunderGlass} onMouseOut={() => {this.resetBackground(); this.unshowunderGlass()}}></div>
-                </div>
+                <svg id="constructMap" width="750px" height="725px">
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('backGoldRampConstruct')); this.textGreen(document.getElementById('backGoldRampConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('backGoldRampConstruct')); this.returnTextColor(document.getElementById('backGoldRampConstructText'))}}  id="backGoldRampConstruct" points="425,476 396,476 396,499 337,499 337,492 319,492 318,495 303,507 307,513 416,513 425,504"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('bottomGoldConstruct')); this.textGreen(document.getElementById('bottomGoldConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('bottomGoldConstruct')); this.returnTextColor(document.getElementById('bottomGoldConstructText'))}}  id="bottomGoldConstruct" points="651,409 651,423 658,423 658,465 648,465 648,467 615,467 615,465 603,465 603,423 610,423 610,409"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('c1Construct')); this.textGreen(document.getElementById('c1ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('c1Construct')); this.returnTextColor(document.getElementById('c1ConstructText'))}}  id="c1Construct" points="645,310 654,321 670,321 672,319 672,317 678,311 689,311 689,330 673,330 670,333 645,333"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('c2Construct')); this.textGreen(document.getElementById('c2ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('c2Construct')); this.returnTextColor(document.getElementById('c2ConstructText'))}}  id="c2Construct" points="411,306 424,306 426,309 426,329 410,329 404,323 404,313"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('c3Construct')); this.textGreen(document.getElementById('c3ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('c3Construct')); this.returnTextColor(document.getElementById('c3ConstructText'))}}  id="c3Construct" points="156,278 182,278 189,271 200,271 231,326 231,352 224,352 224,339 207,339 207,352 200,352 200,336 182,310 182,299 178,295 178,293 180,293 180,287 156,287"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('closedBarrelsConstruct')); this.textGreen(document.getElementById('closedBarrelsConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedBarrelsConstruct')); this.returnTextColor(document.getElementById('closedBarrelsConstructText'))}}  id="closedBarrelsConstruct" points="648,267 683,267 714,308 714,344 700,344 700,304 689,304 683,298 683,283 648,283"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('closedBRConstruct')); this.textGreen(document.getElementById('closedBRConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedBRConstruct')); this.returnTextColor(document.getElementById('closedBRConstructText'))}}  id="closedBRConstruct" points="417,264 417,246 400,246 400,245 396,245 396,244 379,244 379,261 387,261 387,264"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('closedBubbleConstruct')); this.textGreen(document.getElementById('closedBubbleConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedBubbleConstruct')); this.returnTextColor(document.getElementById('closedBubbleConstructText'))}}  id="closedBubbleConstruct" points="135,374 149,374 149,379 145,383 135,383"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('closedSkinnyConstruct')); this.textGreen(document.getElementById('closedSkinnyConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedSkinnyConstruct')); this.returnTextColor(document.getElementById('closedSkinnyConstructText'))}}  id="closedSkinnyConstruct" points="714,388 698,388 698,440 714,440"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('closedStreetConstruct')); this.textGreen(document.getElementById('closedStreetConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedStreetConstruct')); this.returnTextColor(document.getElementById('closedStreetConstructText'))}}  id="closedStreetConstruct" points="191,353 232,353 232,418 226,414 223,415 220,416 217,421 217,426 222,430 224,432 199,480 198,480 179,469 179,467 192,441 192,400 191,400"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('closedSwordLegConstruct')); this.textGreen(document.getElementById('closedSwordLegConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('closedSwordLegConstruct')); this.returnTextColor(document.getElementById('closedSwordLegConstructText'))}}  id="closedSwordLegConstruct" points="385,264 381,264 381,289 385,289"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('donutConstruct')); this.textGreen(document.getElementById('donutConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('donutConstruct')); this.returnTextColor(document.getElementById('donutConstructText'))}}  id="donutConstruct" points="381,384 381,371 373,363 361,363 353,371 353,384"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('laserConstruct')); this.textGreen(document.getElementById('laserConstructText')); this.turnGreen(document.getElementById('laserConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('laserConstruct')); this.returnTextColor(document.getElementById('laserConstructText')); this.returnColor(document.getElementById('laserConstruct2'))}}  id="laserConstruct" points="264,321 251,321 251,396 264,396"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('laserConstruct')); this.textGreen(document.getElementById('laserConstructText')); this.turnGreen(document.getElementById('laserConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('laserConstruct')); this.returnTextColor(document.getElementById('laserConstructText')); this.returnColor(document.getElementById('laserConstruct2'))}}  id="laserConstruct2" points="528,313 513,313 511,316 511,393 525,393 525,386 528,386 528,363 526,363 526,357 528,357"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('lobbyConstruct')); this.textGreen(document.getElementById('lobbyConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('lobbyConstruct')); this.returnTextColor(document.getElementById('lobbyConstructText'))}}  id="lobbyConstruct" points="154,305 155,269 145,259 101,259 91,268 91,287 93,287 93,305"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mainRampConstruct')); this.textGreen(document.getElementById('mainRampConstructText')); this.turnGreen(document.getElementById('mainRampConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainRampConstruct')); this.returnTextColor(document.getElementById('mainRampConstructText')); this.returnColor(document.getElementById('mainRampConstruct2'))}}  id="mainRampConstruct" points="357,246 376,246 376,308 371,313 363,313 358,308"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('mainRampConstruct')); this.textGreen(document.getElementById('mainRampConstructText')); this.turnGreen(document.getElementById('mainRampConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('mainRampConstruct')); this.returnTextColor(document.getElementById('mainRampConstructText')); this.returnColor(document.getElementById('mainRampConstruct2'))}}  id="mainRampConstruct2" points="617,241 644,241 644,267 647,267 647,283 646,283 646,310 617,310 617,283 616,283 616,267 617,267"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('midGoldConstruct')); this.textGreen(document.getElementById('midGoldConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('midGoldConstruct')); this.returnTextColor(document.getElementById('midGoldConstructText'))}}  id="midGoldConstruct" points="462,455 462,473 424,473 424,475 335,475 335,491 319,491 301,460 301,459 310,455"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('midGoldRampConstruct')); this.textGreen(document.getElementById('midGoldRampConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('midGoldRampConstruct')); this.returnTextColor(document.getElementById('midGoldRampConstructText'))}}  id="midGoldRampConstruct" points="490,384 469,384 469,446 465,454 465,455 463,455 463,473 478,473 490,450"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('o1Construct')); this.textGreen(document.getElementById('o1ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('o1Construct')); this.returnTextColor(document.getElementById('o1ConstructText'))}}  id="o1Construct" points="618,311 617,311 610,321 591,321 591,317 585,311 574,311 574,330 585,330 587,328 589,328 593,333 618,333"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('o2Construct')); this.textGreen(document.getElementById('o2ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('o2Construct')); this.returnTextColor(document.getElementById('o2ConstructText'))}}  id="o2Construct" points="322,306 328,312 328,322 322,329 308,329 306,326 306,309 308,306"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('o3Construct')); this.textGreen(document.getElementById('o3ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('o3Construct')); this.returnTextColor(document.getElementById('o3ConstructText'))}}  id="o3Construct" points="90,278 64,278 57,270 46,270 14,325 14,352 22,352 22,340 38,340 38,352 46,352 46,337 64,310 64,298 68,294 68,293 67,292 67,287 90,287"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openBarrelsConstruct')); this.textGreen(document.getElementById('openBarrelsConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openBarrelsConstruct')); this.returnTextColor(document.getElementById('openBarrelsConstructText'))}}  id="openBarrelsConstruct" points="615,267 577,267 546,308 546,343 563,343 563,304 574,304 581,296 581,283 615,283"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openBRConstruct')); this.textGreen(document.getElementById('openBRConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openBRConstruct')); this.returnTextColor(document.getElementById('openBRConstructText'))}}  id="openBRConstruct" points="354,244 332,244 330,246 310,246 310,263 347,263 347,261 354,261"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openBubbleConstruct')); this.textGreen(document.getElementById('openBubbleConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openBubbleConstruct')); this.returnTextColor(document.getElementById('openBubbleConstructText'))}}  id="openBubbleConstruct" points="112,374 97,374 97,378 100,381 103,383 112,383"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openRampConstruct')); this.textGreen(document.getElementById('openRampConstructText')); this.turnGreen(document.getElementById('openRampConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('openRampConstruct')); this.returnTextColor(document.getElementById('openRampConstructText')); this.returnColor(document.getElementById('openRampConstruct2'))}}  id="openRampConstruct" points="33,413 17,422 45,478 46,478 62,469 62,468"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openRampConstruct')); this.textGreen(document.getElementById('openRampConstructText')); this.turnGreen(document.getElementById('openRampConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('openRampConstruct')); this.returnTextColor(document.getElementById('openRampConstructText')); this.returnColor(document.getElementById('openRampConstruct2'))}}  id="openRampConstruct2" points="274,419 275,419 316,492 318,495 305,505 303,505 262,428"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openSkinnyConstruct')); this.textGreen(document.getElementById('openSkinnyConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openSkinnyConstruct')); this.returnTextColor(document.getElementById('openSkinnyConstructText'))}}  id="openSkinnyConstruct" points="562,388 546,388 546,440 562,440"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openStreetConstruct')); this.textGreen(document.getElementById('openStreetConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openStreetConstruct')); this.returnTextColor(document.getElementById('openStreetConstructText'))}}  id="openStreetConstruct" points="54,492 53,492 47,482 47,481 71,469 71,466 41,410 39,408 16,421 14,417 14,353 54,353 54,384 81,437 80,439 93,465 93,466"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('openSwordLegConstruct')); this.textGreen(document.getElementById('openSwordLegConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('openSwordLegConstruct')); this.returnTextColor(document.getElementById('openSwordLegConstructText'))}}  id="openSwordLegConstruct" points="353,264 349,264 349,289 353,289"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r1Construct')); this.textGreen(document.getElementById('r1ConstructText')); this.turnGreen(document.getElementById('r1Construct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r1Construct')); this.returnTextColor(document.getElementById('r1ConstructText')); this.returnColor(document.getElementById('r1Construct2'))}} id="r1Construct" points="132,315 137,315 149,327 149,373 137,373 137,355 132,350"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r1Construct')); this.textGreen(document.getElementById('r1ConstructText')); this.turnGreen(document.getElementById('r1Construct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('r1Construct')); this.returnTextColor(document.getElementById('r1ConstructText')); this.returnColor(document.getElementById('r1Construct2'))}}  id="r1Construct2" points="115,315 112,314 109,315 97,327 97,373 109,373 109,356 115,350"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('r2Construct')); this.textGreen(document.getElementById('r2ConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('r2Construct')); this.returnTextColor(document.getElementById('r2ConstructText'))}}  id="r2Construct" points="127,315 119,315 119,352 114,357 114,389 118,393 129,393 133,389 133,357 127,352"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('riverConstruct')); this.textGreen(document.getElementById('riverConstructText')); this.turnGreen(document.getElementById('riverConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('riverConstruct')); this.returnTextColor(document.getElementById('riverConstructText')); this.returnColor(document.getElementById('riverConstruct2'))}}  id="riverConstruct" points="309,246 286,246 251,318 251,320 265,320 293,263 309,263"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('riverConstruct')); this.textGreen(document.getElementById('riverConstructText')); this.turnGreen(document.getElementById('riverConstruct2'))}} onMouseOut={() => {this.returnColor(document.getElementById('riverConstruct')); this.returnTextColor(document.getElementById('riverConstructText')); this.returnColor(document.getElementById('riverConstruct2'))}}  id="riverConstruct2" points="560,237 548,237 513,312 529,312 556,256 560,256"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('snipeConstruct')); this.textGreen(document.getElementById('snipeConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('snipeConstruct')); this.returnTextColor(document.getElementById('snipeConstructText'))}}  id="snipeConstruct" points="332,243 350,207 350,186 349,186 349,181 351,175 354,172 357,169 361,167 372,167 376,169 380,172 383,176 384,178 384,186 383,186 383,204 401,238 401,240 397,243"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('swordConstruct')); this.textGreen(document.getElementById('swordConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('swordConstruct')); this.returnTextColor(document.getElementById('swordConstructText'))}}  id="swordConstruct" points="118,95 129,95 129,99 131,99 131,150 130,151 130,155 131,156 134,156 138,161 138,179 135,184 136,186 136,253 127,253 127,258 119,258 119,253 112,253 112,184 109,179 109,162 113,156 116,156 116,99 118,98"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('topGoldConstruct')); this.textGreen(document.getElementById('topGoldConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('topGoldConstruct')); this.returnTextColor(document.getElementById('topGoldConstructText'))}}  id="topGoldConstruct" points="199,481 179,469 178,470 169,487 169,489 105,489 94,467 92,467 53,493 53,494 64,515 97,515 97,517 114,534 141,534 160,515 182,515"/>
+                    <polygon onMouseOver={() => {this.turnGreen(document.getElementById('underGlassConstruct')); this.textGreen(document.getElementById('underGlassConstructText'))}} onMouseOut={() => {this.returnColor(document.getElementById('underGlassConstruct')); this.returnTextColor(document.getElementById('underGlassConstructText'))}}  id="underGlassConstruct" points="136,255 112,255 112,314 136,314"/>
+                </svg>
                 <div className="inGamePic">
                     <h2 id="constructInGamePicText" class="inGamePicText"></h2>
                     <img id="constructScreenShot"></img>
