@@ -7,9 +7,6 @@
 html{
   background-color: black;
 }
-svg{
-  background-image: url('./components/Halo3/BlueprintPics/Heretic.png');
-}
 polygon, circle{
   fill:rgba(0,0,0,0);
   stroke:rgba(0,0,0,0);
@@ -79,7 +76,7 @@ polygon, circle{
   display:none;
 }
 .inGamePicText{
-  color:black;
+  color:white;
 }
 a{
   font-size:1.5rem;

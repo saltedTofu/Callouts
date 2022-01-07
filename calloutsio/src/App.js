@@ -1,20 +1,20 @@
 import './App.css';
-import './construct.css';
-import './guardian.css';
-import './narrows.css';
-import './amplified.css';
-import './heretic.css';
-import './onslaught.css';
-import './thePit.css';
+import './components/Construct/construct.css';
+import './components/Guardian/guardian.css';
+import './components/Narrows/narrows.css';
+import './components/Amplified/amplified.css';
+import './components/Heretic/heretic.css';
+import './components/Onslaught/onslaught.css';
+import './components/ThePit/thePit.css';
 import Header from './components/header';
-import HaloThree from './components/Halo3/halothree';
-import haloBackground from './components/halo.jpg';
+import Nav from './components/nav';
+import haloBackground from './utils/halo.jpg';
 
 function App() {
   return (
     <div className="container" style={{ backgroundImage: `url(${haloBackground})` }}>
         <Header />
-        <HaloThree />
+        <Nav />
     </div>
   );
 }
