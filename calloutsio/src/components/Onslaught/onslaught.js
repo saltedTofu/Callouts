@@ -1,21 +1,9 @@
 import React, {useState} from 'react';
 import Screenshot from '../ScreenShots';
 
-function Onslaught() {
+function Onslaught({turnGreen,returnColor,textGreen,returnTextColor}) {
     const [screens,setScreens] = useState('');
 
-    const turnGreen = (div) => {
-        div.style.fill="rgba(0, 255, 0, 0.5)";
-    }
-    const returnColor = (div) => {
-        div.style.fill="rgba(0, 0, 0, 0)";
-    }
-    const textGreen = (textP) => {
-        textP.style.color="rgba(0, 255, 0, 1)"
-    }
-    const returnTextColor = (textP) => {
-        textP.style.color="white";
-    }
     return(
         <div className="onslaughtFullGrid">
             <h1 className="mapTitleOnslaught">Onslaught</h1>

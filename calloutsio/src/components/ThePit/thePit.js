@@ -1,27 +1,11 @@
 import React, {useState} from 'react';
 import Screenshot from '../ScreenShots';
 
-function ThePit(){
+function ThePit({turnGreen,returnColor,textGreen,returnTextColor}){
     const [screens,setScreens] = useState('');
 
-    const turnGreen = (div) => {
-        div.style.fill="rgba(0, 255, 0, 0.5)";
-    }
-    const returnColor = (div) => {
-        div.style.fill="rgba(0, 0, 0, 0)";
-    }
-    const textGreen = (textP) => {
-        textP.style.color="rgba(0, 255, 0, 1)"
-    }
-    const returnTextColor = (textP) => {
-        textP.style.color="white";
-    }
-
     const handleMouseOver = (screenshotName,turnGreenIDArray,textDivID) => {
-        console.log(screenshotName,turnGreenIDArray,textDivID);
-        console.log(turnGreenIDArray.length);
         for(let i=0;i<turnGreenIDArray.length;i++){
-            console.log(turnGreenIDArray[i]);
             turnGreen(document.getElementById(turnGreenIDArray[i]));
         }
         textGreen(document.getElementById(textDivID));
