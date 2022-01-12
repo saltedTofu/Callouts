@@ -8,11 +8,10 @@ import './components/Onslaught/onslaught.css';
 import './components/ThePit/thePit.css';
 import Header from './components/header';
 import Nav from './components/nav';
-import haloBackground from './utils/halo.jpg';
 
 function App() {
   return (
-    <div className="container" style={{ backgroundImage: `url(${haloBackground})` }}>
+    <div className="container">
         <Header />
         <Nav />
     </div>

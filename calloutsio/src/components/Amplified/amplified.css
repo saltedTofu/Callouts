@@ -30,7 +30,7 @@
   border:1px solid white;
 }
 #amplifiedCallouts p{
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 1259px) {
@@ -49,14 +49,7 @@
 }
 @media only screen and (min-width: 1260px) and (max-width: 1450px) {
   .amplifiedFullGrid{
-    grid-template-columns:200px 750px 150px;
-  }
-  #amplifiedCallouts p{
-    font-size: 1.3rem;
-  }
-  #amplifiedScreenShot{
-    width:140px;
-    height:140px;
+    grid-template-columns:300px 750px;
   }
 }
 @media only screen and (min-width: 1451px) and (max-width: 1650px) {

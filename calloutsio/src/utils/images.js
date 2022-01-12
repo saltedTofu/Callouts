@@ -126,6 +126,7 @@ import HToilet from '../utils/Heretic/ScreenShots/Toilet.png';
 import HTopMid from '../utils/Heretic/ScreenShots/TopMid.png';
 import HTunnel from '../utils/Heretic/ScreenShots/Tunnel.png';
 import HWalshy from '../utils/Heretic/ScreenShots/Walshy.png';
+import HCurvy from '../utils/Heretic/ScreenShots/Curvy.png';
 
 //Narrows image imports
 import N50Mauler from '../utils/Narrows/ScreenShots/50Mauler.png';
@@ -170,6 +171,8 @@ import NSnipe from '../utils/Narrows/ScreenShots/Snipe.png';
 import NStage from '../utils/Narrows/ScreenShots/Stage.png';
 import NTopLeft from '../utils/Narrows/ScreenShots/TopLeft.png';
 import NTopRight from '../utils/Narrows/ScreenShots/TopRight.png';
+import NCannonSneaky from '../utils/Narrows/ScreenShots/CannonSneaky.png';
+import NFlagSneaky from '../utils/Narrows/ScreenShots/FlagSneaky.png';
 
 //Onslaught image imports
 import OACorner from '../utils/Onslaught/ScreenShots/ACorner.png';
@@ -208,6 +211,7 @@ import OShield from '../utils/Onslaught/ScreenShots/Shield.png';
 import OTopA from '../utils/Onslaught/ScreenShots/TopA.png';
 import OTopB from '../utils/Onslaught/ScreenShots/TopB.png';
 import OTopMid from '../utils/Onslaught/ScreenShots/TopMid.png';
+import OBasement from '../utils/Onslaught/ScreenShots/Basement.png';
 
 //The Pit image imports
 import P1stBR from '../utils/ThePit/ScreenShots/1stBR.png';
@@ -236,6 +240,7 @@ import PRunway from '../utils/ThePit/ScreenShots/Runway.png';
 import PS1 from '../utils/ThePit/ScreenShots/S1.png';
 import PS2 from '../utils/ThePit/ScreenShots/S2.png';
 import PSnipePocket from '../utils/ThePit/ScreenShots/SnipePocket.png';
+import PSnipeBridge from '../utils/ThePit/ScreenShots/SnipeBridge.png';
 import PStreet from '../utils/ThePit/ScreenShots/Street.png';
 import PSword from '../utils/ThePit/ScreenShots/Sword.png';
 import PSwordRamp from '../utils/ThePit/ScreenShots/SwordRamp.png';
@@ -250,9 +255,9 @@ const screenShots = {
   amplified:[ABGBubble,ABGJumpUp,ABGPocket,ABGSign,ABGTower,ABlue1,ABlue2,ABlueCouch,ABlueCourtyard,ABlueFence,ABlueHouse,ABluePlat,ABlueStreet,ABottomMid,ABPBubble,ABPJumpUp,ABPPocket,ABPShield,ABPSign,ABPTower,AGarageDoor,AGold1,AGold2,AGold3,APink1,APink2,APink3,APinkPlat,ATopMid],
   construct:[CbackGoldRampSS,CbottomGoldSS,Cc1SS,Cc2SS,Cc3SS,CclosedBarrelsSS,CclosedBRSS,CclosedBubbleSS,CclosedSkinnySS,CclosedStreetSS,CclosedSwordLegSS,CdonutSS,ClaserSS,ClobbySS,CmainRampSS,CmidGoldSS,CmidGoldRampSS,Co1SS,Co2SS,Co3SS,CopenBarrelSS,CopenBRSS,CopenBubbleSS,CopenRampSS,CopenSkinnySS,CopenStreetSS,CopenSwordLegSS,Cr1SS,Cr2SS,CriverSS,CsnipeSS,CswordSS,CtopGoldSS,CunderGlassSS],
   guardian:[GBarrelsSS,GBlueEntranceSS,GBlueLightsSS,GBlueRampSS,GBlueWindowSS,GBottomGoldSS,GBottomGreenSS,GCamoSS,GElbowSS,GFrontBlueSS,GGoldLightsSS,GGoldWindowSS,GGreenLightsSS,GShortJumpSS,GShotgunRoomSS,GSnipe1SS,GSnipe2SS,GSnipe3SS,GSnipeLiftSS,GSnipeLightsSS,GSnipeRampSS,GStumpSS,GTopBlueSS,GTopGoldSS,GTopGreenSS,GTopMidSS,GUnderGlassSS],
-  heretic:[HBackWall,HBigNipple,HBottomMid,HBubble,HCar1,HCar2,HCar3,HCarPocket,HCurious,HEli,HGandhi,HGandhiRamp,HGlass,HHighLedge,HJumpUp,HNerd,HNipple,HPink1,HPink2,HPink3,HPinkFace,HPinkPocket,HRedBlue1,HRedBlue2,HSlide,HStreet,HSword,HToilet,HTopMid,HTunnel,HWalshy],
-  narrows:[N50Mauler,NAfro,NBackCannon,NBackFlag,NCannon,NCannonDoor,NCannonLobby,NCannonPowerUp,NCannonShockwave,NCannonSpawn,NFlag,NFlagBox,NFlagDoor,NFlagLobby,NFlagPowerUp,NFlagShockwave,NL0,NL1,NL2,NL3,NL4,NLBox,NLeftAttic,NLeftShoulder,NLobby,NMainCannon,NMiniMohawk,NMohawk,NPowerUp,NR0,NR1,NR2,NR3,NR4,NRBox,NRightAttic,NRightShoulder,NRockets,NSnipe,NStage,NTopLeft,NTopRight],
-  onslaught:[OACorner,OACuts,OADumpster,OAHouse,OAJumpUp,OAMaze,OANest,OAPocket,OASneaky,OAStairs,OAStandup,OAStreet,OATeepee,OATunnel,OBCorner,OBCuts,OBDumpster,OBHouse,OBJumpUp,OBMaze,OBNest,OBottomMid,OBPocket,OBSneaky,OBStairs,OBStandUp,OBStreet,OBTeepee,OBTunnel,OCourtyard,OFlag,OGarageDoor,OShield,OTopA,OTopB,OTopMid],
-  thePit:[P1stBR,P2ndBR,PAssault,PBackRamp,PBlueRedSword,PCourtyard,PCustomOS,PCuts,PFlag,PGreenBox,PGreenHall,PJumpUp,PLongHall,PMauler,PMidbridge,PNeedler,PNeedlerPit,PNeedlerRamp,PPit,PPitRamp,PPlatform,PRockets,PRunway,PS1,PS2,PSnipePocket,PStreet,PSword,PSwordRamp,PSwordWindow,PTraining,PTrainingPocket,PTrainingRamp,PUnderBridge,PWalshy]
+  heretic:[HBackWall,HBigNipple,HBottomMid,HBubble,HCar1,HCar2,HCar3,HCarPocket,HCurious,HEli,HGandhi,HGandhiRamp,HGlass,HHighLedge,HJumpUp,HNerd,HNipple,HPink1,HPink2,HPink3,HPinkFace,HPinkPocket,HRedBlue1,HRedBlue2,HSlide,HStreet,HSword,HToilet,HTopMid,HTunnel,HWalshy,HCurvy],
+  narrows:[N50Mauler,NAfro,NBackCannon,NBackFlag,NCannon,NCannonDoor,NCannonLobby,NCannonPowerUp,NCannonShockwave,NCannonSpawn,NFlag,NFlagBox,NFlagDoor,NFlagLobby,NFlagPowerUp,NFlagShockwave,NL0,NL1,NL2,NL3,NL4,NLBox,NLeftAttic,NLeftShoulder,NLobby,NMainCannon,NMiniMohawk,NMohawk,NPowerUp,NR0,NR1,NR2,NR3,NR4,NRBox,NRightAttic,NRightShoulder,NRockets,NSnipe,NStage,NTopLeft,NTopRight,NCannonSneaky,NFlagSneaky],
+  onslaught:[OACorner,OACuts,OADumpster,OAHouse,OAJumpUp,OAMaze,OANest,OAPocket,OASneaky,OAStairs,OAStandup,OAStreet,OATeepee,OATunnel,OBCorner,OBCuts,OBDumpster,OBHouse,OBJumpUp,OBMaze,OBNest,OBottomMid,OBPocket,OBSneaky,OBStairs,OBStandUp,OBStreet,OBTeepee,OBTunnel,OCourtyard,OFlag,OGarageDoor,OShield,OTopA,OTopB,OTopMid,OBasement],
+  thePit:[P1stBR,P2ndBR,PAssault,PBackRamp,PBlueRedSword,PCourtyard,PCustomOS,PCuts,PFlag,PGreenBox,PGreenHall,PJumpUp,PLongHall,PMauler,PMidbridge,PNeedler,PNeedlerPit,PNeedlerRamp,PPit,PPitRamp,PPlatform,PRockets,PRunway,PS1,PS2,PSnipePocket,PStreet,PSword,PSwordRamp,PSwordWindow,PTraining,PTrainingPocket,PTrainingRamp,PUnderBridge,PWalshy,PSnipeBridge]
 };
 export default screenShots;

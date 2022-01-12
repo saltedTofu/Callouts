@@ -26,7 +26,7 @@
 	background-color: black;
 }
 #constructCallouts p{
-	font-size:1.8rem;
+	font-size:1.85rem;
 }
 #constructScreenShot{
 	width:250px;
@@ -39,26 +39,19 @@
 	}
 	#constructMap{
 		grid-column: 1/span 1;
+    background-image: url('../../utils/Construct/ConstructWithCallouts.png');
 	}
 }
 @media only screen and (min-width: 1260px) and (max-width: 1450px) {
-    .constructFullGrid{
-      grid-template-columns:200px 750px 150px;
-    }
-    #constructCallouts p{
-      font-size: 1.1rem;
-    }
-    #constructScreenShot{
-      width: 100px;
-      height:100px;
-      border:1px solid white;
-    }
+  .constructFullGrid{
+    grid-template-columns:350px 750px;
+  }
 }
 @media only screen and (min-width:1451px) and (max-width: 1650px) {
 	.constructFullGrid{
 	  grid-template-columns:300px 750px 300px;
 	}
 	#constructCallouts p{
-		font-size:1.6rem;
+		font-size:1.65rem;
 	}
 }

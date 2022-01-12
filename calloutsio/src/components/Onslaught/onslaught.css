@@ -1,7 +1,7 @@
 .onslaughtFullGrid{
     display:grid;
     justify-content: center;
-    grid-template-columns: 300px 750px 300px;
+    grid-template-columns: 400px 750px 300px;
     grid-template-rows: 80px 625px;
     color:white;
     
@@ -30,7 +30,7 @@
     border:1px solid white;
   }
   #onslaughtCallouts p{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   @media only screen and (max-width: 1259px) {
@@ -40,19 +40,12 @@
   }
     #onslaughtMap{
       grid-column: 1/span 1;
+      background-image: url('../../utils/Onslaught/Onslaught.png');
     }
   }
   @media only screen and (min-width: 1260px) and (max-width: 1450px) {
     .onslaughtFullGrid{
-      grid-template-columns:200px 750px 150px;
-    }
-    #onslaughtCallouts p{
-      font-size: 1.3rem;
-    }
-    #onslaughtScreenShot{
-      width: 100px;
-      height:100px;
-      border:1px solid white;
+      grid-template-columns:400px 750px;
     }
   }
   @media only screen and (min-width:1451px) and (max-width: 1650px) {

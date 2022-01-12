@@ -14,8 +14,10 @@ polygon, circle{
 .container{
   background-repeat:no-repeat;
   background-attachment: fixed;
+  background-position: center;
   background-size: 100% 100%;
   min-width:950px;
+  background-image: url('./utils/halo.jpg');
 }
 .header{
   display:flex;
@@ -33,6 +35,10 @@ polygon, circle{
 }
 .haloThreeMap{
   width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .mapsList{
   display:flex;
@@ -121,6 +127,14 @@ h2{
   .calloutsList{
     display:none;
   }
+  .inGamePic{
+    display:none;
+  }
+  .circleDiv{
+    display:none;
+  }
+}
+@media only screen and (min-width: 1260px) and (max-width: 1450px) {
   .inGamePic{
     display:none;
   }

@@ -30,28 +30,21 @@
   font-size: 1.8rem;
 }
 
-  @media only screen and (max-width: 1259px) {
-    .guardianFullGrid{
-      grid-template-columns:750px;  
-  }
+@media only screen and (max-width: 1259px) {
+  .guardianFullGrid{
+    grid-template-columns:750px;  
+}
   #guardianMap{
     grid-column: 1/span 1;
+    background-image: url('../../utils/Guardian/GuardianWithCallouts.png');
   }
 }
-  @media only screen and (min-width: 1260px) and (max-width: 1450px) {
-    .guardianFullGrid{
-      grid-template-columns:150px 750px 150px;
-    }
-    #guardianCallouts p{
-      font-size: 1rem;
-    }
-    #ScreenShot{
-      width: 100px;
-      height:100px;
-      border:1px solid white;
-    }
+@media only screen and (min-width: 1260px) and (max-width: 1450px) {
+  .guardianFullGrid{
+    grid-template-columns:300px 750px;
+  }
 }
-  @media only screen and (min-width: 1451px) and (max-width: 1650px) {
+@media only screen and (min-width: 1451px) and (max-width: 1650px) {
   .guardianFullGrid{
     grid-template-columns:300px 750px 300px;
   }
