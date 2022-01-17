@@ -6,8 +6,8 @@ import './components/Amplified/amplified.css';
 import './components/Heretic/heretic.css';
 import './components/Onslaught/onslaught.css';
 import './components/ThePit/thePit.css';
-import Header from './components/header';
-import Nav from './components/nav';
+import Header from './components/Header/header';
+import Nav from './components/Nav/nav';
 
 function App() {
   return (

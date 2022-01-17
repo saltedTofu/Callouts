@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Screenshot from '../ScreenShots';
+import Screenshot from '../ScreenShots/ScreenShots';
 
 function Heretic({turnGreen,returnColor,textGreen,returnTextColor}) {
     const [screens,setScreens] = useState('');
