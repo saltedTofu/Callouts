@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# **Halo Callouts**
+### React App created to help players learn the names of locations on Halo 3 multiplayer maps.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Table of Contents
+  - [Introduction](#introduction)
+  - [Technologies](#technologies)
+  - [Features](#features)
+  - [Screenshots](#screenshots)
+  - [Room for Improvement](#room-for-improvement)
+  - [Sources](#sources)
+  - [Contact](#contact)
+## Introduction
+ - This project is intended to be a tool for people who are trying to learn callout locations for the various competitive maps in Halo 3.
+ - Users can select which of the seven maps they want to learn via the nav bar or by scrolling through the page.
+ - Each map component shows a blueprint of the map and a list of all the callouts for the map on the left hand side. When the user mouses over either the callout name on the callout list or the location on the blueprint, they are both highlighted in green.
+ - The right hand side of each map component will show an in-game screenshot of whichever location is being viewed.
+ - For smaller resolution devices, the maps will show the blueprint with the callout names printed on it.
+## Technologies
+ - React.js
+ - HTML
+ - CSS
+ - JS
+ - GIMP for photo editing
+## Features
+- Utilizes React.js functional components with hooks.
+- SVG used to create the divs for each callout
+## Screenshots
+![Example screenshot](./img/screenshot.png)
+## Room for Improvement
+- No Blueprints were available for the maps Amplified and Onslaught, so these had to be made by me with limited photo-editing skills. I would like to spend more time on them so they look more uniform with the other maps.
+- A checkbox could be added to give the option to add callouts on top of the blueprints (like they are for smaller resolutions) if user wants them at the larger resolutions. 
+## Sources
+- Cite Halo 3
+- Cite flamesword youtube vids
+## Contact
+- Tdansby7@gmail.com
+- linkedin.com/in/tyler-dansby-rd-39541916b
