@@ -19,9 +19,9 @@ function Guardian({turnGreen,returnColor,textGreen,returnTextColor}) {
     }
 
         return(
-            <div className="guardianFullGrid">
-                <h1 className="mapTitleGuardian">Guardian</h1>
-                <div className="calloutsList" id="guardianCallouts">
+            <div className="guardianFullGrid" data-testid="guardianTest">
+                <h1 className="mapTitleGuardian" data-testid="mapTitleGuardianTest">Guardian</h1>
+                <div className="calloutsList" id="guardianCallouts" data-testid="calloutsListTest">
                     <p onMouseOver={() => {handleMouseOver('Barrels',['barrelsGuardian'],'barrelsGuardianText')}} onMouseOut={() => {handleMouseOut(['barrelsGuardian'],'barrelsGuardianText')}} id="barrelsGuardianText">Barrels</p>
                     <p onMouseOver={() => {handleMouseOver('Blue Entrance',['blueEntranceGuardian'],'blueEntranceGuardianText')}} onMouseOut={() => {handleMouseOut(['blueEntranceGuardian'],'blueEntranceGuardianText')}} id="blueEntranceGuardianText">Blue Entrance</p>
                     <p onMouseOver={() => {handleMouseOver('Blue Lights',['blueLightsGuardian'],'blueLightsGuardianText')}} onMouseOut={() => {handleMouseOut(['blueLightsGuardian'],'blueLightsGuardianText')}} id="blueLightsGuardianText">Blue Lights</p>
@@ -50,7 +50,7 @@ function Guardian({turnGreen,returnColor,textGreen,returnTextColor}) {
                     <p onMouseOver={() => {handleMouseOver('Top Mid',['topMidGuardian'],'topMidGuardianText')}} onMouseOut={() => {handleMouseOut(['topMidGuardian'],'topMidGuardianText')}} id="topMidGuardianText">Top Mid </p>
                     <p onMouseOver={() => {handleMouseOver('Under Glass',['underGlassGuardian'],'underGlassGuardianText')}} onMouseOut={() => {handleMouseOut(['underGlassGuardian'],'underGlassGuardianText')}} id="underGlassGuardianText">Under Glass</p>
                 </div>
-                <svg id="guardianMap" height="625" width="750">
+                <svg id="guardianMap" height="625" width="750" data-testid="guardianMapTest">
                     <circle  onMouseOver={() => {handleMouseOver('Top Mid',['topMidGuardian'],'topMidGuardianText')}} onMouseOut={() => {handleMouseOut(['topMidGuardian'],'topMidGuardianText')}} id="topMidGuardian" cx="238.5" cy="162.5" r="58" className = "circleDiv"/>
                     <polygon onMouseOver={() => {handleMouseOver('Barrels',['barrelsGuardian'],'barrelsGuardianText')}} onMouseOut={() => {handleMouseOut(['barrelsGuardian'],'barrelsGuardianText')}}  id="barrelsGuardian" points="51,233 74,232 74,296 139,296 139,318 51,319"/>
                     <polygon onMouseOver={() => {handleMouseOver('Blue Entrance',['blueEntranceGuardian'],'blueEntranceGuardianText')}} onMouseOut={() => {handleMouseOut(['blueEntranceGuardian'],'blueEntranceGuardianText')}}  id="blueEntranceGuardian" points="225,286 251,286 251,322 226,321"/>

@@ -18,9 +18,9 @@ function Heretic({turnGreen,returnColor,textGreen,returnTextColor}) {
         returnTextColor(document.getElementById(textDivID));
     }
     return(
-        <div className="hereticFullGrid">
-            <h1 className="mapTitleHeretic">Heretic</h1>
-            <div className="calloutsList" id="hereticsCallouts">
+        <div className="hereticFullGrid" data-testid="hereticTest">
+            <h1 className="mapTitleHeretic" data-testid="mapTitleHereticTest">Heretic</h1>
+            <div className="calloutsList" id="hereticsCallouts" data-testid="calloutsListTest">
                 <p onMouseOver={() => {handleMouseOver('Back Wall',['backWall'],'backWallText')}} onMouseOut={() => {handleMouseOut(['backWall'],'backWallText')}} id="backWallText">Back Wall</p>
                 <p onMouseOver={() => {handleMouseOver('Big Nipple',['bigNipple'],'bigNippleText')}} onMouseOut={() => {handleMouseOut(['bigNipple'],'bigNippleText')}} id="bigNippleText">Big Nipple</p>
                 <p onMouseOver={() => {handleMouseOver('Red and Blue 1',['blue1Heretic','red1Heretic'],'blue1HereticText')}} onMouseOut={() => {handleMouseOut(['blue1Heretic','red1Heretic'],'blue1HereticText')}} id="blue1HereticText">Red/Blue 1</p>
@@ -55,7 +55,7 @@ function Heretic({turnGreen,returnColor,textGreen,returnTextColor}) {
                 <p onMouseOver={() => {handleMouseOver('Walshy',['blueWalshy','redWalshy'],'blueWalshyText')}} onMouseOut={() => {handleMouseOut(['blueWalshy','redWalshy'],'blueWalshyText')}} id="blueWalshyText">Walshy</p>
                 
             </div>
-            <svg id="hereticMap" height="500" width="950">
+            <svg id="hereticMap" height="500" width="950" data-testid="hereticMapTest">
                 <polygon onMouseOver={() => {handleMouseOver('Top Mid',['topMidHeretic'],'topMidHereticText')}} onMouseOut={() => {handleMouseOut(['topMidHeretic'],'topMidHereticText')}}  id="topMidHeretic" points="273,173 288,183 298,194 303,201 306,211 308,220 310,232 310,245 309,255 306,266 302,275 298,283 291,292 285,298 274,304 270,298 262,295 244,296 239,299 236,304 224,297 217,291 211,282 207,275 203,265 201,255 201,245 200,231 201,224 203,213 207,207 208,202 213,193 219,186 227,179 236,173 239,179 242,181 250,182 252,183 260,183 265,181 271,178"/>
                 <polygon onMouseOver={() => {handleMouseOver('Bottom Mid',['bottomMidHeretic'],'bottomMidHereticText')}} onMouseOut={() => {handleMouseOut(['bottomMidHeretic'],'bottomMidHereticText')}} id="bottomMidHeretic" points="703,185 756,185 770,198 779,213 784,226 784,256 777,275 771,287 763,299 754,309 704,309 692,297 684,281 677,266 674,255 675,229 679,212 686,201 695,192" />
                 <polygon onMouseOver={() => {handleMouseOver('Back Wall',['backWall'],'backWallText')}} onMouseOut={() => {handleMouseOut(['backWall'],'backWallText')}} id="backWall" points="272,434 270,440 267,445 243,445 242,439 240,434" />

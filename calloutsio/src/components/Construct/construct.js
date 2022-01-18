@@ -19,10 +19,10 @@ function Construct({turnGreen,returnColor,textGreen,returnTextColor}) {
     }
 
     return(
-        <div className="constructFullGrid">
-            <h1 className="mapTitleConstruct">Construct</h1>
-            <div className="calloutsList" id="constructCallouts">
-                <p onMouseOver={() => {handleMouseOver('Back Gold',['backGoldRampConstruct'],'backGoldRampConstructText')}} onMouseOut={() => {handleMouseOut(['backGoldRampConstruct'],'backGoldRampConstructText')}} id="backGoldRampConstructText">Back Gold Ramp</p>
+        <div className="constructFullGrid" data-testid="constructTest">
+            <h1 className="mapTitleConstruct" data-testid="mapTitleConstructTest">Construct</h1>
+            <div className="calloutsList" id="constructCallouts" data-testid="calloutsListTest"> 
+                <p onMouseOver={() => {handleMouseOver('Back Gold Ramp',['backGoldRampConstruct'],'backGoldRampConstructText')}} onMouseOut={() => {handleMouseOut(['backGoldRampConstruct'],'backGoldRampConstructText')}} id="backGoldRampConstructText">Back Gold Ramp</p>
                 <p onMouseOver={() => {handleMouseOver('Bottom Gold',['bottomGoldConstruct'],'bottomGoldConstructText')}} onMouseOut={() => {handleMouseOut(['bottomGoldConstruct'],'bottomGoldConstructText')}} id="bottomGoldConstructText">Bottom Gold</p>
                 <p onMouseOver={() => {handleMouseOver('C1',['c1Construct'],'c1ConstructText')}} onMouseOut={() => {handleMouseOut(['c1Construct'],'c1ConstructText')}} id="c1ConstructText">C1</p>
                 <p onMouseOver={() => {handleMouseOver('C2',['c2Construct'],'c2ConstructText')}} onMouseOut={() => {handleMouseOut(['c2Construct'],'c2ConstructText')}} id="c2ConstructText">C2</p>
@@ -57,8 +57,8 @@ function Construct({turnGreen,returnColor,textGreen,returnTextColor}) {
                 <p onMouseOver={() => {handleMouseOver('Top Gold',['topGoldConstruct'],'topGoldConstructText')}} onMouseOut={() => {handleMouseOut(['topGoldConstruct'],'topGoldConstructText')}} id="topGoldConstructText">Top Gold</p>
                 <p onMouseOver={() => {handleMouseOver('Under Glass',['underGlassConstruct'],'underGlassConstructText')}} onMouseOut={() => {handleMouseOut(['underGlassConstruct'],'underGlassConstructText')}} id="underGlassConstructText">Under Glass</p>
             </div>
-            <svg id="constructMap" width="750px" height="725px">
-                <polygon onMouseOver={() => {handleMouseOver('Back Gold',['backGoldRampConstruct'],'backGoldRampConstructText')}} onMouseOut={() => {handleMouseOut(['backGoldRampConstruct'],'backGoldRampConstructText')}} id="backGoldRampConstruct" points="425,476 396,476 396,499 337,499 337,492 319,492 318,495 303,507 307,513 416,513 425,504"/>
+            <svg id="constructMap" width="750px" height="725px" data-testid="constructMapTest">
+                <polygon onMouseOver={() => {handleMouseOver('Back Gold Ramp',['backGoldRampConstruct'],'backGoldRampConstructText')}} onMouseOut={() => {handleMouseOut(['backGoldRampConstruct'],'backGoldRampConstructText')}} id="backGoldRampConstruct" points="425,476 396,476 396,499 337,499 337,492 319,492 318,495 303,507 307,513 416,513 425,504"/>
                 <polygon onMouseOver={() => {handleMouseOver('Bottom Gold',['bottomGoldConstruct'],'bottomGoldConstructText')}} onMouseOut={() => {handleMouseOut(['bottomGoldConstruct'],'bottomGoldConstructText')}} id="bottomGoldConstruct" points="651,409 651,423 658,423 658,465 648,465 648,467 615,467 615,465 603,465 603,423 610,423 610,409"/>
                 <polygon onMouseOver={() => {handleMouseOver('C1',['c1Construct'],'c1ConstructText')}} onMouseOut={() => {handleMouseOut(['c1Construct'],'c1ConstructText')}}  id="c1Construct" points="645,310 654,321 670,321 672,319 672,317 678,311 689,311 689,330 673,330 670,333 645,333"/>
                 <polygon onMouseOver={() => {handleMouseOver('C2',['c2Construct'],'c2ConstructText')}} onMouseOut={() => {handleMouseOut(['c2Construct'],'c2ConstructText')}} id="c2Construct" points="411,306 424,306 426,309 426,329 410,329 404,323 404,313"/>

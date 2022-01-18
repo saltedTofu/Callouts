@@ -19,9 +19,9 @@ function Amplified({turnGreen,returnColor,textGreen,returnTextColor}) {
     }
 
     return(
-        <div className="amplifiedFullGrid">
-            <h1 className="mapTitleAmplified">Amplified</h1>
-            <div className="calloutsList" id="amplifiedCallouts">
+        <div data-testid="amplifiedTest" className="amplifiedFullGrid">
+            <h1 className="mapTitleAmplified" data-testid="mapTitleAmplifiedTest">Amplified</h1>
+            <div className="calloutsList" id="amplifiedCallouts" data-testid="calloutsListTest">
                 <p onMouseOver={() => {handleMouseOver('Top Mid',['topMidAmplified'],'topMidAmplifiedText')}} onMouseOut={() => {handleMouseOut(['topMidAmplified'],'topMidAmplifiedText')}} id="topMidAmplifiedText">Top Mid</p>
                 <p onMouseOver={() => {handleMouseOver('Bottom Mid',['bottomMidAmplified'],'bottomMidAmplifiedText')}} onMouseOut={() => {handleMouseOut(['bottomMidAmplified'],'bottomMidAmplifiedText')}} id="bottomMidAmplifiedText">Bottom Mid</p>
                 <p onMouseOver={() => {handleMouseOver('Gold 1',['gold1Amplified'],'gold1AmplifiedText')}} onMouseOut={() => {handleMouseOut(['gold1Amplified'],'gold1AmplifiedText')}} id="gold1AmplifiedText">Gold 1</p>
@@ -51,15 +51,15 @@ function Amplified({turnGreen,returnColor,textGreen,returnTextColor}) {
                 <p onMouseOver={() => {handleMouseOver('Plat',['plat','plat2'],'platText')}} onMouseOut={() => {handleMouseOut(['plat','plat2'],'platText')}} id="platText">Plat</p>
                 <p onMouseOver={() => {handleMouseOver('Street',['street','street2'],'streetText')}} onMouseOut={() => {handleMouseOut(['street','street2'],'streetText')}} id="streetText">Street</p>
             </div>
-            <svg id="amplifiedMap" width="750px" height="625px">
-                <polygon onMouseOver={() => {handleMouseOver('Top Mid',['topMidAmplified'],'topMidAmplifiedText')}} onMouseOut={() => {handleMouseOut(['topMidAmplified'],'topMidAmplifiedText')}}  id="topMidAmplified" points="411,302 411,323 316,323 316,302"/>
-                <polygon onMouseOver={() => {handleMouseOver('Bottom Mid',['bottomMidAmplified'],'bottomMidAmplifiedText')}} onMouseOut={() => {handleMouseOut(['bottomMidAmplified'],'bottomMidAmplifiedText')}} id="bottomMidAmplified" points="315,299 412,299 412,325 315,325"/>
-                <polygon oonMouseOver={() => {handleMouseOver('Gold 1',['gold1Amplified'],'gold1AmplifiedText')}} onMouseOut={() => {handleMouseOut(['gold1Amplified'],'gold1AmplifiedText')}} id="gold1Amplified" points="240,299 180,299 180,325 240,326"/>
+            <svg id="amplifiedMap" width="750px" height="625px" data-testid="amplifiedMapTest">
+                <polygon onMouseOver={() => {handleMouseOver('Top Mid',['topMidAmplified'],'topMidAmplifiedText')}} onMouseOut={() => {handleMouseOut(['topMidAmplified'],'topMidAmplifiedText')}}  id="topMidAmplified" points="411,302 411,323 316,323 316,302" />
+                <polygon onMouseOver={() => {handleMouseOver('Bottom Mid',['bottomMidAmplified'],'bottomMidAmplifiedText')}} onMouseOut={() => {handleMouseOut(['bottomMidAmplified'],'bottomMidAmplifiedText')}} id="bottomMidAmplified" points="315,299 412,299 412,325 315,325" />          
                 <polygon onMouseOver={() => {handleMouseOver('Gold 2',['gold2Amplified'],'gold2AmplifiedText')}} onMouseOut={() => {handleMouseOut(['gold2Amplified'],'gold2AmplifiedText')}}  id="gold2Amplified" points="149,286 240,286 240,336 149,336"/>
                 <polygon onMouseOver={() => {handleMouseOver('Gold 3',['gold3Amplified'],'gold3AmplifiedText')}} onMouseOut={() => {handleMouseOut(['gold3Amplified'],'gold3AmplifiedText')}}  id="gold3Amplified" points="181,249 240,249 254,239 257,239 284,260 240,288 240,340 243,340 284,361 257,387 241,375 181,375"/>
+                <polygon onMouseOver={() => {handleMouseOver('Gold 1',['gold1Amplified'],'gold1AmplifiedText')}} onMouseOut={() => {handleMouseOut(['gold1Amplified'],'gold1AmplifiedText')}} id="gold1Amplified" points="240,299 180,299 180,325 240,326"/>
                 <polygon onMouseOver={() => {handleMouseOver('Pink 1',['pink1Amplified'],'pink1AmplifiedText')}} onMouseOut={() => {handleMouseOut(['pink1Amplified'],'pink1AmplifiedText')}}  id="pink1Amplified" points="508,299 479,299 479,330 508,330"/>
-                <polygon onMouseOver={() => {handleMouseOver('Pink 2',['pink2Amplified'],'pink2AmplifiedText')}} onMouseOut={() => {handleMouseOut(['pink2Amplified'],'pink2AmplifiedText')}}  id="pink2Amplified" points="575,251 539,251 539,299 511,299 511,330 539,330 539,374 575,374"/>
                 <polygon onMouseOver={() => {handleMouseOver('Pink 3',['pink3Amplified'],'pink3AmplifiedText')}} onMouseOut={() => {handleMouseOut(['pink3Amplified'],'pink3AmplifiedText')}}  id="pink3Amplified" points="508,251 498,261 498,262 511,275 511,347 497,361 508,374 575,374 575,251"/>
+                <polygon onMouseOver={() => {handleMouseOver('Pink 2',['pink2Amplified'],'pink2AmplifiedText')}} onMouseOut={() => {handleMouseOut(['pink2Amplified'],'pink2AmplifiedText')}}  id="pink2Amplified" points="575,251 539,251 539,299 511,299 511,330 539,330 539,374 575,374"/>
                 <polygon onMouseOver={() => {handleMouseOver('Pink Plat',['pinkPlat'],'pinkPlatText')}} onMouseOut={() => {handleMouseOut(['pinkPlat'],'pinkPlatText')}}  id="pinkPlat" points="436,302 451,290 477,311 451,336 436,323"/>
                 <polygon onMouseOver={() => {handleMouseOver('Red and Blue 1',['red1Amp','blue1Amp'],'redBlue1AmpText')}} onMouseOut={() => {handleMouseOut(['red1Amp','blue1Amp'],'redBlue1AmpText')}} id="red1Amp" points="258,69 258,87 480,87 480,69"/>
                 <polygon onMouseOver={() => {handleMouseOver('Red and Blue 1',['red1Amp','blue1Amp'],'redBlue1AmpText')}} onMouseOut={() => {handleMouseOut(['red1Amp','blue1Amp'],'redBlue1AmpText')}} id="blue1Amp" points="258,541 258,560 479,560 479,541"/>

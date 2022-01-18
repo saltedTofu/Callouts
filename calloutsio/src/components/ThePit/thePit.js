@@ -18,9 +18,9 @@ function ThePit({turnGreen,returnColor,textGreen,returnTextColor}){
         returnTextColor(document.getElementById(textDivID));
     }
     return(
-        <div className="thePitFullGrid">
-            <h1 className="mapTitleThePit">The Pit</h1>
-            <div className="calloutsList" id="pitCallouts">
+        <div className="thePitFullGrid" data-testid="thePitTest">
+            <h1 className="mapTitleThePit" data-testid="mapTitleThePitTest">The Pit</h1>
+            <div className="calloutsList" id="pitCallouts" data-testid="calloutsListTest">
                 <p onMouseOver={() => {handleMouseOver('1st BR',['firstBrPit','firstBrPit2'],'firstBrPitText')}} onMouseOut={() => {handleMouseOut(['firstBrPit','firstBrPit2'],'firstBrPitText')}} id="firstBrPitText">1st BR</p>
                 <p onMouseOver={() => {handleMouseOver('2nd BR',['secondBrPit','secondBrPit2'],'secondBrPitText')}}  onMouseOut={() => {handleMouseOut(['secondBrPit','secondBrPit2'],'secondBrPitText')}} id="secondBrPitText">2nd BR</p>
                 <p onMouseOver={() => {handleMouseOver('Assault',['assaultPit','assaultPit2'],'assaultPitText')}} onMouseOut={() => {handleMouseOut(['assaultPit','assaultPit2'],'assaultPitText')}} id="assaultPitText">Assault</p>
@@ -31,7 +31,7 @@ function ThePit({turnGreen,returnColor,textGreen,returnTextColor}){
                 <p onMouseOver={() => {handleMouseOver('Flag',['flagPit','flagPit2'],'flagPitText')}} onMouseOut={() => {handleMouseOut(['flagPit','flagPit2'],'flagPitText')}} id="flagPitText">Flag</p>
                 <p onMouseOver={() => {handleMouseOver('Green Box',['greenBoxPit','greenBoxPit2'],'greenBoxPitText')}} onMouseOut={() => {handleMouseOut(['greenBoxPit','greenBoxPit2'],'greenBoxPitText')}} id="greenBoxPitText">Green Box</p>
                 <p onMouseOver={() => {handleMouseOver('Green Hall',['greenHallPit'],'greenHallPitText')}} onMouseOut={() => {handleMouseOut(['greenHallPit'],'greenHallPitText')}} id="greenHallPitText">Green Hall</p>
-                <p onMouseOver={() => {handleMouseOver('Jump Up',['jumpUpPit'],'jumpUpPitText')}} onMouseOut={() => {handleMouseOut(['jumpUpPit'],'jumpUpPitText')}} id="jumpUpPitText">Jump Up</p>
+                <p onMouseOver={() => {handleMouseOver('Jump Up',['jumpUpPit','jumpUpPit2'],'jumpUpPitText')}} onMouseOut={() => {handleMouseOut(['jumpUpPit','jumpUpPit2'],'jumpUpPitText')}} id="jumpUpPitText">Jump Up</p>
                 <p onMouseOver={() => {handleMouseOver('Long Hall',['longHallCamoPit'],'longHallCamoPitText')}} onMouseOut={() => {handleMouseOut(['longHallCamoPit'],'longHallCamoPitText')}} id="longHallCamoPitText">Long Hall/Camo</p>
                 <p onMouseOver={() => {handleMouseOver('Mid Bridge',['midBridgePit'],'midBridgePitText')}} onMouseOut={() => {handleMouseOut(['midBridgePit'],'midBridgePitText')}} id="midBridgePitText">Mid Bridge</p>
                 <p onMouseOver={() => {handleMouseOver('Mauler',['maulerPit','maulerPit2'],'maulerPitText')}} onMouseOut={() => {handleMouseOut(['maulerPit','maulerPit2'],'maulerPitText')}} id="maulerPitText">Mauler</p>
@@ -56,7 +56,7 @@ function ThePit({turnGreen,returnColor,textGreen,returnTextColor}){
                 <p onMouseOver={() => {handleMouseOver('Training Pocket',['trainingPocketPit','trainingPocketPit2'],'trainingPocketPitText')}} onMouseOut={() => {handleMouseOut(['trainingPocketPit','trainingPocketPit2'],'trainingPocketPitText')}} id="trainingPocketPitText">Training Pocket</p>
                 <p onMouseOver={() => {handleMouseOver('Walshy',['walshyPit','walshyPit2'],'walshyPitText')}} onMouseOut={() => {handleMouseOut(['walshyPit','walshyPit2'],'walshyPitText')}} id="walshyPitText">Walshy</p>
             </div>
-            <svg id="thePitMap" width="750px" height="625px">
+            <svg id="thePitMap" width="750px" height="625px" data-testid="thePitMapTest">
                 <polygon onMouseOver={() => {handleMouseOver('1st BR',['firstBrPit','firstBrPit2'],'firstBrPitText')}} onMouseOut={() => {handleMouseOut(['firstBrPit','firstBrPit2'],'firstBrPitText')}} id="firstBrPit" points="128,489 193,489 193,507 166,507 166,510 128, 510"/>
                 <polygon onMouseOver={() => {handleMouseOver('1st BR',['firstBrPit','firstBrPit2'],'firstBrPitText')}} onMouseOut={() => {handleMouseOut(['firstBrPit','firstBrPit2'],'firstBrPitText')}} id="firstBrPit2" points="562,489 626,489 626,510 589,510 589,507 562,507"/>
                 <polygon onMouseOver={() => {handleMouseOver('2nd BR',['secondBrPit','secondBrPit2'],'secondBrPitText')}}  onMouseOut={() => {handleMouseOut(['secondBrPit','secondBrPit2'],'secondBrPitText')}} id="secondBrPit" points="288,469 323,469 323,526 311,535 300,535 300,497 288,485"/>
@@ -75,14 +75,14 @@ function ThePit({turnGreen,returnColor,textGreen,returnTextColor}){
                 <polygon onMouseOver={() => {handleMouseOver('Green Box',['greenBoxPit','greenBoxPit2'],'greenBoxPitText')}} onMouseOut={() => {handleMouseOut(['greenBoxPit','greenBoxPit2'],'greenBoxPitText')}} id="greenBoxPit" points="323,422 285,422 285,464 323,464"/>
                 <polygon onMouseOver={() => {handleMouseOver('Green Box',['greenBoxPit','greenBoxPit2'],'greenBoxPitText')}} onMouseOut={() => {handleMouseOut(['greenBoxPit','greenBoxPit2'],'greenBoxPitText')}} id="greenBoxPit2" points="470,422 432,422 432,464 470,464"/>
                 <polygon onMouseOver={() => {handleMouseOver('Green Hall',['greenHallPit'],'greenHallPitText')}} onMouseOut={() => {handleMouseOut(['greenHallPit'],'greenHallPitText')}} id="greenHallPit" points="324,433 431,433 431,452 324,452"/>
-                <polygon onMouseOver={() => {handleMouseOver('Jump Up',['jumpUpPit'],'jumpUpPitText')}} onMouseOut={() => {handleMouseOut(['jumpUpPit'],'jumpUpPitText')}} id="jumpUpPit" points="234,394 221,394 221,406 234,419"/>
-                <polygon onMouseOver={() => {handleMouseOver('Jump Up',['jumpUpPit'],'jumpUpPitText')}} onMouseOut={() => {handleMouseOut(['jumpUpPit'],'jumpUpPitText')}} id="jumpUpPit2" points="535,395 525,395 525,416 535,406"/>
+                <polygon onMouseOver={() => {handleMouseOver('Jump Up',['jumpUpPit','jumpUpPit2'],'jumpUpPitText')}} onMouseOut={() => {handleMouseOut(['jumpUpPit','jumpUpPit2'],'jumpUpPitText')}} id="jumpUpPit" points="234,394 221,394 221,406 234,419"/>
+                <polygon onMouseOver={() => {handleMouseOver('Jump Up',['jumpUpPit','jumpUpPit2'],'jumpUpPitText')}} onMouseOut={() => {handleMouseOut(['jumpUpPit','jumpUpPit2'],'jumpUpPitText')}} id="jumpUpPit2" points="535,395 525,395 525,416 535,406"/>
                 <polygon onMouseOver={() => {handleMouseOver('Long Hall',['longHallCamoPit'],'longHallCamoPitText')}} onMouseOut={() => {handleMouseOut(['longHallCamoPit'],'longHallCamoPitText')}} id="longHallCamoPit" points="415,544 415,556 340,556 340,544"/>
                 <polygon onMouseOver={() => {handleMouseOver('Mid Bridge',['midBridgePit'],'midBridgePitText')}} onMouseOut={() => {handleMouseOut(['midBridgePit'],'midBridgePitText')}} id="midBridgePit" points="401,141 354,141 354,188 401,188"/>
                 <polygon onMouseOver={() => {handleMouseOver('Mauler',['maulerPit','maulerPit2'],'maulerPitText')}} onMouseOut={() => {handleMouseOut(['maulerPit','maulerPit2'],'maulerPitText')}} id="maulerPit" points="183,570 166,570 141,544 125,544 125,512 113,512 113,557 137,582 183,582"/>
                 <polygon onMouseOver={() => {handleMouseOver('Mauler',['maulerPit','maulerPit2'],'maulerPitText')}} onMouseOut={() => {handleMouseOut(['maulerPit','maulerPit2'],'maulerPitText')}} id="maulerPit2" points="643,512 630,512 630,543 614,543 589,569 572,569 572,582 619,582 643,556"/>
-                <polygon onMouseOver={() => {handleMouseOver('Needler Pit',['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} onMouseOut={() => {handleMouseOut(['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} id="needlerPit" points="251,539 241,539 215,565 184,565 184,582 251,582"/>
-                <polygon onMouseOver={() => {handleMouseOver('Needler Pit',['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} onMouseOut={() => {handleMouseOut(['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} id="needlerPit2" points="571,565 541,565 514,539 504,539 504,582 571,582"/>
+                <polygon onMouseOver={() => {handleMouseOver('Needler',['needlerPit','needlerPit2'],'needlerPitText')}} onMouseOut={() => {handleMouseOut(['needlerPit','needlerPit2'],'needlerPitText')}} id="needlerPit" points="251,539 241,539 215,565 184,565 184,582 251,582"/>
+                <polygon onMouseOver={() => {handleMouseOver('Needler',['needlerPit','needlerPit2'],'needlerPitText')}} onMouseOut={() => {handleMouseOut(['needlerPit','needlerPit2'],'needlerPitText')}} id="needlerPit2" points="571,565 541,565 514,539 504,539 504,582 571,582"/>
                 <polygon onMouseOver={() => {handleMouseOver('Needler Pit',['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} onMouseOut={() => {handleMouseOut(['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} id="needlerPitPit" points="246,511 194,511 194,530 172,530 184,542 184,562 213,562 240,536 246,536"/>
                 <polygon onMouseOver={() => {handleMouseOver('Needler Pit',['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} onMouseOut={() => {handleMouseOut(['needlerPitPit','needlerPitPit2'],'needlerPitPitText')}} id="needlerPitPit2" points="509,511 561,511 561,530 583,530 571,541 571,562 542,562 516,536 509,536"/>
                 <polygon onMouseOver={() => {handleMouseOver('Needler Ramp',['needlerRampPit','needlerRampPit2'],'needlerRampPitText')}} onMouseOut={() => {handleMouseOut(['needlerRampPit','needlerRampPit2'],'needlerRampPitText')}} id="needlerRampPit" points="299,524 299,535 248,535 248,524"/>

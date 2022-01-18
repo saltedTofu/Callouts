@@ -21,8 +21,8 @@ function Nav(){
         textP.style.color="white";
     }
     return(
-        <div className="haloThreeMap">
-            <div className="mapsList">
+        <div className="haloThreeMap" data-testid="containerTest">
+            <div className="mapsList" data-testid="anchorsListTest">
                 <a id="amplified" href="#amplifiedLink">Amplified</a>
                 <a id="construct" href="#constructLink">Construct</a>
                 <a id="guardian" href="#guardianLink">Guardian</a>
@@ -42,7 +42,7 @@ function Nav(){
                 returnTextColor={returnTextColor}
             />
             <br></br>
-            <a name="constructLink" href="#amplifiedLink">
+            <a name="constructLink" href="#constructLink">
                 <br></br>
             </a>
             <Construct 
