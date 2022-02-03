@@ -6,6 +6,7 @@ import './components/Amplified/amplified.css';
 import './components/Heretic/heretic.css';
 import './components/Onslaught/onslaught.css';
 import './components/ThePit/thePit.css';
+import './components/Header/header.css';
 import Header from './components/Header/header';
 import Nav from './components/Nav/nav';
 
