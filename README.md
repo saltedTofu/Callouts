@@ -23,9 +23,9 @@
 - Jest for writing tests
 ## Screenshots
  - Higher Resolution view of map
-![Example screenshot](./GuardianScreenShot.png)
+![Example screenshot](./READMEimages/GuardianScreenShot.png)
  - Lower Resolution view of map
-![Example screenshot](./ThePitLowRes.png)
+![Example screenshot](./READMEimages/ThePitLowRes.png)
 ## Room for Improvement
 - No Blueprints were available for the maps Amplified and Onslaught, so these had to be made by me with limited photo-editing skills. I would like to spend more time on them so they look more uniform with the other maps.
 - A checkbox could be added to give the option to add callouts on top of the blueprints (like they are for smaller resolutions) if the user wants to see them at the larger resolutions. 
