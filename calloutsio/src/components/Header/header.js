@@ -1,17 +1,18 @@
 import React, {useState, useEffect} from 'react';
+// https://api.openweathermap.org/data/2.5/weather?lat=4.04&lon=39.67&units=imperial&appid=3743c250bf31effa5f54562c11a1838d
 function Header() {
         const [weatherDegrees,setWeatherDegrees]=useState('Loading...');
         const [weatherDescription,setWeatherDescription]=useState('');
 
     useEffect(() => {
-        const url = 'http://api.weatherstack.com/current?access_key=6515e85ac5aa99126314670e1eef2f9c&query=Mombasa&units=f';
+        const url = 'https://api.openweathermap.org/data/2.5/weather?lat=4.04&lon=39.67&units=imperial&appid=3743c250bf31effa5f54562c11a1838d';
         const weatherRetrieved = fetch(url, {
             method: 'GET'
         })
         .then(response => response.json())
         .then(data => {
-            setWeatherDegrees(data.current.temperature);
-            setWeatherDescription(data.current.weather_descriptions);
+            setWeatherDegrees(data.main.temp);
+            setWeatherDescription(data.weather[0].description);
         })
     },[])
     return(
