@@ -3,9 +3,10 @@ import React, {useState, useEffect} from 'react';
 function Header() {
         const [weatherDegrees,setWeatherDegrees]=useState('Loading...');
         const [weatherDescription,setWeatherDescription]=useState('');
+        const weatherKey = process.env.REACT_APP_API_KEY;
 
     useEffect(() => {
-        const url = 'https://api.openweathermap.org/data/2.5/weather?lat=4.04&lon=39.67&units=imperial&appid=3743c250bf31effa5f54562c11a1838d';
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=4.04&lon=39.67&units=imperial&appid=${weatherKey}`;
         const weatherRetrieved = fetch(url, {
             method: 'GET'
         })
